@@ -8,7 +8,7 @@
 
 	<node pkg="tf" type="static_transform_publisher" name="baframe_to_laser" args="0.0 0.0 0.0 0.0 0.0 0.0 /base_link /base_frame 50" />
 	
-	<node pkg="map_server" type="map_server" name="map_server" args="/home/paril/ese519project/nov_21_bags/run\ 2/map.yaml"  output="screen" />
+    <node pkg="map_server" type="map_server" name="map_server" args="$(find race)/map/left_mstb_1.yaml"  output="screen" />
 	
 	<!--<node pkg="rosbag" type="play" name="player" output="screen" args="-clock /home/xlab_ws/src/xlab_race/bags/1970-01-01-00-33-02.bag"/>-->
 
@@ -18,8 +18,7 @@
 		<param name="kf_dist_angular" value ="0.01"/>		
 	</node>
 
-	<node pkg="race" type="odom_scan_matcher" name="odom_scan_matcher" output="screen"/>
+    <node pkg="race" type="odom_scan_matcher" name="odom_scan_matcher" output="screen"/>
 	<!--<node pkg="xlab_race" type="getOdomFromMatcher" name="getOdomFromMatcher"/>-->
 
-  	<node pkg="rviz" type="rviz" name="rviz" args="/home/paril/ese519project/amcl_scan.rviz"/>
 </launch>

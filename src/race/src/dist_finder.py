@@ -13,7 +13,7 @@ AC = 1
 #vel = 12
 
 CENTER= None
-SIDE = 0
+SIDE = -1
 #SIDE = 1 is right SIDE = -1 is left
 pub = rospy.Publisher('error', pid_input, queue_size=10)
 
@@ -50,12 +50,13 @@ def getRange(data,theta):
 def callback(data):
     global AC, CENTER, SIDE
 
+    print(SIDE)
     theta = 50;
     swing = math.radians(theta)
     a = getRange(data,SIDE * (-pi/2+swing))
     b = getRange(data,SIDE * (-pi/2))
 
-    alpha = atan((a*cos(swing)-b)/(a*sin(swing))) 
+    alpha = SIDE * atan((a*cos(swing)-b)/(a*sin(swing))) 
 
     if (CENTER == None):
             CENTER = b*cos(alpha)
@@ -63,9 +64,9 @@ def callback(data):
     
     ## Your code goes here
     AB = b*cos(alpha)
-    CD = AB + AC*sin(alpha)
+    CD = AB + (SIDE * (AC*sin(alpha)))
     
-    error = CENTER-CD
+    error = CENTER - CD
 
 
     ## END

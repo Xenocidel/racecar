@@ -8,17 +8,22 @@ from std_msgs.msg import Bool
 
 dead = False
 SIDE = -1
-kp = 14.0
-kd = 0.09
+kp = 14. #14.0
+kd = .09 #0.09
 servo_offset = 18.5
 prev_error = 0.0 
 vel_input = 12.0
-C = 10
+C = 10 #10 
 pub = rospy.Publisher('drive_parameters', drive_param, queue_size=1)
 
 def kill(data):
     global dead
     dead = data.data
+
+def updateVelocity(data):
+    global vel_input
+    vel_input = data.data
+    print "updated velocity"
 
 def control(data):
     global prev_error
@@ -28,12 +33,12 @@ def control(data):
     global SIDE
     global dead
 
-    if (dead):
+    '''if (dead):
         msg = drive_param() 
         msg.velocity = 0
         msg.angle = 0
         pub.publish(msg)
-        return
+        return''' 
 
     curr_error = data.pid_error
     vel = data.pid_vel
@@ -48,9 +53,27 @@ def control(data):
         angle = -90
 
     msg = drive_param();
-    msg.velocity = vel_input    
-    msg.angle = -angle
-    pub.publish(msg)
+    if (not dead):
+        msg.velocity = vel_input    
+        msg.angle = -angle
+        pub.publish(msg)
+    else:
+        msg.velocity = -70
+        pub.publish(msg)
+
+
+        '''
+        for x in range(10):
+            if vel_input > -180:
+                vel_input -= 10
+                msg.velocity = vel_input
+                pub.publish(msg)
+        '''
+
+        
+
+
+
 
 def updateSide(data):
     global SIDE
@@ -62,5 +85,6 @@ if __name__ == '__main__':
     rospy.init_node('pid_controller', anonymous=True)
     rospy.Subscriber('side',Int32, updateSide)
     rospy.Subscriber("error", pid_input, control)
-    rospy.Subscriber("eStop", Bool,kill) 
+    #rospy.Subscriber("eStop", Bool,kill) 
+    rospy.Subscriber("drive_velocity", Int32, updateVelocity) 
     rospy.spin()

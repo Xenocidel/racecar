@@ -7,7 +7,9 @@ from race.msg import pid_input
 
 
 def callback(data):
-   print data.ranges[1080/4]#a
+   theta = 15
+   print [(i,data.ranges[i*4]) for i in range(10,20)]
+   # print data.ranges[15*4 - 8 : 15*4 + 8]
    return
 
 

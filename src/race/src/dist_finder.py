@@ -9,13 +9,19 @@ from std_msgs.msg import Int32
 
 # same as desired trajectory
 AC = 1
-#vel = 30
+SPEED_FACTOR = 1 
+vel = 30
 #vel = 12
 
 CENTER= None
 SIDE = -1
 #SIDE = 1 is right SIDE = -1 is left
 pub = rospy.Publisher('error', pid_input, queue_size=10)
+
+# Sets SPEED_FACTOR based on new velocity data
+def get_velocity(data):
+        global SPEED_FACTOR 
+        SPEED_FACTOR = data.data/12 
 
 ##  Input:  data: Lidar scan data
 ##          theta: The angle at which the distance is requried
@@ -48,7 +54,7 @@ def getRange(data,theta):
     return None
 
 def callback(data):
-    global AC, CENTER, SIDE
+    global SPEED_FACTOR, AC, CENTER, SIDE
 
     print(SIDE)
     theta = 50;
@@ -64,7 +70,7 @@ def callback(data):
     
     ## Your code goes here
     AB = b*cos(alpha)
-    CD = AB + (SIDE * (AC*sin(alpha)))
+    CD = AB + (SIDE * SPEED_FACTOR *(AC*sin(alpha)))
     
     error = CENTER - CD
 
@@ -86,4 +92,5 @@ if __name__ == '__main__':
     rospy.init_node('dist_finder',anonymous = True)
     rospy.Subscriber('side',Int32,callback2)
     rospy.Subscriber("scan",LaserScan,callback)
+    rospy.Subscriber('drive_velocity',Int32,get_velocity) 
     rospy.spin()

@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-
-<launch>
-        <--  <include file="$(find hector_slam_launch)/launch/tutorial.launch"/>-->
-  <node pkg="rosbag" type="play" name="player" output="screen" args="--clock $(find race)/bag/Lecture3SLAM_Tutorial.bag" respawn="true"/>
-</launch>

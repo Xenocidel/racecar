@@ -10,8 +10,8 @@
 
   <include file="$(find race)/launch/mapping_temp.launch"/>
 
-  <node pkg="rviz" type="rviz" name="rviz"
-	args="-d $(find race)/localize.rviz"/>
+  <!--  <node pkg="rviz" type="rviz" name="rviz"
+    args="-d $(find race)/localize.rviz"/>-->
 
   <param name="/use_sim_time" value="true"/>
 

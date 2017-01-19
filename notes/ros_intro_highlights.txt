@@ -1,0 +1,61 @@
+SETUP ROS
+See all variables that start w/ ROS:
+>>> printenv | grep ROS
+
+Source ROS:
+>>> source /opt/ros/indigo/setup.bash
+
+Permanently source ROS:
+>>> echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
+(one time to use this as well >>> source ~/.bashrc)
+
+
+SETUP CATKIN
+Make catkin workspace
+Catkin initialize workspace in /src
+
+Catkin make outside /src makes new directories and bash files:
+>>> catkin_make
+
+Sourcing Catkin:
+>>> source ~/catkin_ws/devel/setup.bash
+
+EXPLORING ROS
+Rospack - package searching
+Roscd - open package/subpackage without full pathname
+Rosls - list package/subpackage components without full pathname
+
+CATKIN PACKAGE MAKING, BUILDING
+
+NODES
+Must ALWAYS run 'roscore' first and have it running:
+>>> roscore
+
+Rosnode:
+list - lists all nodes running
+info [node] - give info of specific node
+ping [node]
+
+Rosrun:
+>>> rosrun [package] [node]
+>>> rosrun [package] [node] [variable]:=[value] ## eg for hokuyo
+
+Roslaunch:
+>>> roslaunch [package] [launch_file]
+
+RUNNING KILL SWITCH
+curses.KEY_HOME for mac: Fn+left
+curses.KEY_DC for mac: Fn+Delete
+
+RUNNING KEYBOARD/TALKER
+on initial run/build:
+>>> cd ~/catkin_ws
+>>> catkin_make
+>>> catkin_make install
+No need to do source install/setup.bash!
+
+running:
+>>> rosrun race [node]
+
+keyboard to pwm:
+y = ( 13108 - 6554 )/ 200* (x - 100) +  13108

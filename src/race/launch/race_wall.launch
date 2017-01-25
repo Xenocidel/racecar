@@ -5,6 +5,5 @@
   <node name="lidar" pkg="urg_node" type="urg_node" args="_ip_address:='192.168.1.11'"/>  
    
   <node name="dist_finder" pkg="race" type="dist_finder.py"/> 
-  <node name="kill" pkg="race" type="kill.py" output="screen"/> 
-  <node name="control" pkg="race" type="control.py"/>
+  <node name="control" pkg="race" type="control.py" output="screen"/>
 </launch>

@@ -1,0 +1,17 @@
+<launch>
+  <node name="talker" pkg="race" type="talker.py"/>
+ 
+  <node name="static_tf0" pkg="tf" type="static_transform_publisher" args="1 0 0 0 0 0  /world /map 100"/>
+
+  <node pkg="tf" type="static_transform_publisher" name="base_frame_to_laser" 
+        args="0.0 0.0 0.0 0.0 0.0 0.0 /base_frame /laser 10"/> 
+
+  <node name="teensy" pkg="rosserial_python" type="serial_node.py" args="/dev/ttyACM0"/>
+
+  <node name="lidar" pkg="urg_node" type="urg_node" args="_ip_address:='192.168.1.11'"/>  
+   
+  <node name="keyboard" pkg="race" type="keyboard.py" output="screen"/>
+
+  <include file="$(find razor_imu_9dof)/launch/razor-pub.launch"/>
+
+</launch>

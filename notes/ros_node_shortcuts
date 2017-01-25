@@ -1,0 +1,41 @@
+Some of this is theoretical because we haven't tied it all in together and made it work
+
+RUNNING THE CAR
+Source our ROS code:
+>>> source ~/catkin_ws/devel/setup.bash
+OR
+>>> . ~/ros_setup.sh
+
+BUILDING CODE (esp w/ cpp, or new msg)
+on initial run/build:
+>>> cd ~/catkin_ws
+>>> catkin_make
+>>> catkin_make install
+No need to do 'source install/setup.bash'!
+
+ROS
+Must ALWAYS run 'roscore' first and have it running:
+>>> roscore
+
+KEYBOARD CONTROL
+>>> rosrun race keyboard.py
+
+RUNNING TALKER
+>>> rosrun race talker.py
+
+RUNNING TEENSY
+>>> rosrun rosserial_python serial_node.py /dev/ttyACM0
+
+## end of week 1 --> keyboard control
+
+RUNNING KILL SWITCH
+>>> rosrun race kill.py # doesn't do anything but still
+curses.KEY_HOME for mac: Fn+left
+curses.KEY_DC for mac: Fn+Delete
+
+RUNNING HOKUYO
+>>> rosrun urg_node urg_node _ip_address:="192.168.1.11"
+
+RUNNING IMU
+>>> roslaunch razor_imu_9dof razor-pub.launch
+(to visualise: >>> roslaunch razor_imu_9dof razor−pub-and-display.launch)

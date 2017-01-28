@@ -346,6 +346,62 @@ hectorOdom/fast:
 .PHONY : hectorOdom/fast
 
 # Convenience name for target.
+race/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 race/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+.PHONY : race/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_cpp: race/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+.PHONY : nav_msgs_generate_messages_cpp
+
+# fast build rule for target.
+nav_msgs_generate_messages_cpp/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make race/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
+.PHONY : nav_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+race/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 race/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+.PHONY : race/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_lisp: race/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+.PHONY : nav_msgs_generate_messages_lisp
+
+# fast build rule for target.
+nav_msgs_generate_messages_lisp/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make race/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
+.PHONY : nav_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+race/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 race/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+.PHONY : race/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_py: race/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+.PHONY : nav_msgs_generate_messages_py
+
+# fast build rule for target.
+nav_msgs_generate_messages_py/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make race/CMakeFiles/nav_msgs_generate_messages_py.dir/build
+.PHONY : nav_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+race/CMakeFiles/odom.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 race/CMakeFiles/odom.dir/rule
+.PHONY : race/CMakeFiles/odom.dir/rule
+
+# Convenience name for target.
+odom: race/CMakeFiles/odom.dir/rule
+.PHONY : odom
+
+# fast build rule for target.
+odom/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/odom.dir/build.make race/CMakeFiles/odom.dir/build
+.PHONY : odom/fast
+
+# Convenience name for target.
 race/CMakeFiles/odom_scan_matcher.dir/rule:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 race/CMakeFiles/odom_scan_matcher.dir/rule
 .PHONY : race/CMakeFiles/odom_scan_matcher.dir/rule
@@ -669,6 +725,30 @@ src/hectorOdom.cpp.s:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/hectorOdom.dir/build.make race/CMakeFiles/hectorOdom.dir/src/hectorOdom.cpp.s
 .PHONY : src/hectorOdom.cpp.s
 
+src/odom.o: src/odom.cpp.o
+.PHONY : src/odom.o
+
+# target to build an object file
+src/odom.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/odom.dir/build.make race/CMakeFiles/odom.dir/src/odom.cpp.o
+.PHONY : src/odom.cpp.o
+
+src/odom.i: src/odom.cpp.i
+.PHONY : src/odom.i
+
+# target to preprocess a source file
+src/odom.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/odom.dir/build.make race/CMakeFiles/odom.dir/src/odom.cpp.i
+.PHONY : src/odom.cpp.i
+
+src/odom.s: src/odom.cpp.s
+.PHONY : src/odom.s
+
+# target to generate assembly for a file
+src/odom.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/odom.dir/build.make race/CMakeFiles/odom.dir/src/odom.cpp.s
+.PHONY : src/odom.cpp.s
+
 src/process_scan.o: src/process_scan.cpp.o
 .PHONY : src/process_scan.o
 
@@ -718,6 +798,10 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... nav_msgs_generate_messages_cpp"
+	@echo "... nav_msgs_generate_messages_lisp"
+	@echo "... nav_msgs_generate_messages_py"
+	@echo "... odom"
 	@echo "... odom_scan_matcher"
 	@echo "... processScan"
 	@echo "... race_gencpp"
@@ -747,6 +831,9 @@ help:
 	@echo "... src/hectorOdom.o"
 	@echo "... src/hectorOdom.i"
 	@echo "... src/hectorOdom.s"
+	@echo "... src/odom.o"
+	@echo "... src/odom.i"
+	@echo "... src/odom.s"
 	@echo "... src/process_scan.o"
 	@echo "... src/process_scan.i"
 	@echo "... src/process_scan.s"

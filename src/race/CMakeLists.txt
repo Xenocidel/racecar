@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
   geometry_msgs
   tf
+  nav_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -73,6 +74,7 @@ find_package(catkin REQUIRED COMPONENTS
  generate_messages(
    DEPENDENCIES
    sensor_msgs#   std_msgs
+   nav_msgs
  )
 
 ################################################
@@ -107,7 +109,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES race
-  CATKIN_DEPENDS roscpp rospy sensor_msgs std_msgs geometry_msgs
+  CATKIN_DEPENDS roscpp rospy sensor_msgs std_msgs geometry_msgs nav_msgs
 #  DEPENDS system_lib
 )
 
@@ -138,10 +140,12 @@ add_executable(odom_scan_matcher src/getOdomFromMatcher.cpp)
 add_executable(hectorOdom src/hectorOdom.cpp)
 add_executable(amclOdom src/amclOdom.cpp)
 add_executable(processScan src/process_scan.cpp)
+add_executable(odom src/odom.cpp)
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(race_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(odom sensor_msgs)
 
 
 
@@ -156,6 +160,9 @@ target_link_libraries(amclOdom
    ${catkin_LIBRARIES}
  )
 target_link_libraries(processScan
+   ${catkin_LIBRARIES}
+ )
+target_link_libraries(odom
    ${catkin_LIBRARIES}
  )
 
@@ -206,3 +213,5 @@ target_link_libraries(processScan
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+

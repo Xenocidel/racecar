@@ -1060,6 +1060,58 @@ hectorOdom/fast:
 .PHONY : hectorOdom/fast
 
 #=============================================================================
+# Target rules for targets named nav_msgs_generate_messages_cpp
+
+# Build rule for target.
+nav_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav_msgs_generate_messages_cpp
+.PHONY : nav_msgs_generate_messages_cpp
+
+# fast build rule for target.
+nav_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f race/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make race/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
+.PHONY : nav_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named nav_msgs_generate_messages_lisp
+
+# Build rule for target.
+nav_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav_msgs_generate_messages_lisp
+.PHONY : nav_msgs_generate_messages_lisp
+
+# fast build rule for target.
+nav_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f race/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make race/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
+.PHONY : nav_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named nav_msgs_generate_messages_py
+
+# Build rule for target.
+nav_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nav_msgs_generate_messages_py
+.PHONY : nav_msgs_generate_messages_py
+
+# fast build rule for target.
+nav_msgs_generate_messages_py/fast:
+	$(MAKE) -f race/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make race/CMakeFiles/nav_msgs_generate_messages_py.dir/build
+.PHONY : nav_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named odom
+
+# Build rule for target.
+odom: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 odom
+.PHONY : odom
+
+# fast build rule for target.
+odom/fast:
+	$(MAKE) -f race/CMakeFiles/odom.dir/build.make race/CMakeFiles/odom.dir/build
+.PHONY : odom/fast
+
+#=============================================================================
 # Target rules for targets named odom_scan_matcher
 
 # Build rule for target.
@@ -2000,6 +2052,10 @@ help:
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... hectorOdom"
+	@echo "... nav_msgs_generate_messages_cpp"
+	@echo "... nav_msgs_generate_messages_lisp"
+	@echo "... nav_msgs_generate_messages_py"
+	@echo "... odom"
 	@echo "... odom_scan_matcher"
 	@echo "... processScan"
 	@echo "... race_gencpp"

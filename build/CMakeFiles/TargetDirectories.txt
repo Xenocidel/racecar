@@ -57,6 +57,10 @@
 /home/ubuntu/catkin_ws/build/gtest/CMakeFiles/gtest_main.dir
 /home/ubuntu/catkin_ws/build/race/CMakeFiles/hectorOdom.dir
 /home/ubuntu/catkin_ws/build/robot_model/kdl_parser/CMakeFiles/kdl_parser.dir
+/home/ubuntu/catkin_ws/build/race/CMakeFiles/nav_msgs_generate_messages_cpp.dir
+/home/ubuntu/catkin_ws/build/race/CMakeFiles/nav_msgs_generate_messages_lisp.dir
+/home/ubuntu/catkin_ws/build/race/CMakeFiles/nav_msgs_generate_messages_py.dir
+/home/ubuntu/catkin_ws/build/race/CMakeFiles/odom.dir
 /home/ubuntu/catkin_ws/build/race/CMakeFiles/odom_scan_matcher.dir
 /home/ubuntu/catkin_ws/build/race/CMakeFiles/processScan.dir
 /home/ubuntu/catkin_ws/build/race/CMakeFiles/race_gencpp.dir

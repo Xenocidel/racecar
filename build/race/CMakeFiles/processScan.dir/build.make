@@ -90,12 +90,12 @@ processScan_EXTERNAL_OBJECTS =
 /home/ubuntu/catkin_ws/devel/lib/race/processScan: /usr/lib/arm-linux-gnueabihf/libboost_filesystem.so
 /home/ubuntu/catkin_ws/devel/lib/race/processScan: /opt/ros/indigo/lib/libxmlrpcpp.so
 /home/ubuntu/catkin_ws/devel/lib/race/processScan: /opt/ros/indigo/lib/libtf2.so
-/home/ubuntu/catkin_ws/devel/lib/race/processScan: /opt/ros/indigo/lib/libroscpp_serialization.so
 /home/ubuntu/catkin_ws/devel/lib/race/processScan: /opt/ros/indigo/lib/librosconsole.so
 /home/ubuntu/catkin_ws/devel/lib/race/processScan: /opt/ros/indigo/lib/librosconsole_log4cxx.so
 /home/ubuntu/catkin_ws/devel/lib/race/processScan: /opt/ros/indigo/lib/librosconsole_backend_interface.so
 /home/ubuntu/catkin_ws/devel/lib/race/processScan: /usr/lib/liblog4cxx.so
 /home/ubuntu/catkin_ws/devel/lib/race/processScan: /usr/lib/arm-linux-gnueabihf/libboost_regex.so
+/home/ubuntu/catkin_ws/devel/lib/race/processScan: /opt/ros/indigo/lib/libroscpp_serialization.so
 /home/ubuntu/catkin_ws/devel/lib/race/processScan: /opt/ros/indigo/lib/librostime.so
 /home/ubuntu/catkin_ws/devel/lib/race/processScan: /usr/lib/arm-linux-gnueabihf/libboost_date_time.so
 /home/ubuntu/catkin_ws/devel/lib/race/processScan: /opt/ros/indigo/lib/libcpp_common.so

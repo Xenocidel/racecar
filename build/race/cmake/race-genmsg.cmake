@@ -2,7 +2,7 @@
 
 message(STATUS "race: 3 messages, 0 services")
 
-set(MSG_I_FLAGS "-Irace:/home/ubuntu/catkin_ws/src/race/msg;-Isensor_msgs:/opt/ros/indigo/share/sensor_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Irace:/home/ubuntu/catkin_ws/src/race/msg;-Isensor_msgs:/opt/ros/indigo/share/sensor_msgs/cmake/../msg;-Inav_msgs:/opt/ros/indigo/share/nav_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/indigo/share/geometry_msgs/cmake/../msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg;-Iactionlib_msgs:/opt/ros/indigo/share/actionlib_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -191,6 +191,7 @@ if(gencpp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ra
   )
 endif()
 add_dependencies(race_generate_messages_cpp sensor_msgs_generate_messages_cpp)
+add_dependencies(race_generate_messages_cpp nav_msgs_generate_messages_cpp)
 
 if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/race)
   # install generated code
@@ -200,6 +201,7 @@ if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/
   )
 endif()
 add_dependencies(race_generate_messages_lisp sensor_msgs_generate_messages_lisp)
+add_dependencies(race_generate_messages_lisp nav_msgs_generate_messages_lisp)
 
 if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/race)
   install(CODE "execute_process(COMMAND \"/usr/bin/python\" -m compileall \"${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/race\")")
@@ -210,3 +212,4 @@ if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/race
   )
 endif()
 add_dependencies(race_generate_messages_py sensor_msgs_generate_messages_py)
+add_dependencies(race_generate_messages_py nav_msgs_generate_messages_py)

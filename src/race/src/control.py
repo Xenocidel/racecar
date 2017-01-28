@@ -3,7 +3,9 @@ import Tkinter as tk
 import rospy
 from race.msg import drive_param
 from race.msg import pid_input
+from std_msgs.msg import Int32
 
+SIDE = -1
 kp = 14.0
 kd = 0.09
 servo_offset = 18.5
@@ -11,7 +13,7 @@ prev_error = 0.0
 vel_input = 12.0
 C = 10
 pub = rospy.Publisher('drive_parameters', drive_param, queue_size=1)
-
+publish = rospy.Publisher('side', Int32, queue_size=1)
 def control(data):
     global prev_error
     global vel_input
@@ -32,7 +34,7 @@ def control(data):
 
     
 
-    angle = C * (kp*curr_error + kd*diff_error) 
+    angle = SIDE * C * (kp*curr_error + kd*diff_error) 
 
     if angle > 90: 
             angle = 90
@@ -53,5 +55,8 @@ if __name__ == '__main__':
     kd = input("Enter Kd Value: ")
     vel_input = input("Enter Velocity: ")
     rospy.init_node('pid_controller', anonymous=True)
+    msg = Int32()
+    msg.data = SIDE
+    publish.publish(msg)
     rospy.Subscriber("error", pid_input, control)
     rospy.spin()

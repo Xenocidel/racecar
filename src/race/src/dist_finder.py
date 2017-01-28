@@ -5,13 +5,16 @@ import math
 from sensor_msgs.msg import LaserScan
 from race.msg import pid_input
 from math import *
+from std_msgs.msg import Int32
 
 # same as desired trajectory
 AC = 1
 #vel = 30
 #vel = 12
-CENTER= None
 
+CENTER= None
+SIDE = 0
+#SIDE = 1 is right SIDE = -1 is left
 pub = rospy.Publisher('error', pid_input, queue_size=10)
 
 ##  Input:  data: Lidar scan data
@@ -45,12 +48,12 @@ def getRange(data,theta):
     return None
 
 def callback(data):
-    global AC, CENTER
+    global AC, CENTER, SIDE
 
     theta = 50;
     swing = math.radians(theta)
-    a = getRange(data,-pi/2+swing)
-    b = getRange(data,-pi/2)
+    a = getRange(data,SIDE * (-pi/2+swing))
+    b = getRange(data,SIDE * (-pi/2))
 
     alpha = atan((a*cos(swing)-b)/(a*sin(swing))) 
 
@@ -65,10 +68,6 @@ def callback(data):
     error = CENTER-CD
 
 
-
-
-
-
     ## END
 
     msg = pid_input()
@@ -77,9 +76,13 @@ def callback(data):
     #msg.pid_vel = vel
     pub.publish(msg)
     
+def callback2(data):
+    global SIDE
+    SIDE = data.data
 
 if __name__ == '__main__':
     print("Laser node started")
     rospy.init_node('dist_finder',anonymous = True)
+    rospy.Subscriber('side',Int32,callback2)
     rospy.Subscriber("scan",LaserScan,callback)
     rospy.spin()

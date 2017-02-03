@@ -10,13 +10,13 @@ curses.cbreak()
 stdscr.keypad(1)
 rospy.init_node('wall_switcher', anonymous=True)
 em_pub = rospy.Publisher('side', Int32, queue_size=1)
-#k_pub = rospy.Publisher('eStop',Bool,queue_size=10)
+k_pub = rospy.Publisher('eStop',Bool,queue_size=10)
 stdscr.refresh()
 
 msg = Int32()
 msg.data = 1
 em_pub.publish(msg)
-#k_pub.publish(False)
+k_pub.publish(False)
 
 key = ''
 while key != ord('q'):
@@ -33,6 +33,6 @@ while key != ord('q'):
         em_pub.publish(msg)
         stdscr.addstr(5, 20, "RIGHT")
 
-#k_pub.publish(True)
+k_pub.publish(True)
 
 curses.endwin()

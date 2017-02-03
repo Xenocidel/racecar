@@ -2,6 +2,8 @@
 
 <launch>
 
+    <!--Has IMU-specific transforms, for possible use with future IMU-based odometry-->
+
 	<arg name="map_name" value="SmallObstacles"/>
 
 	<node pkg="tf" type="static_transform_publisher" name="base_frame_to_laser" args="0.0 0.0 0.0 0.0 0.0 0.0 /base_frame /laser 50" />
@@ -12,5 +14,5 @@
 
     <node pkg="race" type="imuFixer.py" name="imuFixer" />
 
-<param name="use_sim_time" value="false"/>
+    <param name="use_sim_time" value="false"/>
 </launch>

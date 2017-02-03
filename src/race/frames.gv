@@ -1,9 +1,0 @@
-digraph G {
-"odom" -> "base_frame"[label="Broadcaster: /hectorOdom\nAverage rate: 1990000.000 Hz\nMost recent transform: 0.000 ( 13089.111 sec old)\nBuffer length: 0.000 sec\n"];
-"base_frame" -> "laser"[label="Broadcaster: /base_frame_to_laser\nAverage rate: 40.250 Hz\nMost recent transform: 13089.142 ( -0.030 sec old)\nBuffer length: 4.919 sec\n"];
-"base_frame" -> "base_imu_link"[label="Broadcaster: /base_frame_to_imu\nAverage rate: 99.293 Hz\nMost recent transform: 13089.113 ( -0.002 sec old)\nBuffer length: 4.925 sec\n"];
-edge [style=invis];
- subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
-"Recorded at time: 13089.111"[ shape=plaintext ] ;
- }->"odom";
-}

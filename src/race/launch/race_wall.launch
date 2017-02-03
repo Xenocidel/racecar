@@ -6,8 +6,9 @@
   
  
   <node name="dist_finder" pkg="race" type="dist_finder.py"/> 
-  <node name="control" pkg="race" type="control.py"/>
+  <node name="control" pkg="race" type="controlKill.py"/>
 
+  <include file="$(find race)/launch/localize/amcl_hector.launch"/> 
 
-  <node name="keyWall" pkg="race" type="keyWall.py" output="screen"/>
+  <node name="wall_chooser" pkg="race" type="keyWall.py" output="screen"/>
 </launch>

@@ -7,7 +7,7 @@ from std_msgs.msg import Int32
 from std_msgs.msg import Bool
 
 dead = False
-SIDE = 1
+SIDE = -1
 kp = 14.0
 kd = 0.09
 servo_offset = 18.5

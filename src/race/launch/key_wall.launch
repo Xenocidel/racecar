@@ -7,7 +7,7 @@
  
   <node name="dist_finder" pkg="race" type="dist_finder.py"/> 
   
-  <node name="control" pkg="race" type="controlKill.py"/>
+  <node name="control" pkg="race" type="control.py"/>
 
   <node name="wall_chooser" pkg="race" type="keyWall.py" output="screen"/>
 </launch>

@@ -123,7 +123,7 @@ def do_stuff():                                                 #Functionality: 
 currentNode=1                   #Start node; this number is the index of the node that the car is current on or reaching
 direction=1                     #A direction of 1 means the car is traveling clockwise, -1 is counterclockwise (later reverses nodelist if counterclockwise)
 in_threshold=10                 #Threshold for how close to the node you must be to set the wall
-out_threshold=2                 #Threshold for how far from the node you must reach to move on to next node
+out_threshold=1                 #Threshold for how far from the node you must reach to move on to next node
 nodes=[ [(0.5,-.2),[0,1,1,0]], [(21,0),[0,1,1,1]], [(29,0),[0,0,1,1]], [(29.5,-17.9),[1,0,0,1]], [(1,-19),[1,1,0,0]] ]
                                 #Nodes list in order of traversal, nodes are in format [(x,y),[up=0,right=1,down=2,left=3]]
 
@@ -147,7 +147,7 @@ if __name__=='__main__':
         nodes.reverse()
         currentNode=len(nodes)-1-currentNode                #Adjust currentNode to compensate for flipped nodes list
     
-    setSide(1)                                              #Sets initial side (wall following) to right wall
+    setSide(-1)                                              #Sets initial side (wall following) to right wall
     sub = rospy.Subscriber('amcl_pose',PoseWithCovarianceStamped,callback) 
     rospy.spin()
 #-----          Initialization End              -----#

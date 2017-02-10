@@ -136,6 +136,7 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   INCLUDE("/home/ubuntu/catkin_ws/build/robot_model/collada_urdf/cmake_install.cmake")
   INCLUDE("/home/ubuntu/catkin_ws/build/robot_model/kdl_parser/cmake_install.cmake")
   INCLUDE("/home/ubuntu/catkin_ws/build/robot_model/kdl_parser_py/cmake_install.cmake")
+  INCLUDE("/home/ubuntu/catkin_ws/build/zed_wrapper/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

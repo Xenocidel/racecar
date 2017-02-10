@@ -7,7 +7,8 @@ from std_msgs.msg import Int32
 from std_msgs.msg import Bool
 
 dead = False
-SIDE = -1
+SIDE = rospy.get_param("/initial_side", "-1") #defaults to left wall following
+#SIDE = 1 is right SIDE = -1 is left
 kp = 14.0
 kd = 0.09
 servo_offset = 18.5

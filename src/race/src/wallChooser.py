@@ -119,13 +119,13 @@ def do_stuff():                                                 #Functionality: 
 
 #-----          Changeable Variables Start      -----#
 
-(car_x,car_y)=(0,0)             # ******* car x and y should actually be subscribed to node that constantly updates x,y
-currentNode=1                   #Start node; this number is the index of the node that the car is current on or reaching
-direction=1                     #A direction of 1 means the car is traveling clockwise, -1 is counterclockwise (later reverses nodelist if counterclockwise)
-in_threshold=10                 #Threshold for how close to the node you must be to set the wall
-out_threshold=1                 #Threshold for how far from the node you must reach to move on to next node
+(car_x,car_y)=(0,0)                             # ******* car x and y should actually be subscribed to node that constantly updates x,y
+currentNode=rospy.getParam("current_node",1)    #Start node; this number is the index of the node that the car is current on or reaching
+direction=rospy.getParam("direction",1)         #A direction of 1 means the car is traveling clockwise, -1 is counterclockwise (later reverses nodelist if counterclockwise)
+in_threshold=10                                 #Threshold for how close to the node you must be to set the wall
+out_threshold=1                                 #Threshold for how far from the node you must reach to move on to next node
 nodes=[ [(0.5,-.2),[0,1,1,0]], [(21,0),[0,1,1,1]], [(29,0),[0,0,1,1]], [(29.5,-17.9),[1,0,0,1]], [(1,-19),[1,1,0,0]] ]
-                                #Nodes list in order of traversal, nodes are in format [(x,y),[up=0,right=1,down=2,left=3]]
+                                                #Nodes list in order of traversal, nodes are in format [(x,y),[up=0,right=1,down=2,left=3]]
 
 #-----          Changeable Variables End        -----#
 
@@ -147,7 +147,7 @@ if __name__=='__main__':
         nodes.reverse()
         currentNode=len(nodes)-1-currentNode                #Adjust currentNode to compensate for flipped nodes list
     
-    setSide(-1)                                              #Sets initial side (wall following) to right wall
+    setSide(rospy.get_param("/initial_side", "-1"))          #Sets initial side (wall following) to left wall
     sub = rospy.Subscriber('amcl_pose',PoseWithCovarianceStamped,callback) 
     rospy.spin()
 #-----          Initialization End              -----#

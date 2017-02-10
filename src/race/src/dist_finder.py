@@ -13,7 +13,7 @@ AC = 1
 #vel = 12
 
 CENTER= None
-SIDE = -1
+SIDE = rospy.get_param("/initial_side", "-1") #defaults to left wall following
 #SIDE = 1 is right SIDE = -1 is left
 pub = rospy.Publisher('error', pid_input, queue_size=10)
 

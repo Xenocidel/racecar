@@ -22,6 +22,8 @@ def callback(data):
         if not (data.linear_acceleration.x <= THRESH_X and data.linear_acceleration >= 0):
 
             VELOCITY.data += data.linear_acceleration.x*(1.0/(20*math.pow(10,6)))
+
+
         em_pub.publish(VELOCITY)
             
 

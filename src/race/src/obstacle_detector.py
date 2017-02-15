@@ -20,6 +20,8 @@ em_pub = rospy.Publisher('eStop', Bool, queue_size=10)
 
 
 '''Update saved drive parameters'''
+
+# daniel: where does drive_data come from?
 def save_drive(drive_data):
 	global velocity,angle
 	velocity = drive_data.velocity
@@ -81,5 +83,7 @@ def detect_collision(laser_data):
 
 if __name__=='__main__':
 	rospy.init_node('wall_detector', anonymous=True)
+
+    # daniel: this publisher is not being used anywhere, nothing is being published
 	drive_sub = rospy.Publisher('drive_parameters', drive_param, save_drive)
 	laser_sub = rospy.Publisher('scan', LaserScan, sanity_checker)

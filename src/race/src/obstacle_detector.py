@@ -53,7 +53,7 @@ def getSomeScans(data,theta_start,theta_end):
 
 	subset = data.ranges[start:end]
 	MIN = data.range_min
-	return [x for x in subset if (~isnan(x) && x>MIN)] #discards garbage
+	return [x for x in subset if (~isnan(x) and x>MIN)] #discards garbage
 
 FRONT_BUMPER_THRESHOLD = .25
 

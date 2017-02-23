@@ -1,4 +1,8 @@
 <launch>
+  <param name="/initial_side" value="-1"/>
+  <param name="direction" value="1"/>
+  <param name="current_node" value="1"/>
+  
   <node name="talker" pkg="race" type="talker.py"/>
   
   <node name="teensy" pkg="rosserial_python" type="serial_node.py" args="/dev/ttyACM0"/>

@@ -56,6 +56,7 @@ Input:  data: Lidar scan data
 OUTPUT: distance of scan at angle theta
 '''
 def getSomeScans(data,theta_start,theta_end):
+<<<<<<< HEAD
     if (theta_start > theta_end):
         return None
     theta_0 = data.angle_min
@@ -84,6 +85,7 @@ def detect_collision(laser_data):
     left_theta = -pi/64
     right_theta = pi/64
 
+<<<<<<< HEAD
     #Check scans in immediate front
     distances = getSomeScans(laser_data,left_theta,right_theta)
     if min(distances)<FRONT_BUMPER_THRESHOLD:
@@ -102,6 +104,7 @@ def set_threshold(data):
     FRONT_BUMPER_THRESHOLD = (.5 if data.data else 1.5)
 
 if __name__=='__main__':
+<<<<<<< HEAD
     rospy.init_node('wall_detector', anonymous=True)
 
     #drive_sub = rospy.Subscriber('drive_parameters', drive_param, save_drive)

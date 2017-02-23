@@ -45,6 +45,11 @@ def callback(data):
             VELOCITY.data += SIGN*round(data.linear_acceleration.x,1)*dt #(1.0/48) 
             print(str(data.header.stamp.to_sec()) + ", "+str(data.linear_acceleration.x)) 
         em_pub.publish(VELOCITY) 
+
+            #VELOCITY.data += data.linear_acceleration.x*(1.0/(20*math.pow(10,6)))
+
+
+        #em_pub.publish(VELOCITY)
             
 
 

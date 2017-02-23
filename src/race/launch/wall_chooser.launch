@@ -11,5 +11,8 @@
 
   <include file="$(find race)/launch/amcl_hector.launch"/> 
 
-  <node name="wall_chooser" pkg="race" type="wallChooser.py" output="screen"/>
+  <node name="wall_chooser" pkg="race" type="wallChooser.py"/>
+
+  <node name="kill_switch" pkg="race" type="kill.py" output="screen"/>
+
 </launch>

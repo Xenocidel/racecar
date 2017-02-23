@@ -147,7 +147,7 @@ if __name__=='__main__':
         nodes.reverse()
         currentNode=len(nodes)-1-currentNode                #Adjust currentNode to compensate for flipped nodes list
     
-    setSide(-1)                                              #Sets initial side (wall following) to right wall
+    setSide(1) #-1)                                              #Sets initial side (wall following) to right wall
     sub = rospy.Subscriber('amcl_pose',PoseWithCovarianceStamped,callback) 
     rospy.spin()
 #-----          Initialization End              -----#

@@ -6,14 +6,23 @@ from race.msg import pid_input
 from std_msgs.msg import Int32
 from std_msgs.msg import Bool
 
+##IGNORE
+# (kp,kd,C,SCALE_FACTOR)
+
+# constants = {'30': (5.75,5,25,1.5), '12': (14,.09,10,1)}
+##ENDIGNORE 
+
+# (kd,SCALE_FACTOR)
+constants = {'30': (12.5,1.5), '12': (.09,1), '45': (15,1.5)}
+
 dead = False
-SIDE = -1
-kp = 14. #14.0
-kd = .09 #0.09
+SIDE = 1 #-1
+kp = 14.0 #14.0
+kd = 0.09 #15 #12.5 #0.09
 servo_offset = 18.5
 prev_error = 0.0 
 vel_input = 12.0
-C = 10 #10 
+C = 10 
 pub = rospy.Publisher('drive_parameters', drive_param, queue_size=1)
 
 def kill(data):

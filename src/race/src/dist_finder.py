@@ -14,7 +14,7 @@ vel = 30
 #vel = 12
 
 CENTER= None
-SIDE = -1
+SIDE = 1 #-1
 #SIDE = 1 is right SIDE = -1 is left
 pub = rospy.Publisher('error', pid_input, queue_size=10)
 

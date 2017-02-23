@@ -18,7 +18,7 @@ key = ''
 while key != ord('q'):
     key = stdscr.getch()
     stdscr.refresh()
-    if key == curses.KEY_DC:
+    if key == curses.KEY_DC or key==107:
         v_msg = Int32(0)
         v_pub.publish(v_msg)
         #em_pub.publish(True)

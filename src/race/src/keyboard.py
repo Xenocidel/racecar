@@ -56,7 +56,7 @@ while key != ord('q'):
         stdscr.addstr(2, 25, '%.2f' % forward)
         stdscr.addstr(5, 20, "    ")
     elif key == curses.KEY_DOWN:
-        forward = forward - 2; 
+        forward = forward - 1; 
         stdscr.addstr(2, 20, "Down")
         stdscr.addstr(2, 25, '%.2f' % forward)
         stdscr.addstr(5, 20, "    ")

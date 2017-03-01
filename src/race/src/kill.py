@@ -4,6 +4,30 @@ import rospy
 from std_msgs.msg import Bool
 import curses
 from std_msgs.msg import Int32
+import time
+
+'''
+Brake and then go at 20 velocity
+'''
+def brakePump():
+        global em_pub, activated
+        for i in range(1):
+            v_msg = Int32(-70)
+            for x in range(10):
+                v_msg.data -= 10
+                v_pub.publish(v_msg)
+
+            time.sleep(0.4)
+
+            for x in range(19):
+                if v_msg.data > 12:
+                    v_msg.data = 12
+                v_msg.data += 10
+                v_pub.publish(v_msg)
+
+            time.sleep(0.3)
+            #em_pub.publish(True)
+            print("BREAKS PUMPED")
 
 stdscr = curses.initscr()
 curses.cbreak()
@@ -29,6 +53,8 @@ while key != ord('q'):
     elif key == curses.KEY_HOME or key == 104:
         em_pub.publish(False)
         stdscr.addstr(5, 20, "Normal Operation :)")
+    elif key == 98:
+        brakePump()
 
 #em_pub.publish(True)
 curses.endwin()

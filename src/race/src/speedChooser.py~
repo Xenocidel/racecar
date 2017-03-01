@@ -9,7 +9,9 @@
 from math import sqrt           #Square root for distance_finder
 import rospy                    #ROS package for use in python, rospy
 from std_msgs.msg import Int32  #Standard messages Int32 to publish 'side'
+from std_msgs.msg import Bool  #Standard messages Bool to publish 'is_turning'
 from geometry_msgs.msg import PoseWithCovarianceStamped
+import time
 #-----          Imports End                     -----#
 
 
@@ -17,6 +19,28 @@ from geometry_msgs.msg import PoseWithCovarianceStamped
 
 
 #-----          Internal Functions Start        -----#
+
+
+'''
+Brake and then go at 20 velocity
+'''
+def brakePump():
+        for i in range(1):
+            v_msg = Int32(-70)
+            for x in range(10):
+                v_msg.data -= 10
+                em_pub.publish(v_msg)
+
+            time.sleep(0.4)
+
+            for x in range(19):
+                if v_msg.data > 12:
+                    v_msg.data = 12
+                v_msg.data += 10
+                em_pub.publish(v_msg)
+
+            time.sleep(0.3)
+            print("BREAKS PUMPED")
 
       
 def distance_from_node():                                       #Output: distance of car from current node as an integer (negative value means it passed the current node)
@@ -45,17 +69,27 @@ def setSpeed(s):                                                 #Input: Integer
     print("set speed to ",s) 
     em_pub.publish(msg)                                             #Publishes message to 'side' variable
 
+
+def setTurning(turn):
+	turn_pub.publish(turn)
+	print("Set 'turning' to ",turn)
+	
+
 def do_stuff():                                                 #Functionality: function called every time (x,y) is updated
-    global currentNode, nodes, in_threshold,out_threshold           #Global variables for node info and in/out thresholds
+    global currentNode, nodes, in_threshold,out_threshold,out_threshold_turn,in_threshold_turn           #Global variables for node info and in/out thresholds
     current_dist=distance_from_node()                               #Distance from the current node (for checking thresholds)
     if (current_dist>=0):                                           #If 'entering' current node
         if (current_dist<in_threshold):                                 #If car has entered node's range
             setSpeed(12)                                            #Publish speed
+        if (current_dist<in_threshold_turn):
+            setTurning(True)
     elif (current_dist<0):                                          #If 'exiting' current node
         if (current_dist<-1*out_threshold):                             #If car has fully exited node's range
             currentNode=(currentNode+1)%len(nodes)                          #Update node to the next node
             print("Set current node to ",currentNode)
-            setSpeed(30)
+            setSpeed(23)
+        if (current_dist<-1*out_threshold_turn):
+            setTurning(False)
             #do_stuff()
  
 #-----      Directly Usable Functions End       -----#
@@ -73,6 +107,8 @@ in_threshold=7                                 #Threshold for how close to the n
 out_threshold=5                                 #Threshold for how far from the node you must reach to move on to next node
 nodes=[ [(0.5,-.2),[0,1,1,0]], [(29,0),[0,0,1,1]], [(29.5,-17.9),[1,0,0,1]], [(1,-19),[1,1,0,0]] ]
                                                 #Nodes list in order of traversal, nodes are in format [(x,y),[up=0,right=1,down=2,left=3]]
+in_threshold_turn=2
+out_threshold_turn=3
 
 #-----          Changeable Variables End        -----#
 
@@ -89,12 +125,13 @@ def callback(data):
 if __name__=='__main__':
     rospy.init_node('speed_control', anonymous=True)         #Create node to publish SIDE to ("side_control")
     em_pub = rospy.Publisher('drive_velocity', Int32, queue_size=1)   #Make the publisher for 'side' variable
+    turn_pub = rospy.Publisher('is_turning', Bool, queue_size=1)   #Make the publisher for 'is_turning' variable
     
     if (direction==-1):                                     #Reverses order of traversing nodes if counterclockwise
         nodes.reverse()
         currentNode=len(nodes)-1-currentNode                #Adjust currentNode to compensate for flipped nodes list
     
-    setSpeed(12)          #Sets initial speed to 12
+    setSpeed(23)          #Sets initial speed to 30
     sub = rospy.Subscriber('amcl_pose',PoseWithCovarianceStamped,callback) 
     rospy.spin()
 #-----          Initialization End              -----#

@@ -1,5 +1,8 @@
 <launch>
-  <include file="$(find razor_imu_9dof)/launch/razor-pub.launch"/> 
+  <param name="/initial_side" value="-1"/>
+  <param name="direction" value="1"/>
+  <param name="current_node" value="1"/>
+  <param name="/initial_speed" value="45"/>   
   
   <node name="talker" pkg="race" type="talker.py"/>
   
@@ -12,4 +15,6 @@
   <node name="control" pkg="race" type="control.py"/>
 
   <node name="wall_chooser" pkg="race" type="keyWall.py" output="screen"/>
+
+  <node name="obstacle_detector" pkg="race" type="obstacle_detector.py" output="screen"/>
 </launch>

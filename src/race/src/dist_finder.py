@@ -6,22 +6,30 @@ from sensor_msgs.msg import LaserScan
 from race.msg import pid_input
 from math import *
 from std_msgs.msg import Int32
+import constants
 
 # same as desired trajectory
 AC = 1
 SPEED_FACTOR = 1 
-vel = 30
-#vel = 12
+vel = rospy.get_param("/initial_speed", "12")
+
+def set_speed_factor():
+    global SPEED_FACTOR
+    if (vel in constants.PID_CONST.keys()): 
+        SPEED_FACTOR = constants.PID_CONST[vel]['SPEED_FACTOR']
+
+set_speed_factor()
 
 CENTER= None
-SIDE = 1 #-1
+SIDE = rospy.get_param("/initial_side", -1)
 #SIDE = 1 is right SIDE = -1 is left
 pub = rospy.Publisher('error', pid_input, queue_size=10)
 
 # Sets SPEED_FACTOR based on new velocity data
 def get_velocity(data):
-        global SPEED_FACTOR 
-        SPEED_FACTOR = data.data/12 
+    global vel
+    vel = data.data
+    set_speed_factor()
 
 ##  Input:  data: Lidar scan data
 ##          theta: The angle at which the distance is requried

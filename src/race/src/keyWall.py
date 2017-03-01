@@ -15,7 +15,7 @@ v_pub = rospy.Publisher('drive_velocity', Int32, queue_size=1)
 stdscr.refresh()
 VELOCITY = 0
 
-SPEEDS = [-70, -7, 0, 12, 30]
+SPEEDS = [-70, -7, 0, 12, 23]
 
 msg = Int32()
 msg.data = 1

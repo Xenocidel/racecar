@@ -6,13 +6,13 @@
 
 #-----          Imports Start                   -----#
 
-from math import sqrt           #Square root for distance_finder
+from math import *           #Square root for distance_finder
 import rospy                    #ROS package for use in python, rospy
 from std_msgs.msg import Int32  #Standard messages Int32 to publish 'side'
 from geometry_msgs.msg import PoseWithCovarianceStamped
 #-----          Imports End                     -----#
 
-
+side_published = False
 
 
 
@@ -91,7 +91,7 @@ def setSide(s):                                                 #Input: Integer 
                                                                 #Functionality: Sets 'side' variable to 's'
     msg = Int32()                                                   #Message of type Int32, which will be published
     msg.data = s                                                    #Sets message data to 's'
-    print("set side to ",s) 
+    print("set side to "+str(s)+" at "+str(car_x)+", "+str(car_y)) 
     em_pub.publish(msg)                                             #Publishes message to 'side' variable
 
 def findSide():                                                 #Functionality: generates current side to follow using earlier functions
@@ -100,16 +100,20 @@ def findSide():                                                 #Functionality: 
                                                                     #Calculate needed side by calling in/out functions on current node
 
 def do_stuff():                                                 #Functionality: function called every time (x,y) is updated
+    global side_published 
     global currentNode, nodes, in_threshold,out_threshold           #Global variables for node info and in/out thresholds
     current_dist=distance_from_node()                               #Distance from the current node (for checking thresholds)
     if (current_dist>=0):                                           #If 'entering' current node
         if (current_dist<in_threshold):                                 #If car has entered node's range
-            setSide(findSide())                                            #Publish side
+            if not side_published: 
+                side_published = True
+                setSide(findSide())                                            #Publish side
     elif (current_dist<0):                                          #If 'exiting' current node
         if (current_dist<-1*out_threshold):                             #If car has fully exited node's range
+            side_published = False            
             currentNode=(currentNode+1)%len(nodes)                          #Update node to the next node
-            print("Set current node to ",currentNode)
-            #do_stuff()
+            #print("Set current node to ",currentNode)
+            do_stuff()
  
 #-----      Directly Usable Functions End       -----#
 
@@ -132,10 +136,13 @@ nodes=[ [(0.5,-.2),[0,1,1,0]], [(21,0),[0,1,1,1]], [(29,0),[0,0,1,1]], [(29.5,-1
 
 def callback(data):
     global car_x,car_y 
-    car_x = data.pose.pose.position.x
-    car_y = data.pose.pose.position.y
-    print("X: ",car_x,", Y: ",car_y,"; Dist: ",str(distance_from_node()),", CurrNode: ",currentNode) 
-    do_stuff()  
+    x = floor(data.pose.pose.position.x)
+    y = floor(data.pose.pose.position.y) 
+    if abs(x-car_x)>=1 or abs(y-car_y)>=1:
+        print("X: ",car_x,", Y: ",car_y,"; Dist: ",str(distance_from_node()),", CurrNode: ",currentNode) 
+        car_x = x
+        car_y = y 
+        do_stuff()  
 
 
 #-----          Initialization Start            -----#

@@ -39,8 +39,7 @@ int main(int argc, char** argv){
   ros::Subscriber pose_sub = n.subscribe("amcl_pose",1, callback);
 
   std::string int_str;
-  const char * junk;
-
+  int initial_side; 
   if (!n.hasParam("direction")) {
     direction = 1;
   } else {
@@ -53,14 +52,21 @@ int main(int argc, char** argv){
     n.getParam("current_node", int_str);
     sscanf(int_str.c_str(), "%d",&currentNode);
   }
-  //ros::param::param<std::int>("direction", direction, &default_val);
-  //ros::param::param<std::int>("current_node", currentNode, &default_val);
-  
+  if (!n.hasParam("/initial_side")) {
+    initial_side = -1;
+  } else { 
+    n.getParam("/initial_side",int_str);
+    sscanf(int_str.c_str(), "%d", &initial_side);
+  }
+
   if (direction==-1) {
     //NEED TO FIX IF WE WANT TO GO IN OPPOSITE
     //nodes.reverse();
     currentNode = NUM_NODES-1-currentNode;
   }
+
+  set_side(initial_side);
+  ros::spin();
 }
 
 void callback(const geometry_msgs::PoseWithCovarianceStamped msg) {

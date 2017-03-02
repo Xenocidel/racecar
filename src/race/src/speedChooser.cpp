@@ -15,9 +15,9 @@ void brakePump();
 int distance_from_node();
 int distance(int p1_x, int p1_y, int p2_x, int p2_y);
 void setSpeed(int s);
-void setTurning(Bool turn);
+void setTurning(bool turn);
 void do_stuff();
-void callback(const gemoetry_msgs::PoseWithCovarianceStamped data);
+void callback(const geometry_msgs::PoseWithCovarianceStamped data);
 
 
 
@@ -37,8 +37,11 @@ double nodes[4][2][4] = { {{0.5,-.2},{0,1,1,0}}, {{29,0},{0,0,1,1}}, {{29.5,-17.
 int numOfNodes=4;
 int in_threshold_turn=12;
 int out_threshold_turn=2;
-
-
+int direction;
+int currentNode;
+ros::Publisher em_pub;
+ros::Publisher turn_pub;
+ros::NodeHandle n;
 
 
 
@@ -46,9 +49,10 @@ int out_threshold_turn=2;
 int main(int argc, char** argv) {
 	ros::init(argc, argv, "speed_control");
 
-	ros::NodeHandle n;
-	ros::Publisher em_pub = n.advertise<std_msgs::Int32>("drive_velocity", 1);
-	ros::Publisher turn_pub = n.advertise<std_msgs::Bool>("is_turning", 1);
+	std::string int_str;
+
+	em_pub = n.advertise<std_msgs::Int32>("drive_velocity", 1);
+	turn_pub = n.advertise<std_msgs::Bool>("is_turning", 1);
 	if (!n.hasParam("direction")) {
 		direction = 1;
 	} else {
@@ -63,7 +67,8 @@ int main(int argc, char** argv) {
     	}
 	setSpeed(0);
 	usleep(5*1000*1000);
-	setSpeed(23);	ros::Subscriber sub = n.subscribe("amcl_pose",1, callback);
+	setSpeed(23);	
+	ros::Subscriber sub = n.subscribe("amcl_pose",1, callback);
 
 	ros::spin();
 }
@@ -104,7 +109,7 @@ int distance_from_node() {
 	y=nodes[currentNode][0][1];
 	x_next=nodes[(currentNode+1)%numOfNodes][0][0];
 	y_next=nodes[(currentNode+1)%numOfNodes][0][1];
-	if distance(x,y,x_next,y_next)>distance(car_x,car_y,x_next,y_next) {
+	if (distance(x,y,x_next,y_next)>distance(car_x,car_y,x_next,y_next)) {
 		sign=-1;
 	}
 	else {
@@ -131,8 +136,10 @@ void setSpeed(int s){
 }
 
 
-void setTurning(Bool turn){
-	turn_pub.publish(turn);
+void setTurning(bool turn){
+	std_msgs::Bool msg;
+	msg.data = turn;	
+	turn_pub.publish(msg);
 	//print("Set 'turning' to ",turn)
 }
 
@@ -153,9 +160,9 @@ void do_stuff() {
 			}
 		}
 	}
-	elif (current_dist<0) {
+	else if (current_dist<0) {
 		if (current_dist<-1*out_threshold) {
-			currentNode=(currentNode+1)%len(nodes)
+			currentNode=(currentNode+1)%numOfNodes;
 			//print("Set current node to ",currentNode)
 		}
 		if (current_dist<-1*out_threshold_turn) {
@@ -173,11 +180,11 @@ void do_stuff() {
 
 
 
-void callback(const gemoetry_msgs::PoseWithCovarianceStamped data) {
+void callback(const geometry_msgs::PoseWithCovarianceStamped data) {
 	double x = data.pose.pose.position.x;
 	double y = data.pose.pose.position.y;
-	if abs(x-car_x)>=1 || abs(y-car_y)>=1 {
-		cout << "X: " << car_x," << Y: " << car_y << "; Dist: " << str(distance_from_node()) << ", CurrNode: " << currentNode; 
+	if (abs(x-car_x)>=1 || abs(y-car_y)>=1) {
+		cout << "X: " << car_x << " << Y: " << car_y << "; Dist: " << distance_from_node() << ", CurrNode: " << currentNode; 
 		car_x = x;
 		car_y = y;
 		do_stuff();

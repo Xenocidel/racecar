@@ -30,8 +30,6 @@ bool speed_up_activated = false;
 
 int car_x=0;
 int car_y=0;
-ros::param::param<std::int>("direction", direction, 1);
-ros::param::param<std::int>("current_node", currentNode, 1);
 
 int in_threshold=7;
 int out_threshold=5;
@@ -51,7 +49,18 @@ int main(int argc, char** argv) {
 	ros::NodeHandle n;
 	ros::Publisher em_pub = n.advertise<std_msgs::Int32>("drive_velocity", 1);
 	ros::Publisher turn_pub = n.advertise<std_msgs::Bool>("is_turning", 1);
-
+	if (!n.hasParam("direction")) {
+		direction = 1;
+	} else {
+		n.getParam("direction",int_str);
+		sscanf(int_str.c_str(),"%d",&direction);
+	}
+	if (!n.hasParam("current_node")) {
+  		currentNode = 1;
+	} else {
+		n.getParam("current_node", int_str);
+		sscanf(int_str.c_str(), "%d",&currentNode);
+    	}
 	setSpeed(0);
 	usleep(5*1000*1000);
 	setSpeed(23);	ros::Subscriber sub = n.subscribe("amcl_pose",1, callback);

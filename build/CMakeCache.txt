@@ -68,6 +68,12 @@ Boost_SERIALIZATION_LIBRARY_DEBUG:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost
 //Boost serialization library (release)
 Boost_SERIALIZATION_LIBRARY_RELEASE:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_serialization.so
 
+//Boost signals library (debug)
+Boost_SIGNALS_LIBRARY_DEBUG:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_signals.so
+
+//Boost signals library (release)
+Boost_SIGNALS_LIBRARY_RELEASE:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_signals.so
+
 //Boost system library (debug)
 Boost_SYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib/arm-linux-gnueabihf/libboost_system.so
 
@@ -706,6 +712,9 @@ console_bridge_DIR:PATH=/usr/share/console_bridge/cmake
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/indigo/share/cpp_common/cmake
 
+//The directory containing a CMake configuration file for cv_bridge.
+cv_bridge_DIR:PATH=/opt/ros/indigo/share/cv_bridge/cmake
+
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/indigo/share/dynamic_reconfigure/cmake
 
@@ -755,6 +764,9 @@ gtest_force_shared_crt:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
+//The directory containing a CMake configuration file for image_geometry.
+image_geometry_DIR:PATH=/opt/ros/indigo/share/image_geometry/cmake
+
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/indigo/share/image_transport/cmake
 
@@ -781,6 +793,15 @@ kdl_parser_py_SOURCE_DIR:STATIC=/home/ubuntu/catkin_ws/src/robot_model/kdl_parse
 
 //Path to a library.
 lib:FILEPATH=/opt/ros/indigo/lib/libbondcpp.so
+
+//Value Computed by CMake
+libviso2_BINARY_DIR:STATIC=/home/ubuntu/catkin_ws/build/viso2/libviso2
+
+//The directory containing a CMake configuration file for libviso2.
+libviso2_DIR:PATH=/home/ubuntu/catkin_ws/devel/share/libviso2/cmake
+
+//Value Computed by CMake
+libviso2_SOURCE_DIR:STATIC=/home/ubuntu/catkin_ws/src/viso2/libviso2
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/indigo/share/message_filters/cmake
@@ -809,6 +830,9 @@ pcl_conversions_DIR:PATH=/opt/ros/indigo/share/pcl_conversions/cmake
 //The directory containing a CMake configuration file for pcl_msgs.
 pcl_msgs_DIR:PATH=/opt/ros/indigo/share/pcl_msgs/cmake
 
+//The directory containing a CMake configuration file for pcl_ros.
+pcl_ros_DIR:PATH=/opt/ros/indigo/share/pcl_ros/cmake
+
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/indigo/share/pluginlib/cmake
 
@@ -836,6 +860,12 @@ robot_model_BINARY_DIR:STATIC=/home/ubuntu/catkin_ws/build/robot_model/robot_mod
 //Value Computed by CMake
 robot_model_SOURCE_DIR:STATIC=/home/ubuntu/catkin_ws/src/robot_model/robot_model
 
+//The directory containing a CMake configuration file for rosbag.
+rosbag_DIR:PATH=/opt/ros/indigo/share/rosbag/cmake
+
+//The directory containing a CMake configuration file for rosbag_storage.
+rosbag_storage_DIR:PATH=/opt/ros/indigo/share/rosbag_storage/cmake
+
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/indigo/share/rosconsole/cmake
 
@@ -859,6 +889,9 @@ rosgraph_msgs_DIR:PATH=/opt/ros/indigo/share/rosgraph_msgs/cmake
 
 //The directory containing a CMake configuration file for roslib.
 roslib_DIR:PATH=/opt/ros/indigo/share/roslib/cmake
+
+//The directory containing a CMake configuration file for roslz4.
+roslz4_DIR:PATH=/opt/ros/indigo/share/roslz4/cmake
 
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/indigo/share/rospy/cmake
@@ -938,6 +971,9 @@ smclib_DIR:PATH=/opt/ros/indigo/share/smclib/cmake
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/indigo/share/std_msgs/cmake
 
+//The directory containing a CMake configuration file for std_srvs.
+std_srvs_DIR:PATH=/opt/ros/indigo/share/std_srvs/cmake
+
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/indigo/share/tf2/cmake
 
@@ -982,6 +1018,21 @@ urdfdom_DIR:PATH=/usr/share/urdfdom/cmake
 
 //The directory containing a CMake configuration file for urdfdom_headers.
 urdfdom_headers_DIR:PATH=/usr/share/urdfdom_headers/cmake
+
+//Value Computed by CMake
+viso2_BINARY_DIR:STATIC=/home/ubuntu/catkin_ws/build/viso2/viso2
+
+//Dependencies for target
+viso2_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+viso2_SOURCE_DIR:STATIC=/home/ubuntu/catkin_ws/src/viso2/viso2
+
+//Value Computed by CMake
+viso2_ros_BINARY_DIR:STATIC=/home/ubuntu/catkin_ws/build/viso2/viso2_ros
+
+//Value Computed by CMake
+viso2_ros_SOURCE_DIR:STATIC=/home/ubuntu/catkin_ws/src/viso2/viso2_ros
 
 //The directory containing a CMake configuration file for visualization_msgs.
 visualization_msgs_DIR:PATH=/opt/ros/indigo/share/visualization_msgs/cmake
@@ -1064,6 +1115,10 @@ Boost_PROGRAM_OPTIONS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 Boost_SERIALIZATION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_SERIALIZATION_LIBRARY_RELEASE
 Boost_SERIALIZATION_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SIGNALS_LIBRARY_DEBUG
+Boost_SIGNALS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: Boost_SIGNALS_LIBRARY_RELEASE
+Boost_SIGNALS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_SYSTEM_LIBRARY_DEBUG
 Boost_SYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_SYSTEM_LIBRARY_RELEASE
@@ -1536,7 +1591,7 @@ _BOOST_INCLUDEDIR_LAST:INTERNAL=/usr/include
 //Last used Boost_ADDITIONAL_VERSIONS value.
 _Boost_ADDITIONAL_VERSIONS_LAST:INTERNAL=1.47;1.47.0
 //Components requested for this build tree.
-_Boost_COMPONENTS_SEARCHED:INTERNAL=date_time;filesystem;iostreams;mpi;program_options;serialization;system;thread
+_Boost_COMPONENTS_SEARCHED:INTERNAL=date_time;filesystem;iostreams;mpi;program_options;serialization;signals;system;thread
 //Last used Boost_INCLUDE_DIR value.
 _Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
 //Last used Boost_LIBRARY_DIR value.

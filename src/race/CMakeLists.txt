@@ -141,7 +141,8 @@ add_executable(hectorOdom src/hectorOdom.cpp)
 add_executable(amclOdom src/amclOdom.cpp)
 add_executable(processScan src/process_scan.cpp)
 add_executable(odom src/odom.cpp)
-
+add_executable(wallChooser src/wallChooser.cpp)
+add_executable(speedChooser src/speedChooser.cpp)
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(race_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
@@ -164,6 +165,12 @@ target_link_libraries(processScan
  )
 target_link_libraries(odom
    ${catkin_LIBRARIES}
+ )
+target_link_libraries(wallChooser
+  ${catkin_LIBRARIES}
+ )
+target_link_libraries(speedChooser
+  ${catkin_LIBRARIES}
  )
 
 #############

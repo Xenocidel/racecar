@@ -6,6 +6,7 @@ from std_msgs.msg import Bool
 from race.msg import drive_param
 from sensor_msgs.msg import LaserScan
 from std_msgs.msg import Int32
+import time
 '''Need rospy and message types for eStop (bool), drive_parameters (drive_param), scan (LaserScan)'''
 
 from math import radians, degrees, pi #for conversions
@@ -15,15 +16,20 @@ from numpy import isnan
 import numpy 
 
 
+side_pub = rospy.Publisher('side', Int32, queue_size=1)
+speed_pub = rospy.Publisher('drive_velocity', Int32, queue_size=1)
+ref_time  = time.time() - 3
+    
 #global parameters
 '''Drive parameters'''
-velocity = rospy.get_param("/initial_speed", "12")
-SIDE = rospy.get_param("/initial_side", -1)
+VEL      = 23
+SIDE     = -1
+TURN_NUMBER = 0
+reset_speed = False
 #SIDE = 1 is right SIDE = -1 is left
 
 '''Publisher'''
-#em_pub = rospy.Publisher('eStop', Bool, queue_size=10)
-v_pub  = rospy.Publisher('drive_velocity', Int32, queue_size=1)
+#speed_pub = rospy.Publisher('eStop', Bool, queue_size=10)
 activated = False
 
 
@@ -34,7 +40,7 @@ activated = False
 
 FRONT_BUMPER_THRESHOLD = 3.0 
 SAFETY_MODE = True
-WIDTH = 1.2 #.3
+WIDTH = .5 #1.2 #.3
 
 
 '''Update saved drive parameters'''
@@ -43,45 +49,68 @@ def save_drive(drive_data):
     velocity = drive_data.velocity
     set_threshold()
 
+def setSide(s):                                                 #Input: Integer 's' that is speed
+                                                                #Functionality: Sets 'speed' variable to 's'
+    msg = Int32()                                                   #Message of type Int32, which will be published
+    msg.data = s                                                    #Sets message data to 's'
+    #print("set speed to ",s) 
+    side_pub.publish(msg)                                             #Publishes message to 'side' variable
 '''
 Brake and then go at 20 velocity
-
-def brakePump():
-    global em_pub, activated
-    v_msg = Int32(-70)
-    for x in range(10):
-        v_msg.data -= 10
-        v_pub.publish(v_msg)
-
-    for x in range(19):
-        v_msg.data += 10
-        v_pub.publish(v_msg)
-
-    #em_pub.publish(True)
-    print("BREAKS PUMPED")
 '''
+def detectTurn(laser_data):
 
-'''
-Check for immediate obstacles that we are not avoiding
-If the data points around our headed trajectory seem close,
-pull emergency stop, which can be reset in kill switch
-'''
-def safety_checker(laser_data):
-    global em_pub, activated
-    v_msg = Int32(-70)
-    if not activated and detect_collision(laser_data):
-        v_pub.publish(v_msg) 
-        activated = True
+    global speed_pub, side_pub, TURN_NUMBER, ref_time, reset_speed
+    v_msg = Int32()
 
         
-        
+    if time.time() >= ref_time+1.8 and detect_collision(laser_data):
+        v_msg = Int32(-70)
         for x in range(10):
             v_msg.data -= 10
-            v_pub.publish(v_msg)
+            speed_pub.publish(v_msg)
 
+        time.sleep(0.22)
+
+        for x in range(19):
+            v_msg.data += 10 
+            if v_msg.data > 12:
+               v_msg.data = 12
+            speed_pub.publish(v_msg)
+
+
+        print("TURN DETECTED")
+        reset_speed = True
+        ref_time = time.time()
         
-        #em_pub.publish(True)
-        print("Emergency STOP!!!!!")
+
+        setSide(1)
+
+
+
+
+
+    if reset_speed and time.time() > ref_time + 1.8:
+        reset_speed = False
+        TURN_NUMBER += 1
+
+
+        print("TURN COMPLETED")
+        
+        v_msg.data = VEL
+        speed_pub.publish(v_msg)
+
+        if TURN_NUMBER % 4 == 0:
+          TURN_NUMBER = TURN_NUMBER % 4
+          setSide(-1)
+        else:
+          setSide(1)
+
+
+
+    
+
+
 
 '''
 Input:  data: Lidar scan data
@@ -185,16 +214,26 @@ def side_callback(data):
 '''Set threshold based on velocity'''
 def set_threshold():
     global FRONT_BUMPER_THRESHOLD
-    if (velocity in constants.PID_CONST.keys()):
-        FRONT_BUMPER_THRESHOLD = constants.PID_CONST[velocity]['STOPPING_DISTANCE']
+    if (velocity in constants.PID_CONST_FAST.keys()):
+        FRONT_BUMPER_THRESHOLD = constants.PID_CONST_FAST[velocity]['STOPPING_DISTANCE']
     #if SAFETY_MODE:
     #        FRONT_BUMPER_THRESHOLD += .5
 
+def setSpeed(s):                                                 #Input: Integer 's' that is speed
+                                                                #Functionality: Sets 'speed' variable to 's'
+    msg = Int32()                                                   #Message of type Int32, which will be published
+    msg.data = s                                                    #Sets message data to 's'
+    #print("set speed to ",s) 
+    speed_pub.publish(msg)                                             #Publishes message to 'side' variable
+
+
 if __name__=='__main__':
-    rospy.init_node('wall_detector', anonymous=True)
+
+    rospy.init_node('goFastOrGoHome', anonymous=True)
+    setSpeed(VEL)
 
     drive_sub = rospy.Subscriber('drive_parameters', drive_param, save_drive)
-    laser_sub = rospy.Subscriber('scan', LaserScan, safety_checker)
+    laser_sub = rospy.Subscriber('scan', LaserScan, detectTurn)
     rospy.Subscriber('side',Int32,side_callback)
     #turn_sub = rospy.Subscriber('is_turning', Bool, set_threshold)
     rospy.spin()

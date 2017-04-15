@@ -570,6 +570,20 @@ sensor_msgs_generate_messages_py/fast:
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 # Convenience name for target.
+race/CMakeFiles/speedChooser.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 race/CMakeFiles/speedChooser.dir/rule
+.PHONY : race/CMakeFiles/speedChooser.dir/rule
+
+# Convenience name for target.
+speedChooser: race/CMakeFiles/speedChooser.dir/rule
+.PHONY : speedChooser
+
+# fast build rule for target.
+speedChooser/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/speedChooser.dir/build.make race/CMakeFiles/speedChooser.dir/build
+.PHONY : speedChooser/fast
+
+# Convenience name for target.
 race/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 race/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 .PHONY : race/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
@@ -652,6 +666,20 @@ tf_generate_messages_py: race/CMakeFiles/tf_generate_messages_py.dir/rule
 tf_generate_messages_py/fast:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/tf_generate_messages_py.dir/build.make race/CMakeFiles/tf_generate_messages_py.dir/build
 .PHONY : tf_generate_messages_py/fast
+
+# Convenience name for target.
+race/CMakeFiles/wallChooser.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 race/CMakeFiles/wallChooser.dir/rule
+.PHONY : race/CMakeFiles/wallChooser.dir/rule
+
+# Convenience name for target.
+wallChooser: race/CMakeFiles/wallChooser.dir/rule
+.PHONY : wallChooser
+
+# fast build rule for target.
+wallChooser/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/wallChooser.dir/build.make race/CMakeFiles/wallChooser.dir/build
+.PHONY : wallChooser/fast
 
 src/amclOdom.o: src/amclOdom.cpp.o
 .PHONY : src/amclOdom.o
@@ -773,6 +801,54 @@ src/process_scan.cpp.s:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/processScan.dir/build.make race/CMakeFiles/processScan.dir/src/process_scan.cpp.s
 .PHONY : src/process_scan.cpp.s
 
+src/speedChooser.o: src/speedChooser.cpp.o
+.PHONY : src/speedChooser.o
+
+# target to build an object file
+src/speedChooser.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/speedChooser.dir/build.make race/CMakeFiles/speedChooser.dir/src/speedChooser.cpp.o
+.PHONY : src/speedChooser.cpp.o
+
+src/speedChooser.i: src/speedChooser.cpp.i
+.PHONY : src/speedChooser.i
+
+# target to preprocess a source file
+src/speedChooser.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/speedChooser.dir/build.make race/CMakeFiles/speedChooser.dir/src/speedChooser.cpp.i
+.PHONY : src/speedChooser.cpp.i
+
+src/speedChooser.s: src/speedChooser.cpp.s
+.PHONY : src/speedChooser.s
+
+# target to generate assembly for a file
+src/speedChooser.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/speedChooser.dir/build.make race/CMakeFiles/speedChooser.dir/src/speedChooser.cpp.s
+.PHONY : src/speedChooser.cpp.s
+
+src/wallChooser.o: src/wallChooser.cpp.o
+.PHONY : src/wallChooser.o
+
+# target to build an object file
+src/wallChooser.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/wallChooser.dir/build.make race/CMakeFiles/wallChooser.dir/src/wallChooser.cpp.o
+.PHONY : src/wallChooser.cpp.o
+
+src/wallChooser.i: src/wallChooser.cpp.i
+.PHONY : src/wallChooser.i
+
+# target to preprocess a source file
+src/wallChooser.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/wallChooser.dir/build.make race/CMakeFiles/wallChooser.dir/src/wallChooser.cpp.i
+.PHONY : src/wallChooser.cpp.i
+
+src/wallChooser.s: src/wallChooser.cpp.s
+.PHONY : src/wallChooser.s
+
+# target to generate assembly for a file
+src/wallChooser.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/wallChooser.dir/build.make race/CMakeFiles/wallChooser.dir/src/wallChooser.cpp.s
+.PHONY : src/wallChooser.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -815,6 +891,7 @@ help:
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... speedChooser"
 	@echo "... test"
 	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... tf2_msgs_generate_messages_lisp"
@@ -822,6 +899,7 @@ help:
 	@echo "... tf_generate_messages_cpp"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_py"
+	@echo "... wallChooser"
 	@echo "... src/amclOdom.o"
 	@echo "... src/amclOdom.i"
 	@echo "... src/amclOdom.s"
@@ -837,6 +915,12 @@ help:
 	@echo "... src/process_scan.o"
 	@echo "... src/process_scan.i"
 	@echo "... src/process_scan.s"
+	@echo "... src/speedChooser.o"
+	@echo "... src/speedChooser.i"
+	@echo "... src/speedChooser.s"
+	@echo "... src/wallChooser.o"
+	@echo "... src/wallChooser.i"
+	@echo "... src/wallChooser.s"
 .PHONY : help
 
 

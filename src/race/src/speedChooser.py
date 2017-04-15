@@ -41,7 +41,7 @@ def brakePump():
                     v_msg.data = 12
                 em_pub.publish(v_msg)
 
-            time.sleep(0.3)
+            #time.sleep(0.3)
             
         print("BRAKES PUMPED at "+str(car_x)+","+str(car_y))
 
@@ -122,8 +122,8 @@ in_threshold=7                                 #Threshold for how close to the n
 out_threshold=5                                 #Threshold for how far from the node you must reach to move on to next node
 nodes=[ [(0.5,-.2),[0,1,1,0]], [(29,0),[0,0,1,1]], [(29.5,-17.9),[1,0,0,1]], [(1,-19),[1,1,0,0]] ]
                                                 #Nodes list in order of traversal, nodes are in format [(x,y),[up=0,right=1,down=2,left=3]]
-in_threshold_turn=12 
-out_threshold_turn=2
+in_threshold_turn=14 
+out_threshold_turn=0
 
 #-----          Changeable Variables End        -----#
 

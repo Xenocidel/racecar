@@ -331,6 +331,1230 @@ zed_wrapper_node/fast:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/zed_wrapper_node.dir/build.make zed_wrapper/CMakeFiles/zed_wrapper_node.dir/build
 .PHONY : zed_wrapper_node/fast
 
+__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.o: __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o
+.PHONY : __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o
+.PHONY : __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o
+
+__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.i: __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.i
+.PHONY : __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.i
+.PHONY : __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.i
+
+__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.s: __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.s
+.PHONY : __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.s
+.PHONY : __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.s
+
+__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.o: __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
+
+__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.i: __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
+
+__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.s: __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/DataStructures/Frame.o: __/lsd_slam/lsd_slam_core/src/DataStructures/Frame.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/DataStructures/Frame.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/DataStructures/Frame.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/Frame.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/DataStructures/Frame.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/DataStructures/Frame.i: __/lsd_slam/lsd_slam_core/src/DataStructures/Frame.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/DataStructures/Frame.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/DataStructures/Frame.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/Frame.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/DataStructures/Frame.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/DataStructures/Frame.s: __/lsd_slam/lsd_slam_core/src/DataStructures/Frame.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/DataStructures/Frame.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/DataStructures/Frame.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/Frame.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/DataStructures/Frame.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.o: __/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.i: __/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.s: __/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.o: __/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.i: __/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.s: __/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.o: __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.i: __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.s: __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.o: __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.i: __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.s: __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.o: __/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.i: __/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.s: __/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.o: __/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.i: __/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.s: __/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.o: __/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.i: __/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.s: __/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.o: __/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.i: __/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.s: __/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.o: __/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.i: __/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.s: __/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.o: __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.i: __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.s: __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.o: __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.i: __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.s: __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.o: __/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.i: __/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.s: __/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.o: __/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.i: __/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.s: __/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/SlamSystem.o: __/lsd_slam/lsd_slam_core/src/SlamSystem.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/SlamSystem.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/SlamSystem.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/SlamSystem.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/SlamSystem.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/SlamSystem.i: __/lsd_slam/lsd_slam_core/src/SlamSystem.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/SlamSystem.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/SlamSystem.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/SlamSystem.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/SlamSystem.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/SlamSystem.s: __/lsd_slam/lsd_slam_core/src/SlamSystem.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/SlamSystem.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/SlamSystem.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/SlamSystem.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/SlamSystem.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.o: __/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.i: __/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.s: __/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.o: __/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.i: __/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.s: __/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.o: __/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.i: __/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.s: __/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.o: __/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.i: __/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.s: __/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/main_live_odometry.o: __/lsd_slam/lsd_slam_core/src/main_live_odometry.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/main_live_odometry.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/main_live_odometry.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/main_live_odometry.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/main_live_odometry.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/main_live_odometry.i: __/lsd_slam/lsd_slam_core/src/main_live_odometry.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/main_live_odometry.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/main_live_odometry.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/main_live_odometry.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/main_live_odometry.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/main_live_odometry.s: __/lsd_slam/lsd_slam_core/src/main_live_odometry.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/main_live_odometry.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/main_live_odometry.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/main_live_odometry.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/main_live_odometry.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/main_on_images.o: __/lsd_slam/lsd_slam_core/src/main_on_images.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/main_on_images.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/main_on_images.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/main_on_images.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/main_on_images.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/main_on_images.i: __/lsd_slam/lsd_slam_core/src/main_on_images.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/main_on_images.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/main_on_images.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/main_on_images.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/main_on_images.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/main_on_images.s: __/lsd_slam/lsd_slam_core/src/main_on_images.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/main_on_images.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/main_on_images.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/main_on_images.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/main_on_images.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/util/SophusUtil.o: __/lsd_slam/lsd_slam_core/src/util/SophusUtil.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/SophusUtil.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/util/SophusUtil.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/SophusUtil.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/SophusUtil.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/util/SophusUtil.i: __/lsd_slam/lsd_slam_core/src/util/SophusUtil.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/SophusUtil.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/util/SophusUtil.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/SophusUtil.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/SophusUtil.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/util/SophusUtil.s: __/lsd_slam/lsd_slam_core/src/util/SophusUtil.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/SophusUtil.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/util/SophusUtil.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/SophusUtil.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/SophusUtil.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/util/Undistorter.o: __/lsd_slam/lsd_slam_core/src/util/Undistorter.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/Undistorter.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/util/Undistorter.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/Undistorter.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/Undistorter.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/util/Undistorter.i: __/lsd_slam/lsd_slam_core/src/util/Undistorter.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/Undistorter.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/util/Undistorter.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/Undistorter.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/Undistorter.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/util/Undistorter.s: __/lsd_slam/lsd_slam_core/src/util/Undistorter.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/Undistorter.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/util/Undistorter.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/Undistorter.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/Undistorter.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/util/globalFuncs.o: __/lsd_slam/lsd_slam_core/src/util/globalFuncs.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/globalFuncs.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/util/globalFuncs.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/globalFuncs.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/globalFuncs.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/util/globalFuncs.i: __/lsd_slam/lsd_slam_core/src/util/globalFuncs.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/globalFuncs.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/util/globalFuncs.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/globalFuncs.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/globalFuncs.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/util/globalFuncs.s: __/lsd_slam/lsd_slam_core/src/util/globalFuncs.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/globalFuncs.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/util/globalFuncs.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/globalFuncs.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/globalFuncs.cpp.s
+
+__/lsd_slam/lsd_slam_core/src/util/settings.o: __/lsd_slam/lsd_slam_core/src/util/settings.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/settings.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/src/util/settings.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/settings.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/settings.cpp.o
+
+__/lsd_slam/lsd_slam_core/src/util/settings.i: __/lsd_slam/lsd_slam_core/src/util/settings.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/settings.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/src/util/settings.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/settings.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/settings.cpp.i
+
+__/lsd_slam/lsd_slam_core/src/util/settings.s: __/lsd_slam/lsd_slam_core/src/util/settings.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/settings.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/src/util/settings.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/settings.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/src/util/settings.cpp.s
+
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.o: __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.cpp.o
+
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.i: __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.cpp.i
+
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.s: __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.cpp.s
+
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.o: __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.cpp.o
+
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.i: __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.cpp.i
+
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.s: __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.cpp.s
+
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.o: __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.cpp.o
+
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.i: __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.cpp.i
+
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.s: __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.cpp.s
+
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.o: __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.cpp.o
+
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.i: __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.cpp.i
+
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.s: __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.cpp.s
+
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.o: __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.cpp.o
+
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.i: __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.cpp.i
+
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.s: __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.cpp.s
+
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.o: __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.cpp.o
+
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.i: __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.cpp.i
+
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.s: __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.cpp.s
+
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.o: __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.cpp.o
+
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.i: __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.cpp.i
+
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.s: __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.cpp.s
+
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.o: __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.cpp.o
+
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.i: __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.cpp.i
+
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.s: __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.cpp.s
+
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.o: __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.cpp.o
+
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.i: __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.cpp.i
+
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.s: __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.cpp.s
+
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.o: __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.cpp.o
+
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.i: __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.cpp.i
+
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.s: __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.cpp.s
+
+__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.o: __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o
+
+__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.i: __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.i
+
+__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.s: __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.s
+
+__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.o: __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o
+
+__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.i: __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.i
+
+__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.s: __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.s
+
+__/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.o: __/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.cpp.o
+
+__/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.i: __/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.cpp.i
+
+__/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.s: __/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.cpp.s
+
+__/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.o: __/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.cpp.o
+
+__/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.i: __/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.cpp.i
+
+__/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.s: __/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.cpp.s
+
+__/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.o: __/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.cpp.o
+
+__/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.i: __/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.cpp.i
+
+__/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.s: __/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.cpp.s
+
+__/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.o: __/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.cpp.o
+
+__/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.i: __/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.cpp.i
+
+__/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.s: __/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.cpp.s
+
+__/lsd_slam/lsd_slam_viewer/src/main_viewer.o: __/lsd_slam/lsd_slam_viewer/src/main_viewer.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/main_viewer.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_viewer/src/main_viewer.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/main_viewer.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/main_viewer.cpp.o
+
+__/lsd_slam/lsd_slam_viewer/src/main_viewer.i: __/lsd_slam/lsd_slam_viewer/src/main_viewer.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/main_viewer.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_viewer/src/main_viewer.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/main_viewer.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/main_viewer.cpp.i
+
+__/lsd_slam/lsd_slam_viewer/src/main_viewer.s: __/lsd_slam/lsd_slam_viewer/src/main_viewer.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/main_viewer.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_viewer/src/main_viewer.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/main_viewer.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/main_viewer.cpp.s
+
+__/lsd_slam/lsd_slam_viewer/src/settings.o: __/lsd_slam/lsd_slam_viewer/src/settings.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/settings.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_viewer/src/settings.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/settings.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/settings.cpp.o
+
+__/lsd_slam/lsd_slam_viewer/src/settings.i: __/lsd_slam/lsd_slam_viewer/src/settings.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/settings.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_viewer/src/settings.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/settings.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/settings.cpp.i
+
+__/lsd_slam/lsd_slam_viewer/src/settings.s: __/lsd_slam/lsd_slam_viewer/src/settings.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/settings.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_viewer/src/settings.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/settings.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/src/settings.cpp.s
+
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.o: __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.cpp.o
+
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.i: __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.cpp.i
+
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.s: __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.cpp.s
+
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.o: __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.cpp.o
+
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.i: __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.cpp.i
+
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.s: __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.cpp.s
+
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.o: __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.cpp.o
+
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.i: __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.cpp.i
+
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.s: __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.cpp.s
+
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.o: __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.cpp.o
+
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.i: __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.cpp.i
+
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.s: __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.cpp.s
+
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.o: __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.cpp.o
+
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.i: __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.cpp.i
+
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.s: __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.cpp.s
+
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.o: __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.o
+
+# target to build an object file
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.cpp.o
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.cpp.o
+
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.i: __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.i
+
+# target to preprocess a source file
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.cpp.i
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.cpp.i
+
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.s: __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.s
+
+# target to generate assembly for a file
+__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.cpp.s
+.PHONY : __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.cpp.s
+
 __/race/src/amclOdom.o: __/race/src/amclOdom.cpp.o
 .PHONY : __/race/src/amclOdom.o
 
@@ -450,6 +1674,54 @@ __/race/src/process_scan.s: __/race/src/process_scan.cpp.s
 __/race/src/process_scan.cpp.s:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/process_scan.cpp.s
 .PHONY : __/race/src/process_scan.cpp.s
+
+__/race/src/speedChooser.o: __/race/src/speedChooser.cpp.o
+.PHONY : __/race/src/speedChooser.o
+
+# target to build an object file
+__/race/src/speedChooser.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/speedChooser.cpp.o
+.PHONY : __/race/src/speedChooser.cpp.o
+
+__/race/src/speedChooser.i: __/race/src/speedChooser.cpp.i
+.PHONY : __/race/src/speedChooser.i
+
+# target to preprocess a source file
+__/race/src/speedChooser.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/speedChooser.cpp.i
+.PHONY : __/race/src/speedChooser.cpp.i
+
+__/race/src/speedChooser.s: __/race/src/speedChooser.cpp.s
+.PHONY : __/race/src/speedChooser.s
+
+# target to generate assembly for a file
+__/race/src/speedChooser.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/speedChooser.cpp.s
+.PHONY : __/race/src/speedChooser.cpp.s
+
+__/race/src/wallChooser.o: __/race/src/wallChooser.cpp.o
+.PHONY : __/race/src/wallChooser.o
+
+# target to build an object file
+__/race/src/wallChooser.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/wallChooser.cpp.o
+.PHONY : __/race/src/wallChooser.cpp.o
+
+__/race/src/wallChooser.i: __/race/src/wallChooser.cpp.i
+.PHONY : __/race/src/wallChooser.i
+
+# target to preprocess a source file
+__/race/src/wallChooser.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/wallChooser.cpp.i
+.PHONY : __/race/src/wallChooser.cpp.i
+
+__/race/src/wallChooser.s: __/race/src/wallChooser.cpp.s
+.PHONY : __/race/src/wallChooser.s
+
+# target to generate assembly for a file
+__/race/src/wallChooser.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/wallChooser.cpp.s
+.PHONY : __/race/src/wallChooser.cpp.s
 
 __/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/ellipsoid_fit.o: __/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/ellipsoid_fit.m.o
 .PHONY : __/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/ellipsoid_fit.o
@@ -1299,6 +2571,159 @@ help:
 	@echo "... test"
 	@echo "... zed_wrapper_gencfg"
 	@echo "... zed_wrapper_node"
+	@echo "... __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.o"
+	@echo "... __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.i"
+	@echo "... __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.s"
+	@echo "... __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.o"
+	@echo "... __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.i"
+	@echo "... __/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/DataStructures/Frame.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/DataStructures/Frame.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/DataStructures/Frame.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/SlamSystem.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/SlamSystem.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/SlamSystem.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/main_live_odometry.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/main_live_odometry.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/main_live_odometry.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/main_on_images.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/main_on_images.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/main_on_images.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/util/SophusUtil.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/util/SophusUtil.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/util/SophusUtil.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/util/Undistorter.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/util/Undistorter.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/util/Undistorter.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/util/globalFuncs.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/util/globalFuncs.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/util/globalFuncs.s"
+	@echo "... __/lsd_slam/lsd_slam_core/src/util/settings.o"
+	@echo "... __/lsd_slam/lsd_slam_core/src/util/settings.i"
+	@echo "... __/lsd_slam/lsd_slam_core/src/util/settings.s"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.o"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.i"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.s"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.o"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.i"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.s"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.o"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.i"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.s"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.o"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.i"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.s"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.o"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.i"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.s"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.o"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.i"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.s"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.o"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.i"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.s"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.o"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.i"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.s"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.o"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.i"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.s"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.o"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.i"
+	@echo "... __/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.s"
+	@echo "... __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.o"
+	@echo "... __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.i"
+	@echo "... __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.s"
+	@echo "... __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.o"
+	@echo "... __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.i"
+	@echo "... __/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.s"
+	@echo "... __/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.o"
+	@echo "... __/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.i"
+	@echo "... __/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.s"
+	@echo "... __/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.o"
+	@echo "... __/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.i"
+	@echo "... __/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.s"
+	@echo "... __/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.o"
+	@echo "... __/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.i"
+	@echo "... __/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.s"
+	@echo "... __/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.o"
+	@echo "... __/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.i"
+	@echo "... __/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.s"
+	@echo "... __/lsd_slam/lsd_slam_viewer/src/main_viewer.o"
+	@echo "... __/lsd_slam/lsd_slam_viewer/src/main_viewer.i"
+	@echo "... __/lsd_slam/lsd_slam_viewer/src/main_viewer.s"
+	@echo "... __/lsd_slam/lsd_slam_viewer/src/settings.o"
+	@echo "... __/lsd_slam/lsd_slam_viewer/src/settings.i"
+	@echo "... __/lsd_slam/lsd_slam_viewer/src/settings.s"
+	@echo "... __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.o"
+	@echo "... __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.i"
+	@echo "... __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.s"
+	@echo "... __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.o"
+	@echo "... __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.i"
+	@echo "... __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.s"
+	@echo "... __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.o"
+	@echo "... __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.i"
+	@echo "... __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.s"
+	@echo "... __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.o"
+	@echo "... __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.i"
+	@echo "... __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.s"
+	@echo "... __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.o"
+	@echo "... __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.i"
+	@echo "... __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.s"
+	@echo "... __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.o"
+	@echo "... __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.i"
+	@echo "... __/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.s"
 	@echo "... __/race/src/amclOdom.o"
 	@echo "... __/race/src/amclOdom.i"
 	@echo "... __/race/src/amclOdom.s"
@@ -1314,6 +2739,12 @@ help:
 	@echo "... __/race/src/process_scan.o"
 	@echo "... __/race/src/process_scan.i"
 	@echo "... __/race/src/process_scan.s"
+	@echo "... __/race/src/speedChooser.o"
+	@echo "... __/race/src/speedChooser.i"
+	@echo "... __/race/src/speedChooser.s"
+	@echo "... __/race/src/wallChooser.o"
+	@echo "... __/race/src/wallChooser.i"
+	@echo "... __/race/src/wallChooser.s"
 	@echo "... __/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/ellipsoid_fit.o"
 	@echo "... __/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/ellipsoid_fit.i"
 	@echo "... __/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/ellipsoid_fit.s"

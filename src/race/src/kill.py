@@ -50,6 +50,8 @@ while key != ord('q'):
         for x in range(10):
             v_msg.data -= 10
             v_pub.publish(v_msg)
+        
+        em_pub.publish(True)
     elif key == curses.KEY_HOME or key == 104:
         em_pub.publish(False)
         stdscr.addstr(5, 20, "Normal Operation :)")

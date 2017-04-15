@@ -1,8 +1,8 @@
 <launch>
-  <param name="/initial_side" value="-1"/>
+  <param name="/initial_side" value="1"/>
   <param name="direction" value="1"/>
   <param name="current_node" value="1"/>
-  <param name="/initial_speed" value="45"/>   
+  <param name="/initial_speed" value="12"/>   
   
   <node name="talker" pkg="race" type="talker.py"/>
   

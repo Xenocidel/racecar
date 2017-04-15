@@ -1268,6 +1268,19 @@ sensor_msgs_generate_messages_py/fast:
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named speedChooser
+
+# Build rule for target.
+speedChooser: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 speedChooser
+.PHONY : speedChooser
+
+# fast build rule for target.
+speedChooser/fast:
+	$(MAKE) -f race/CMakeFiles/speedChooser.dir/build.make race/CMakeFiles/speedChooser.dir/build
+.PHONY : speedChooser/fast
+
+#=============================================================================
 # Target rules for targets named tf2_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -1344,6 +1357,19 @@ tf_generate_messages_py: cmake_check_build_system
 tf_generate_messages_py/fast:
 	$(MAKE) -f race/CMakeFiles/tf_generate_messages_py.dir/build.make race/CMakeFiles/tf_generate_messages_py.dir/build
 .PHONY : tf_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named wallChooser
+
+# Build rule for target.
+wallChooser: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 wallChooser
+.PHONY : wallChooser
+
+# fast build rule for target.
+wallChooser/fast:
+	$(MAKE) -f race/CMakeFiles/wallChooser.dir/build.make race/CMakeFiles/wallChooser.dir/build
+.PHONY : wallChooser/fast
 
 #=============================================================================
 # Target rules for targets named _run_tests_urdf
@@ -2237,12 +2263,14 @@ help:
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... speedChooser"
 	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... tf_generate_messages_cpp"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_py"
+	@echo "... wallChooser"
 	@echo "... _run_tests_urdf"
 	@echo "... _run_tests_urdf_rostest"
 	@echo "... _run_tests_urdf_rostest_test_test_robot_model_parser.launch"

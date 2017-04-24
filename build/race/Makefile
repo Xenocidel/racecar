@@ -681,6 +681,34 @@ wallChooser/fast:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/wallChooser.dir/build.make race/CMakeFiles/wallChooser.dir/build
 .PHONY : wallChooser/fast
 
+# Convenience name for target.
+race/CMakeFiles/zedBW.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 race/CMakeFiles/zedBW.dir/rule
+.PHONY : race/CMakeFiles/zedBW.dir/rule
+
+# Convenience name for target.
+zedBW: race/CMakeFiles/zedBW.dir/rule
+.PHONY : zedBW
+
+# fast build rule for target.
+zedBW/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/zedBW.dir/build.make race/CMakeFiles/zedBW.dir/build
+.PHONY : zedBW/fast
+
+# Convenience name for target.
+race/CMakeFiles/zedNav.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 race/CMakeFiles/zedNav.dir/rule
+.PHONY : race/CMakeFiles/zedNav.dir/rule
+
+# Convenience name for target.
+zedNav: race/CMakeFiles/zedNav.dir/rule
+.PHONY : zedNav
+
+# fast build rule for target.
+zedNav/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/zedNav.dir/build.make race/CMakeFiles/zedNav.dir/build
+.PHONY : zedNav/fast
+
 src/amclOdom.o: src/amclOdom.cpp.o
 .PHONY : src/amclOdom.o
 
@@ -849,6 +877,54 @@ src/wallChooser.cpp.s:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/wallChooser.dir/build.make race/CMakeFiles/wallChooser.dir/src/wallChooser.cpp.s
 .PHONY : src/wallChooser.cpp.s
 
+src/zedBW.o: src/zedBW.cpp.o
+.PHONY : src/zedBW.o
+
+# target to build an object file
+src/zedBW.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/zedBW.dir/build.make race/CMakeFiles/zedBW.dir/src/zedBW.cpp.o
+.PHONY : src/zedBW.cpp.o
+
+src/zedBW.i: src/zedBW.cpp.i
+.PHONY : src/zedBW.i
+
+# target to preprocess a source file
+src/zedBW.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/zedBW.dir/build.make race/CMakeFiles/zedBW.dir/src/zedBW.cpp.i
+.PHONY : src/zedBW.cpp.i
+
+src/zedBW.s: src/zedBW.cpp.s
+.PHONY : src/zedBW.s
+
+# target to generate assembly for a file
+src/zedBW.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/zedBW.dir/build.make race/CMakeFiles/zedBW.dir/src/zedBW.cpp.s
+.PHONY : src/zedBW.cpp.s
+
+src/zedNav.o: src/zedNav.cpp.o
+.PHONY : src/zedNav.o
+
+# target to build an object file
+src/zedNav.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/zedNav.dir/build.make race/CMakeFiles/zedNav.dir/src/zedNav.cpp.o
+.PHONY : src/zedNav.cpp.o
+
+src/zedNav.i: src/zedNav.cpp.i
+.PHONY : src/zedNav.i
+
+# target to preprocess a source file
+src/zedNav.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/zedNav.dir/build.make race/CMakeFiles/zedNav.dir/src/zedNav.cpp.i
+.PHONY : src/zedNav.cpp.i
+
+src/zedNav.s: src/zedNav.cpp.s
+.PHONY : src/zedNav.s
+
+# target to generate assembly for a file
+src/zedNav.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/zedNav.dir/build.make race/CMakeFiles/zedNav.dir/src/zedNav.cpp.s
+.PHONY : src/zedNav.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -900,6 +976,8 @@ help:
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_py"
 	@echo "... wallChooser"
+	@echo "... zedBW"
+	@echo "... zedNav"
 	@echo "... src/amclOdom.o"
 	@echo "... src/amclOdom.i"
 	@echo "... src/amclOdom.s"
@@ -921,6 +999,12 @@ help:
 	@echo "... src/wallChooser.o"
 	@echo "... src/wallChooser.i"
 	@echo "... src/wallChooser.s"
+	@echo "... src/zedBW.o"
+	@echo "... src/zedBW.i"
+	@echo "... src/zedBW.s"
+	@echo "... src/zedNav.o"
+	@echo "... src/zedNav.i"
+	@echo "... src/zedNav.s"
 .PHONY : help
 
 

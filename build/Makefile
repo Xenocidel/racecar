@@ -1372,6 +1372,32 @@ wallChooser/fast:
 .PHONY : wallChooser/fast
 
 #=============================================================================
+# Target rules for targets named zedBW
+
+# Build rule for target.
+zedBW: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 zedBW
+.PHONY : zedBW
+
+# fast build rule for target.
+zedBW/fast:
+	$(MAKE) -f race/CMakeFiles/zedBW.dir/build.make race/CMakeFiles/zedBW.dir/build
+.PHONY : zedBW/fast
+
+#=============================================================================
+# Target rules for targets named zedNav
+
+# Build rule for target.
+zedNav: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 zedNav
+.PHONY : zedNav
+
+# fast build rule for target.
+zedNav/fast:
+	$(MAKE) -f race/CMakeFiles/zedNav.dir/build.make race/CMakeFiles/zedNav.dir/build
+.PHONY : zedNav/fast
+
+#=============================================================================
 # Target rules for targets named _run_tests_urdf
 
 # Build rule for target.
@@ -2271,6 +2297,8 @@ help:
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_py"
 	@echo "... wallChooser"
+	@echo "... zedBW"
+	@echo "... zedNav"
 	@echo "... _run_tests_urdf"
 	@echo "... _run_tests_urdf_rostest"
 	@echo "... _run_tests_urdf_rostest_test_test_robot_model_parser.launch"

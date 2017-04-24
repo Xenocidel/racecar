@@ -38,4 +38,4 @@ RUNNING HOKUYO
 
 RUNNING IMU
 >>> roslaunch razor_imu_9dof razor-pub.launch
-(to visualise: >>> roslaunch razor_imu_9dof razor−pub-and-display.launch)
+(to visualise: >>> roslaunch razor_imu_9dof razor-pub-and-display.launch)

@@ -67,6 +67,8 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/ubuntu/catkin_ws/src/race/src/process_scan.cpp" "/home/ubuntu/catkin_ws/build/zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/process_scan.cpp.o"
   "/home/ubuntu/catkin_ws/src/race/src/speedChooser.cpp" "/home/ubuntu/catkin_ws/build/zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/speedChooser.cpp.o"
   "/home/ubuntu/catkin_ws/src/race/src/wallChooser.cpp" "/home/ubuntu/catkin_ws/build/zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/wallChooser.cpp.o"
+  "/home/ubuntu/catkin_ws/src/race/src/zedBW.cpp" "/home/ubuntu/catkin_ws/build/zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedBW.cpp.o"
+  "/home/ubuntu/catkin_ws/src/race/src/zedNav.cpp" "/home/ubuntu/catkin_ws/build/zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedNav.cpp.o"
   "/home/ubuntu/catkin_ws/src/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/ellipsoid_fit.m" "/home/ubuntu/catkin_ws/build/zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/ellipsoid_fit.m.o"
   "/home/ubuntu/catkin_ws/src/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/magnetometer_calibration.m" "/home/ubuntu/catkin_ws/build/zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/magnetometer_calibration.m.o"
   "/home/ubuntu/catkin_ws/src/robot_model/collada_parser/src/collada_parser.cpp" "/home/ubuntu/catkin_ws/build/zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_parser/src/collada_parser.cpp.o"

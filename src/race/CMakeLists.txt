@@ -143,12 +143,14 @@ add_executable(processScan src/process_scan.cpp)
 add_executable(odom src/odom.cpp)
 add_executable(wallChooser src/wallChooser.cpp)
 add_executable(speedChooser src/speedChooser.cpp)
+add_executable(zedNav src/zedNav.cpp)
+add_executable(zedBW src/zedBW.cpp)
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(race_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(odom sensor_msgs)
-
-
+add_dependencies(zedNav sensor_msgs)
+add_dependencies(wallChooser sensor_msgs)
 
 ## Specify libraries to link a library or executable target against
  target_link_libraries(odom_scan_matcher
@@ -170,6 +172,12 @@ target_link_libraries(wallChooser
   ${catkin_LIBRARIES}
  )
 target_link_libraries(speedChooser
+  ${catkin_LIBRARIES}
+ )
+target_link_libraries(zedNav
+  ${catkin_LIBRARIES}
+ )
+target_link_libraries(zedBW
   ${catkin_LIBRARIES}
  )
 

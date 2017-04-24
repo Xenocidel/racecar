@@ -1723,6 +1723,54 @@ __/race/src/wallChooser.cpp.s:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/wallChooser.cpp.s
 .PHONY : __/race/src/wallChooser.cpp.s
 
+__/race/src/zedBW.o: __/race/src/zedBW.cpp.o
+.PHONY : __/race/src/zedBW.o
+
+# target to build an object file
+__/race/src/zedBW.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedBW.cpp.o
+.PHONY : __/race/src/zedBW.cpp.o
+
+__/race/src/zedBW.i: __/race/src/zedBW.cpp.i
+.PHONY : __/race/src/zedBW.i
+
+# target to preprocess a source file
+__/race/src/zedBW.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedBW.cpp.i
+.PHONY : __/race/src/zedBW.cpp.i
+
+__/race/src/zedBW.s: __/race/src/zedBW.cpp.s
+.PHONY : __/race/src/zedBW.s
+
+# target to generate assembly for a file
+__/race/src/zedBW.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedBW.cpp.s
+.PHONY : __/race/src/zedBW.cpp.s
+
+__/race/src/zedNav.o: __/race/src/zedNav.cpp.o
+.PHONY : __/race/src/zedNav.o
+
+# target to build an object file
+__/race/src/zedNav.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedNav.cpp.o
+.PHONY : __/race/src/zedNav.cpp.o
+
+__/race/src/zedNav.i: __/race/src/zedNav.cpp.i
+.PHONY : __/race/src/zedNav.i
+
+# target to preprocess a source file
+__/race/src/zedNav.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedNav.cpp.i
+.PHONY : __/race/src/zedNav.cpp.i
+
+__/race/src/zedNav.s: __/race/src/zedNav.cpp.s
+.PHONY : __/race/src/zedNav.s
+
+# target to generate assembly for a file
+__/race/src/zedNav.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedNav.cpp.s
+.PHONY : __/race/src/zedNav.cpp.s
+
 __/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/ellipsoid_fit.o: __/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/ellipsoid_fit.m.o
 .PHONY : __/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/ellipsoid_fit.o
 
@@ -2745,6 +2793,12 @@ help:
 	@echo "... __/race/src/wallChooser.o"
 	@echo "... __/race/src/wallChooser.i"
 	@echo "... __/race/src/wallChooser.s"
+	@echo "... __/race/src/zedBW.o"
+	@echo "... __/race/src/zedBW.i"
+	@echo "... __/race/src/zedBW.s"
+	@echo "... __/race/src/zedNav.o"
+	@echo "... __/race/src/zedNav.i"
+	@echo "... __/race/src/zedNav.s"
 	@echo "... __/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/ellipsoid_fit.o"
 	@echo "... __/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/ellipsoid_fit.i"
 	@echo "... __/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/ellipsoid_fit.s"

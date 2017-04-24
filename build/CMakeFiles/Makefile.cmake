@@ -521,6 +521,8 @@ SET(CMAKE_DEPEND_INFO_FILES
   "race/CMakeFiles/tf_generate_messages_lisp.dir/DependInfo.cmake"
   "race/CMakeFiles/tf_generate_messages_py.dir/DependInfo.cmake"
   "race/CMakeFiles/wallChooser.dir/DependInfo.cmake"
+  "race/CMakeFiles/zedBW.dir/DependInfo.cmake"
+  "race/CMakeFiles/zedNav.dir/DependInfo.cmake"
   "robot_model/urdf/CMakeFiles/_run_tests_urdf.dir/DependInfo.cmake"
   "robot_model/urdf/CMakeFiles/_run_tests_urdf_rostest.dir/DependInfo.cmake"
   "robot_model/urdf/CMakeFiles/_run_tests_urdf_rostest_test_test_robot_model_parser.launch.dir/DependInfo.cmake"

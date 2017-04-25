@@ -2,7 +2,7 @@
 #include <sensor_msgs/Image.h>
 #include <math.h>
 #define square(x) x*x
-#define THRESHOLD 100
+#define THRESHOLD 70
 
 struct polar_point { int roh; int theta; };
 
@@ -18,9 +18,10 @@ class zedBW
   {
     int i,j;
     int W = msg.width, H = msg.height;
+    int newH=H*55/100;
 
     edge.header = msg.header;
-    edge.height = msg.height;
+    edge.height = newH;
     edge.width = msg.width;
     edge.encoding = "mono8"; // now single color (B/W)
     edge.is_bigendian = msg.is_bigendian;
@@ -29,7 +30,7 @@ class zedBW
     std::vector <unsigned char> bw; // to hold raw bw
     
     /* Consolidate color into black and white photo */
-    for (i=0;i<H;i++) {
+    for (i=0;i<newH;i++) {
         for (j=0;j<W;j++) {
             long sum = 0;
             int k;
@@ -42,8 +43,8 @@ class zedBW
     /* Calculate dx, dy, sgm */
     int dx,dy;
     double max = 0;
-    for (i=0;i<H;i++) {
-        if (i==0 || i==(H-1)) { // top/bottom row
+    for (i=0;i<newH;i++) {
+        if (i==0 || i==(newH-1)) { // top/bottom row
             for (j=0;j<W;j++) edges.push_back(0);
         }
         else {
@@ -73,11 +74,11 @@ class zedBW
 
     /* Hough Transform */
     int theta, roh, roh_min, roh_max;
-    for (i=0;i<H;i++) {
+    for (i=0;i<newH;i++) {
         for (j=0;j<W;j++) {
             int x,y;
             x = j;
-            y = H - 1 - i;
+            y = newH - 1 - i;
             int index = W*i + j;
             if (edge_img[index]) {
                 for (theta=0;theta<180;theta++) {
@@ -160,7 +161,6 @@ class zedBW
     pub_l_ = nh_.advertise<sensor_msgs::Image>("left_edges",10);
     sub_r_ = nh_.subscribe("/zed/right/image_raw_color",10,&zedBW::callback_r,this);
     sub_l_ = nh_.subscribe("/zed/left/image_raw_color",10,&zedBW::callback_l,this);
-
   }
   
 };

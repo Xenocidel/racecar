@@ -150,6 +150,20 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+race/CMakeFiles/TestLib.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 race/CMakeFiles/TestLib.dir/rule
+.PHONY : race/CMakeFiles/TestLib.dir/rule
+
+# Convenience name for target.
+TestLib: race/CMakeFiles/TestLib.dir/rule
+.PHONY : TestLib
+
+# fast build rule for target.
+TestLib/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/TestLib.dir/build.make race/CMakeFiles/TestLib.dir/build
+.PHONY : TestLib/fast
+
+# Convenience name for target.
 race/CMakeFiles/_race_generate_messages_check_deps_drive_param.dir/rule:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 race/CMakeFiles/_race_generate_messages_check_deps_drive_param.dir/rule
 .PHONY : race/CMakeFiles/_race_generate_messages_check_deps_drive_param.dir/rule
@@ -931,6 +945,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... TestLib"
 	@echo "... _race_generate_messages_check_deps_drive_param"
 	@echo "... _race_generate_messages_check_deps_drive_values"
 	@echo "... _race_generate_messages_check_deps_pid_input"

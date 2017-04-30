@@ -103,6 +103,8 @@ zedNav_EXTERNAL_OBJECTS =
 /home/ubuntu/catkin_ws/devel/lib/race/zedNav: /usr/lib/arm-linux-gnueabihf/libboost_thread.so
 /home/ubuntu/catkin_ws/devel/lib/race/zedNav: /usr/lib/arm-linux-gnueabihf/libpthread.so
 /home/ubuntu/catkin_ws/devel/lib/race/zedNav: /usr/lib/arm-linux-gnueabihf/libconsole_bridge.so
+/home/ubuntu/catkin_ws/devel/lib/race/zedNav: /home/ubuntu/catkin_ws/devel/lib/libTestLib.a
+/home/ubuntu/catkin_ws/devel/lib/race/zedNav: /usr/local/cuda-6.5/lib/libcudart.so
 /home/ubuntu/catkin_ws/devel/lib/race/zedNav: race/CMakeFiles/zedNav.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/ubuntu/catkin_ws/devel/lib/race/zedNav"
 	cd /home/ubuntu/catkin_ws/build/race && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/zedNav.dir/link.txt --verbose=$(VERBOSE)

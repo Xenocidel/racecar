@@ -93,9 +93,32 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/wallChooser.cpp.o.provi
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/wallChooser.cpp.o.provides.build: zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/wallChooser.cpp.o
 
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.o: 
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.o: /home/ubuntu/catkin_ws/src/race/src/cudaTest.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.o"
+	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.o -c /home/ubuntu/catkin_ws/src/race/src/cudaTest.cpp
+
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.i"
+	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/catkin_ws/src/race/src/cudaTest.cpp > CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.i
+
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.s"
+	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/catkin_ws/src/race/src/cudaTest.cpp -o CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.s
+
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.o.requires:
+.PHONY : zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.o.requires
+
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.o.provides: zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.o.requires
+	$(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.o.provides.build
+.PHONY : zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.o.provides
+
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.o.provides.build: zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.o
+
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/speedChooser.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/speedChooser.cpp.o: /home/ubuntu/catkin_ws/src/race/src/speedChooser.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/speedChooser.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/race/src/speedChooser.cpp.o -c /home/ubuntu/catkin_ws/src/race/src/speedChooser.cpp
 
@@ -118,7 +141,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/speedChooser.cpp.o.prov
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/getOdomFromMatcher.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/getOdomFromMatcher.cpp.o: /home/ubuntu/catkin_ws/src/race/src/getOdomFromMatcher.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/getOdomFromMatcher.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/race/src/getOdomFromMatcher.cpp.o -c /home/ubuntu/catkin_ws/src/race/src/getOdomFromMatcher.cpp
 
@@ -141,7 +164,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/getOdomFromMatcher.cpp.
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/odom.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/odom.cpp.o: /home/ubuntu/catkin_ws/src/race/src/odom.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/odom.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/race/src/odom.cpp.o -c /home/ubuntu/catkin_ws/src/race/src/odom.cpp
 
@@ -164,7 +187,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/odom.cpp.o.provides.bui
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedNav.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedNav.cpp.o: /home/ubuntu/catkin_ws/src/race/src/zedNav.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedNav.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedNav.cpp.o -c /home/ubuntu/catkin_ws/src/race/src/zedNav.cpp
 
@@ -187,7 +210,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedNav.cpp.o.provides.b
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/amclOdom.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/amclOdom.cpp.o: /home/ubuntu/catkin_ws/src/race/src/amclOdom.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/amclOdom.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/race/src/amclOdom.cpp.o -c /home/ubuntu/catkin_ws/src/race/src/amclOdom.cpp
 
@@ -210,7 +233,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/amclOdom.cpp.o.provides
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedBW.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedBW.cpp.o: /home/ubuntu/catkin_ws/src/race/src/zedBW.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedBW.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedBW.cpp.o -c /home/ubuntu/catkin_ws/src/race/src/zedBW.cpp
 
@@ -233,7 +256,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedBW.cpp.o.provides.bu
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/process_scan.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/process_scan.cpp.o: /home/ubuntu/catkin_ws/src/race/src/process_scan.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/process_scan.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/race/src/process_scan.cpp.o -c /home/ubuntu/catkin_ws/src/race/src/process_scan.cpp
 
@@ -254,9 +277,32 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/process_scan.cpp.o.prov
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/process_scan.cpp.o.provides.build: zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/process_scan.cpp.o
 
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o: 
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o: /home/ubuntu/catkin_ws/src/race/src/cudaTest2.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o"
+	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o -c /home/ubuntu/catkin_ws/src/race/src/cudaTest2.cpp
+
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.i"
+	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/catkin_ws/src/race/src/cudaTest2.cpp > CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.i
+
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.s"
+	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/catkin_ws/src/race/src/cudaTest2.cpp -o CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.s
+
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o.requires:
+.PHONY : zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o.requires
+
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o.provides: zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o.requires
+	$(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o.provides.build
+.PHONY : zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o.provides
+
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o.provides.build: zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o
+
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/src/collada_urdf.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/src/collada_urdf.cpp.o: /home/ubuntu/catkin_ws/src/robot_model/collada_urdf/src/collada_urdf.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/src/collada_urdf.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/src/collada_urdf.cpp.o -c /home/ubuntu/catkin_ws/src/robot_model/collada_urdf/src/collada_urdf.cpp
 
@@ -279,7 +325,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/src/col
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/src/collada_to_urdf.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/src/collada_to_urdf.cpp.o: /home/ubuntu/catkin_ws/src/robot_model/collada_urdf/src/collada_to_urdf.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/src/collada_to_urdf.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/src/collada_to_urdf.cpp.o -c /home/ubuntu/catkin_ws/src/robot_model/collada_urdf/src/collada_to_urdf.cpp
 
@@ -302,7 +348,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/src/col
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/src/urdf_to_collada.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/src/urdf_to_collada.cpp.o: /home/ubuntu/catkin_ws/src/robot_model/collada_urdf/src/urdf_to_collada.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/src/urdf_to_collada.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/src/urdf_to_collada.cpp.o -c /home/ubuntu/catkin_ws/src/robot_model/collada_urdf/src/urdf_to_collada.cpp
 
@@ -325,7 +371,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/src/urd
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/test/test_collada_urdf.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/test/test_collada_urdf.cpp.o: /home/ubuntu/catkin_ws/src/robot_model/collada_urdf/test/test_collada_urdf.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/test/test_collada_urdf.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/test/test_collada_urdf.cpp.o -c /home/ubuntu/catkin_ws/src/robot_model/collada_urdf/test/test_collada_urdf.cpp
 
@@ -348,7 +394,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/test/te
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_parser/src/collada_parser.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_parser/src/collada_parser.cpp.o: /home/ubuntu/catkin_ws/src/robot_model/collada_parser/src/collada_parser.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_parser/src/collada_parser.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_parser/src/collada_parser.cpp.o -c /home/ubuntu/catkin_ws/src/robot_model/collada_parser/src/collada_parser.cpp
 
@@ -371,7 +417,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_parser/src/c
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_parser/src/collada_parser_plugin.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_parser/src/collada_parser_plugin.cpp.o: /home/ubuntu/catkin_ws/src/robot_model/collada_parser/src/collada_parser_plugin.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_parser/src/collada_parser_plugin.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_parser/src/collada_parser_plugin.cpp.o -c /home/ubuntu/catkin_ws/src/robot_model/collada_parser/src/collada_parser_plugin.cpp
 
@@ -394,7 +440,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_parser/src/c
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/urdf/src/model.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/urdf/src/model.cpp.o: /home/ubuntu/catkin_ws/src/robot_model/urdf/src/model.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/urdf/src/model.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/urdf/src/model.cpp.o -c /home/ubuntu/catkin_ws/src/robot_model/urdf/src/model.cpp
 
@@ -417,7 +463,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/urdf/src/model.cpp.o
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/urdf/src/rosconsole_bridge.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/urdf/src/rosconsole_bridge.cpp.o: /home/ubuntu/catkin_ws/src/robot_model/urdf/src/rosconsole_bridge.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/urdf/src/rosconsole_bridge.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/urdf/src/rosconsole_bridge.cpp.o -c /home/ubuntu/catkin_ws/src/robot_model/urdf/src/rosconsole_bridge.cpp
 
@@ -440,7 +486,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/urdf/src/rosconsole_
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/urdf/test/test_robot_model_parser.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/urdf/test/test_robot_model_parser.cpp.o: /home/ubuntu/catkin_ws/src/robot_model/urdf/test/test_robot_model_parser.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/urdf/test/test_robot_model_parser.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/urdf/test/test_robot_model_parser.cpp.o -c /home/ubuntu/catkin_ws/src/robot_model/urdf/test/test_robot_model_parser.cpp
 
@@ -463,7 +509,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/urdf/test/test_robot
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/kdl_parser/src/check_kdl_parser.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/kdl_parser/src/check_kdl_parser.cpp.o: /home/ubuntu/catkin_ws/src/robot_model/kdl_parser/src/check_kdl_parser.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/kdl_parser/src/check_kdl_parser.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/kdl_parser/src/check_kdl_parser.cpp.o -c /home/ubuntu/catkin_ws/src/robot_model/kdl_parser/src/check_kdl_parser.cpp
 
@@ -486,7 +532,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/kdl_parser/src/check
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/kdl_parser/src/kdl_parser.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/kdl_parser/src/kdl_parser.cpp.o: /home/ubuntu/catkin_ws/src/robot_model/kdl_parser/src/kdl_parser.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/kdl_parser/src/kdl_parser.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/kdl_parser/src/kdl_parser.cpp.o -c /home/ubuntu/catkin_ws/src/robot_model/kdl_parser/src/kdl_parser.cpp
 
@@ -509,7 +555,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/kdl_parser/src/kdl_p
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/kdl_parser/test/test_kdl_parser.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/kdl_parser/test/test_kdl_parser.cpp.o: /home/ubuntu/catkin_ws/src/robot_model/kdl_parser/test/test_kdl_parser.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_23)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/kdl_parser/test/test_kdl_parser.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/kdl_parser/test/test_kdl_parser.cpp.o -c /home/ubuntu/catkin_ws/src/robot_model/kdl_parser/test/test_kdl_parser.cpp
 
@@ -532,7 +578,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/kdl_parser/test/test
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/kdl_parser/test/test_inertia_rpy.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/kdl_parser/test/test_inertia_rpy.cpp.o: /home/ubuntu/catkin_ws/src/robot_model/kdl_parser/test/test_inertia_rpy.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_24)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/kdl_parser/test/test_inertia_rpy.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/kdl_parser/test/test_inertia_rpy.cpp.o -c /home/ubuntu/catkin_ws/src/robot_model/kdl_parser/test/test_inertia_rpy.cpp
 
@@ -555,7 +601,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/kdl_parser/test/test
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/ros_lib/embedded_linux_comms.c.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/ros_lib/embedded_linux_comms.c.o: /home/ubuntu/catkin_ws/src/rosserial/rosserial_embeddedlinux/src/ros_lib/embedded_linux_comms.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_23)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_25)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/ros_lib/embedded_linux_comms.c.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/ros_lib/embedded_linux_comms.c.o   -c /home/ubuntu/catkin_ws/src/rosserial/rosserial_embeddedlinux/src/ros_lib/embedded_linux_comms.c
 
@@ -578,7 +624,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinu
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/ExampleServiceClient/ExampleServiceClient.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/ExampleServiceClient/ExampleServiceClient.cpp.o: /home/ubuntu/catkin_ws/src/rosserial/rosserial_embeddedlinux/src/examples/ExampleServiceClient/ExampleServiceClient.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_24)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_26)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/ExampleServiceClient/ExampleServiceClient.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/ExampleServiceClient/ExampleServiceClient.cpp.o -c /home/ubuntu/catkin_ws/src/rosserial/rosserial_embeddedlinux/src/examples/ExampleServiceClient/ExampleServiceClient.cpp
 
@@ -601,7 +647,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinu
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/VEXProRangeMotorLoop/VEXProRangeMotorLoop.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/VEXProRangeMotorLoop/VEXProRangeMotorLoop.cpp.o: /home/ubuntu/catkin_ws/src/rosserial/rosserial_embeddedlinux/src/examples/VEXProRangeMotorLoop/VEXProRangeMotorLoop.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_25)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_27)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/VEXProRangeMotorLoop/VEXProRangeMotorLoop.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/VEXProRangeMotorLoop/VEXProRangeMotorLoop.cpp.o -c /home/ubuntu/catkin_ws/src/rosserial/rosserial_embeddedlinux/src/examples/VEXProRangeMotorLoop/VEXProRangeMotorLoop.cpp
 
@@ -624,7 +670,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinu
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/ExampleService/ExampleService.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/ExampleService/ExampleService.cpp.o: /home/ubuntu/catkin_ws/src/rosserial/rosserial_embeddedlinux/src/examples/ExampleService/ExampleService.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_26)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_28)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/ExampleService/ExampleService.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/ExampleService/ExampleService.cpp.o -c /home/ubuntu/catkin_ws/src/rosserial/rosserial_embeddedlinux/src/examples/ExampleService/ExampleService.cpp
 
@@ -647,7 +693,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinu
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/ExampleSubscriber/ExampleSubscriber.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/ExampleSubscriber/ExampleSubscriber.cpp.o: /home/ubuntu/catkin_ws/src/rosserial/rosserial_embeddedlinux/src/examples/ExampleSubscriber/ExampleSubscriber.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_27)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_29)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/ExampleSubscriber/ExampleSubscriber.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/ExampleSubscriber/ExampleSubscriber.cpp.o -c /home/ubuntu/catkin_ws/src/rosserial/rosserial_embeddedlinux/src/examples/ExampleSubscriber/ExampleSubscriber.cpp
 
@@ -670,7 +716,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinu
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/VEXProServoSubscribe/VEXProServoSubscribe.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/VEXProServoSubscribe/VEXProServoSubscribe.cpp.o: /home/ubuntu/catkin_ws/src/rosserial/rosserial_embeddedlinux/src/examples/VEXProServoSubscribe/VEXProServoSubscribe.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_28)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_30)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/VEXProServoSubscribe/VEXProServoSubscribe.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/VEXProServoSubscribe/VEXProServoSubscribe.cpp.o -c /home/ubuntu/catkin_ws/src/rosserial/rosserial_embeddedlinux/src/examples/VEXProServoSubscribe/VEXProServoSubscribe.cpp
 
@@ -693,7 +739,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinu
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/HelloRos/HelloROS.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/HelloRos/HelloROS.cpp.o: /home/ubuntu/catkin_ws/src/rosserial/rosserial_embeddedlinux/src/examples/HelloRos/HelloROS.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_29)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_31)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/HelloRos/HelloROS.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/HelloRos/HelloROS.cpp.o -c /home/ubuntu/catkin_ws/src/rosserial/rosserial_embeddedlinux/src/examples/HelloRos/HelloROS.cpp
 
@@ -716,7 +762,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinu
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/VEXProRangePublish/VEXProRangePublish.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/VEXProRangePublish/VEXProRangePublish.cpp.o: /home/ubuntu/catkin_ws/src/rosserial/rosserial_embeddedlinux/src/examples/VEXProRangePublish/VEXProRangePublish.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_30)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_32)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/VEXProRangePublish/VEXProRangePublish.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/VEXProRangePublish/VEXProRangePublish.cpp.o -c /home/ubuntu/catkin_ws/src/rosserial/rosserial_embeddedlinux/src/examples/VEXProRangePublish/VEXProRangePublish.cpp
 
@@ -739,7 +785,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinu
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/VEXProMotor13Subscribe/VEXProMotor13Subscribe.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/VEXProMotor13Subscribe/VEXProMotor13Subscribe.cpp.o: /home/ubuntu/catkin_ws/src/rosserial/rosserial_embeddedlinux/src/examples/VEXProMotor13Subscribe/VEXProMotor13Subscribe.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_31)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_33)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/VEXProMotor13Subscribe/VEXProMotor13Subscribe.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinux/src/examples/VEXProMotor13Subscribe/VEXProMotor13Subscribe.cpp.o -c /home/ubuntu/catkin_ws/src/rosserial/rosserial_embeddedlinux/src/examples/VEXProMotor13Subscribe/VEXProMotor13Subscribe.cpp
 
@@ -762,7 +808,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_embeddedlinu
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_server/src/serial_node.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_server/src/serial_node.cpp.o: /home/ubuntu/catkin_ws/src/rosserial/rosserial_server/src/serial_node.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_32)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_34)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_server/src/serial_node.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_server/src/serial_node.cpp.o -c /home/ubuntu/catkin_ws/src/rosserial/rosserial_server/src/serial_node.cpp
 
@@ -785,7 +831,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_server/src/s
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_server/src/socket_node.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_server/src/socket_node.cpp.o: /home/ubuntu/catkin_ws/src/rosserial/rosserial_server/src/socket_node.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_33)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_35)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_server/src/socket_node.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_server/src/socket_node.cpp.o -c /home/ubuntu/catkin_ws/src/rosserial/rosserial_server/src/socket_node.cpp
 
@@ -808,7 +854,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_server/src/s
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_windows/src/ros_lib/WindowsSocket.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_windows/src/ros_lib/WindowsSocket.cpp.o: /home/ubuntu/catkin_ws/src/rosserial/rosserial_windows/src/ros_lib/WindowsSocket.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_34)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_36)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_windows/src/ros_lib/WindowsSocket.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_windows/src/ros_lib/WindowsSocket.cpp.o -c /home/ubuntu/catkin_ws/src/rosserial/rosserial_windows/src/ros_lib/WindowsSocket.cpp
 
@@ -831,7 +877,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_windows/src/
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_windows/src/examples/TestDrive/testdrive.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_windows/src/examples/TestDrive/testdrive.cpp.o: /home/ubuntu/catkin_ws/src/rosserial/rosserial_windows/src/examples/TestDrive/testdrive.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_35)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_37)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_windows/src/examples/TestDrive/testdrive.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_windows/src/examples/TestDrive/testdrive.cpp.o -c /home/ubuntu/catkin_ws/src/rosserial/rosserial_windows/src/examples/TestDrive/testdrive.cpp
 
@@ -854,7 +900,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_windows/src/
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_windows/src/examples/MessageReceive/messagereceive.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_windows/src/examples/MessageReceive/messagereceive.cpp.o: /home/ubuntu/catkin_ws/src/rosserial/rosserial_windows/src/examples/MessageReceive/messagereceive.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_36)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_38)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_windows/src/examples/MessageReceive/messagereceive.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_windows/src/examples/MessageReceive/messagereceive.cpp.o -c /home/ubuntu/catkin_ws/src/rosserial/rosserial_windows/src/examples/MessageReceive/messagereceive.cpp
 
@@ -877,7 +923,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_windows/src/
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_client/src/ros_lib/time.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_client/src/ros_lib/time.cpp.o: /home/ubuntu/catkin_ws/src/rosserial/rosserial_client/src/ros_lib/time.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_37)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_39)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_client/src/ros_lib/time.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_client/src/ros_lib/time.cpp.o -c /home/ubuntu/catkin_ws/src/rosserial/rosserial_client/src/ros_lib/time.cpp
 
@@ -900,7 +946,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_client/src/r
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_client/src/ros_lib/duration.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_client/src/ros_lib/duration.cpp.o: /home/ubuntu/catkin_ws/src/rosserial/rosserial_client/src/ros_lib/duration.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_38)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_40)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_client/src/ros_lib/duration.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_client/src/ros_lib/duration.cpp.o -c /home/ubuntu/catkin_ws/src/rosserial/rosserial_client/src/ros_lib/duration.cpp
 
@@ -923,7 +969,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_client/src/r
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_client/test/float64_test.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_client/test/float64_test.cpp.o: /home/ubuntu/catkin_ws/src/rosserial/rosserial_client/test/float64_test.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_39)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_41)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_client/test/float64_test.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_client/test/float64_test.cpp.o -c /home/ubuntu/catkin_ws/src/rosserial/rosserial_client/test/float64_test.cpp
 
@@ -946,7 +992,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/rosserial/rosserial_client/test/
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_40)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_42)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se3.cpp
 
@@ -969,7 +1015,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdpa
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_41)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_43)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so2.cpp
 
@@ -992,7 +1038,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdpa
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_42)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_44)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_sim3.cpp
 
@@ -1015,7 +1061,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdpa
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_43)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_45)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_se2.cpp
 
@@ -1038,7 +1084,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdpa
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_44)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_46)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_so3.cpp
 
@@ -1061,7 +1107,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdpa
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_45)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_47)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/thirdparty/Sophus/sophus/test_rxso3.cpp
 
@@ -1084,7 +1130,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/thirdpa
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_46)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_48)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/src/PointCloudViewer.cpp
 
@@ -1107,7 +1153,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/Poi
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_47)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_49)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/src/main_stitchVideos.cpp
 
@@ -1130,7 +1176,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/mai
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_48)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_50)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/src/KeyFrameDisplay.cpp
 
@@ -1153,7 +1199,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/Key
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_49)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_51)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/src/KeyFrameGraphDisplay.cpp
 
@@ -1176,7 +1222,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/Key
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/main_viewer.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/main_viewer.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/src/main_viewer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_50)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_52)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/main_viewer.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/main_viewer.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/src/main_viewer.cpp
 
@@ -1199,7 +1245,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/mai
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/settings.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/settings.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/src/settings.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_51)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_53)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/settings.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/settings.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/src/settings.cpp
 
@@ -1222,7 +1268,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/src/set
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_52)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_54)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
 
@@ -1245,7 +1291,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/build/C
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_53)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_55)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o   -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_viewer/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c
 
@@ -1268,7 +1314,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_viewer/build/C
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_54)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_56)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/thirdparty/openFabMap/samples/openFABMAPcli.cpp
 
@@ -1291,7 +1337,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdpart
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_55)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_57)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/FabMap.cpp
 
@@ -1314,7 +1360,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdpart
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_56)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_58)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/BOWMSCTrainer.cpp
 
@@ -1337,7 +1383,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdpart
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_57)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_59)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/thirdparty/openFabMap/src/ChowLiuTree.cpp
 
@@ -1360,7 +1406,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdpart
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_58)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_60)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se3.cpp
 
@@ -1383,7 +1429,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdpart
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_59)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_61)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so2.cpp
 
@@ -1406,7 +1452,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdpart
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_60)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_62)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_sim3.cpp
 
@@ -1429,7 +1475,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdpart
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_61)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_63)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_se2.cpp
 
@@ -1452,7 +1498,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdpart
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_62)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_64)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_so3.cpp
 
@@ -1475,7 +1521,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdpart
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_63)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_65)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/thirdparty/Sophus/sophus/test_rxso3.cpp
 
@@ -1498,7 +1544,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/thirdpart
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/SlamSystem.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/SlamSystem.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/SlamSystem.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_64)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_66)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/SlamSystem.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/SlamSystem.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/SlamSystem.cpp
 
@@ -1521,7 +1567,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/SlamS
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_65)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_67)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/LiveSLAMWrapper.cpp
 
@@ -1544,7 +1590,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/LiveS
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_66)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_68)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/Tracking/Relocalizer.cpp
 
@@ -1567,7 +1613,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Track
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_67)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_69)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/Tracking/SE3Tracker.cpp
 
@@ -1590,7 +1636,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Track
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_68)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_70)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/Tracking/TrackingReference.cpp
 
@@ -1613,7 +1659,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Track
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_69)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_71)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/Tracking/Sim3Tracker.cpp
 
@@ -1636,7 +1682,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Track
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/globalFuncs.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/globalFuncs.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/util/globalFuncs.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_70)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_72)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/globalFuncs.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/globalFuncs.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/util/globalFuncs.cpp
 
@@ -1659,7 +1705,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/Undistorter.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/Undistorter.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/util/Undistorter.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_71)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_73)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/Undistorter.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/Undistorter.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/util/Undistorter.cpp
 
@@ -1682,7 +1728,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/SophusUtil.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/SophusUtil.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/util/SophusUtil.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_72)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_74)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/SophusUtil.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/SophusUtil.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/util/SophusUtil.cpp
 
@@ -1705,7 +1751,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/settings.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/settings.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/util/settings.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_73)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_75)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/settings.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/settings.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/util/settings.cpp
 
@@ -1728,7 +1774,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/util/
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_74)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_76)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/DataStructures/FrameMemory.cpp
 
@@ -1751,7 +1797,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataS
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/Frame.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/Frame.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/DataStructures/Frame.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_75)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_77)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/Frame.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/Frame.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/DataStructures/Frame.cpp
 
@@ -1774,7 +1820,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataS
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_76)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_78)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/DataStructures/FramePoseStruct.cpp
 
@@ -1797,7 +1843,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DataS
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/main_on_images.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/main_on_images.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/main_on_images.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_77)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_79)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/main_on_images.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/main_on_images.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/main_on_images.cpp
 
@@ -1820,7 +1866,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/main_
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_78)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_80)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/GlobalMapping/KeyFrameGraph.cpp
 
@@ -1843,7 +1889,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Globa
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_79)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_81)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/GlobalMapping/TrackableKeyFrameSearch.cpp
 
@@ -1866,7 +1912,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Globa
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_80)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_82)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/GlobalMapping/FabMap.cpp
 
@@ -1889,7 +1935,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Globa
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_81)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_83)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/GlobalMapping/g2oTypeSim3Sophus.cpp
 
@@ -1912,7 +1958,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Globa
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_82)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_84)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMapPixelHypothesis.cpp
 
@@ -1935,7 +1981,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Depth
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_83)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_85)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/DepthEstimation/DepthMap.cpp
 
@@ -1958,7 +2004,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/Depth
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_84)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_86)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSImageStreamThread.cpp
 
@@ -1981,7 +2027,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWra
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_85)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_87)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/IOWrapper/ROS/ROSOutput3DWrapper.cpp
 
@@ -2004,7 +2050,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWra
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_86)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_88)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/IOWrapper/OpenCV/ImageDisplay_OpenCV.cpp
 
@@ -2027,7 +2073,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWra
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_87)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_89)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/IOWrapper/Timestamp.cpp
 
@@ -2050,7 +2096,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/IOWra
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/main_live_odometry.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/main_live_odometry.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/main_live_odometry.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_88)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_90)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/main_live_odometry.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/main_live_odometry.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/src/main_live_odometry.cpp
 
@@ -2073,7 +2119,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/src/main_
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_89)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_91)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp.o -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdCXX/CMakeCXXCompilerId.cpp
 
@@ -2096,7 +2142,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/build/CMa
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o: /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_90)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_92)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building C object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/cc  $(C_DEFINES) $(C_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c.o   -c /home/ubuntu/catkin_ws/src/lsd_slam/lsd_slam_core/build/CMakeFiles/2.8.12.2/CompilerIdC/CMakeCCompilerId.c
 
@@ -2119,7 +2165,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/lsd_slam/lsd_slam_core/build/CMa
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/src/zed_wrapper_nodelet.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/src/zed_wrapper_nodelet.cpp.o: /home/ubuntu/catkin_ws/src/zed_wrapper/src/zed_wrapper_nodelet.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_91)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_93)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/src/zed_wrapper_nodelet.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/src/zed_wrapper_nodelet.cpp.o -c /home/ubuntu/catkin_ws/src/zed_wrapper/src/zed_wrapper_nodelet.cpp
 
@@ -2142,7 +2188,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/src/zed_wrapper_nodelet.cpp.o.provi
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/src/zed_wrapper_node.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/src/zed_wrapper_node.cpp.o: /home/ubuntu/catkin_ws/src/zed_wrapper/src/zed_wrapper_node.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_92)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_94)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/src/zed_wrapper_node.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/src/zed_wrapper_node.cpp.o -c /home/ubuntu/catkin_ws/src/zed_wrapper/src/zed_wrapper_node.cpp
 
@@ -2165,7 +2211,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/src/zed_wrapper_node.cpp.o.provides
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/magnetometer_calibration.m.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/magnetometer_calibration.m.o: /home/ubuntu/catkin_ws/src/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/magnetometer_calibration.m
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_93)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_95)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/magnetometer_calibration.m.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/magnetometer_calibration.m.o -c /home/ubuntu/catkin_ws/src/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/magnetometer_calibration.m
 
@@ -2188,7 +2234,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/razor_imu_9dof/magnetometer_cali
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/ellipsoid_fit.m.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/ellipsoid_fit.m.o: /home/ubuntu/catkin_ws/src/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/ellipsoid_fit.m
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_94)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_96)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/ellipsoid_fit.m.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/ellipsoid_fit.m.o -c /home/ubuntu/catkin_ws/src/razor_imu_9dof/magnetometer_calibration/Matlab/magnetometer_calibration/ellipsoid_fit.m
 

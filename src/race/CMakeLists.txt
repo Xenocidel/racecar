@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(race)
 
+FIND_PACKAGE(CUDA REQUIRED)
+
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
@@ -14,6 +16,11 @@ find_package(catkin REQUIRED COMPONENTS
   tf
   nav_msgs
 )
+
+SET(CUDA_NVCC_FLAGS "" CACHE STRING "nvcc flags" FORCE)
+SET (CUDA_VERBOSE_BUILD ON CACHE BOOL "nvcc verbose" FORCE)
+SET(LIB_TYPE STATIC)
+CUDA_ADD_LIBRARY(TestLib ${LIB_TYPE} src/cudaTest2.cu)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -149,7 +156,7 @@ add_executable(zedBW src/zedBW.cpp)
 ## same as for the library above
 # add_dependencies(race_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(odom sensor_msgs)
-add_dependencies(zedNav sensor_msgs)
+add_dependencies(zedNav sensor_msgs TestLib)
 add_dependencies(wallChooser sensor_msgs)
 
 ## Specify libraries to link a library or executable target against
@@ -176,6 +183,7 @@ target_link_libraries(speedChooser
  )
 target_link_libraries(zedNav
   ${catkin_LIBRARIES}
+  TestLib
  )
 target_link_libraries(zedBW
   ${catkin_LIBRARIES}

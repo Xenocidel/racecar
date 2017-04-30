@@ -292,7 +292,7 @@ CUDA_HOST_COMPILER:FILEPATH=/usr/bin/cc
 //Path to a program.
 CUDA_NVCC_EXECUTABLE:FILEPATH=/usr/local/cuda-6.5/bin/nvcc
 
-//Semi-colon delimit multiple arguments.
+//nvcc flags
 CUDA_NVCC_FLAGS:STRING=
 
 //Semi-colon delimit multiple arguments.
@@ -327,7 +327,10 @@ CUDA_TOOLKIT_ROOT_DIR:PATH=/usr/local/cuda-6.5
 //  With the Makefile generator this defaults to VERBOSE variable
 // specified on the command line, but can be forced on with this
 // option.
-CUDA_VERBOSE_BUILD:BOOL=OFF
+CUDA_VERBOSE_BUILD:BOOL=ON
+
+//Version of CUDA as computed from nvcc.
+CUDA_VERSION:STRING=6.5
 
 //"cublas" library
 CUDA_cublas_LIBRARY:FILEPATH=/usr/local/cuda-6.5/lib/libcublas.so
@@ -627,6 +630,9 @@ RT_LIBRARY:FILEPATH=/usr/lib/arm-linux-gnueabihf/librt.so
 
 //Enable debian style python package layout
 SETUPTOOLS_DEB_LAYOUT:BOOL=ON
+
+//Dependencies for the target
+TestLib_LIB_DEPENDS:STATIC=general;/usr/local/cuda-6.5/lib/libcudart.so;
 
 //Path to a file.
 TinyXML_INCLUDE_DIR:PATH=/usr/include
@@ -1267,6 +1273,9 @@ CMAKE_USE_RELATIVE_PATHS-ADVANCED:INTERNAL=1
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_64_BIT_DEVICE_CODE
 CUDA_64_BIT_DEVICE_CODE-ADVANCED:INTERNAL=1
+//List of intermediate files that are part of the cuda dependency
+// scanning.
+CUDA_ADDITIONAL_CLEAN_FILES:INTERNAL=/home/ubuntu/catkin_ws/build/race/CMakeFiles/TestLib.dir/src/TestLib_generated_cudaTest2.cu.o.depend
 //ADVANCED property for variable: CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE
 CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_CUDART_LIBRARY
@@ -1299,6 +1308,8 @@ CUDA_TOOLKIT_INCLUDE-ADVANCED:INTERNAL=1
 //This is the value of the last time CUDA_TOOLKIT_ROOT_DIR was
 // set successfully.
 CUDA_TOOLKIT_ROOT_DIR_INTERNAL:INTERNAL=/usr/local/cuda-6.5
+//ADVANCED property for variable: CUDA_VERSION
+CUDA_VERSION-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_cublas_LIBRARY
 CUDA_cublas_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_cufft_LIBRARY

@@ -1,3 +1,4 @@
+/home/ubuntu/catkin_ws/build/race/CMakeFiles/TestLib.dir
 /home/ubuntu/catkin_ws/build/zed_wrapper/CMakeFiles/ZEDWrapper.dir
 /home/ubuntu/catkin_ws/build/robot_model/robot_model/CMakeFiles/_catkin_empty_exported_target.dir
 /home/ubuntu/catkin_ws/build/race/CMakeFiles/_race_generate_messages_check_deps_drive_param.dir

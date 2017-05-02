@@ -1,5 +1,5 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/TestLib.dir/src/./TestLib_generated_cudaTest2.cu.o"
+  "CMakeFiles/TestLib.dir/src/./TestLib_generated_zedMagic.cu.o"
   "/home/ubuntu/catkin_ws/devel/lib/libTestLib.pdb"
   "/home/ubuntu/catkin_ws/devel/lib/libTestLib.a"
 )

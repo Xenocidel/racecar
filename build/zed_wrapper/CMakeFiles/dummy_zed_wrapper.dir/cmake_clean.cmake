@@ -3,6 +3,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/dummy_zed_wrapper.dir/__/race/src/hectorOdom.cpp.o"
   "CMakeFiles/dummy_zed_wrapper.dir/__/race/src/wallChooser.cpp.o"
   "CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.o"
+  "CMakeFiles/dummy_zed_wrapper.dir/__/race/src/timingTattler.cpp.o"
   "CMakeFiles/dummy_zed_wrapper.dir/__/race/src/speedChooser.cpp.o"
   "CMakeFiles/dummy_zed_wrapper.dir/__/race/src/getOdomFromMatcher.cpp.o"
   "CMakeFiles/dummy_zed_wrapper.dir/__/race/src/odom.cpp.o"

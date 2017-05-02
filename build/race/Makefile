@@ -682,6 +682,20 @@ tf_generate_messages_py/fast:
 .PHONY : tf_generate_messages_py/fast
 
 # Convenience name for target.
+race/CMakeFiles/timer.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 race/CMakeFiles/timer.dir/rule
+.PHONY : race/CMakeFiles/timer.dir/rule
+
+# Convenience name for target.
+timer: race/CMakeFiles/timer.dir/rule
+.PHONY : timer
+
+# fast build rule for target.
+timer/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/timer.dir/build.make race/CMakeFiles/timer.dir/build
+.PHONY : timer/fast
+
+# Convenience name for target.
 race/CMakeFiles/wallChooser.dir/rule:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 race/CMakeFiles/wallChooser.dir/rule
 .PHONY : race/CMakeFiles/wallChooser.dir/rule
@@ -867,6 +881,30 @@ src/speedChooser.cpp.s:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/speedChooser.dir/build.make race/CMakeFiles/speedChooser.dir/src/speedChooser.cpp.s
 .PHONY : src/speedChooser.cpp.s
 
+src/timingTattler.o: src/timingTattler.cpp.o
+.PHONY : src/timingTattler.o
+
+# target to build an object file
+src/timingTattler.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/timer.dir/build.make race/CMakeFiles/timer.dir/src/timingTattler.cpp.o
+.PHONY : src/timingTattler.cpp.o
+
+src/timingTattler.i: src/timingTattler.cpp.i
+.PHONY : src/timingTattler.i
+
+# target to preprocess a source file
+src/timingTattler.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/timer.dir/build.make race/CMakeFiles/timer.dir/src/timingTattler.cpp.i
+.PHONY : src/timingTattler.cpp.i
+
+src/timingTattler.s: src/timingTattler.cpp.s
+.PHONY : src/timingTattler.s
+
+# target to generate assembly for a file
+src/timingTattler.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/timer.dir/build.make race/CMakeFiles/timer.dir/src/timingTattler.cpp.s
+.PHONY : src/timingTattler.cpp.s
+
 src/wallChooser.o: src/wallChooser.cpp.o
 .PHONY : src/wallChooser.o
 
@@ -990,6 +1028,7 @@ help:
 	@echo "... tf_generate_messages_cpp"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_py"
+	@echo "... timer"
 	@echo "... wallChooser"
 	@echo "... zedBW"
 	@echo "... zedNav"
@@ -1011,6 +1050,9 @@ help:
 	@echo "... src/speedChooser.o"
 	@echo "... src/speedChooser.i"
 	@echo "... src/speedChooser.s"
+	@echo "... src/timingTattler.o"
+	@echo "... src/timingTattler.i"
+	@echo "... src/timingTattler.s"
 	@echo "... src/wallChooser.o"
 	@echo "... src/wallChooser.i"
 	@echo "... src/wallChooser.s"

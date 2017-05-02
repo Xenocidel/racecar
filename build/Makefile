@@ -1372,6 +1372,19 @@ tf_generate_messages_py/fast:
 .PHONY : tf_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named timer
+
+# Build rule for target.
+timer: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 timer
+.PHONY : timer
+
+# fast build rule for target.
+timer/fast:
+	$(MAKE) -f race/CMakeFiles/timer.dir/build.make race/CMakeFiles/timer.dir/build
+.PHONY : timer/fast
+
+#=============================================================================
 # Target rules for targets named wallChooser
 
 # Build rule for target.
@@ -2310,6 +2323,7 @@ help:
 	@echo "... tf_generate_messages_cpp"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_py"
+	@echo "... timer"
 	@echo "... wallChooser"
 	@echo "... zedBW"
 	@echo "... zedNav"

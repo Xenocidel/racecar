@@ -1747,6 +1747,30 @@ __/race/src/speedChooser.cpp.s:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/speedChooser.cpp.s
 .PHONY : __/race/src/speedChooser.cpp.s
 
+__/race/src/timingTattler.o: __/race/src/timingTattler.cpp.o
+.PHONY : __/race/src/timingTattler.o
+
+# target to build an object file
+__/race/src/timingTattler.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/timingTattler.cpp.o
+.PHONY : __/race/src/timingTattler.cpp.o
+
+__/race/src/timingTattler.i: __/race/src/timingTattler.cpp.i
+.PHONY : __/race/src/timingTattler.i
+
+# target to preprocess a source file
+__/race/src/timingTattler.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/timingTattler.cpp.i
+.PHONY : __/race/src/timingTattler.cpp.i
+
+__/race/src/timingTattler.s: __/race/src/timingTattler.cpp.s
+.PHONY : __/race/src/timingTattler.s
+
+# target to generate assembly for a file
+__/race/src/timingTattler.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/timingTattler.cpp.s
+.PHONY : __/race/src/timingTattler.cpp.s
+
 __/race/src/wallChooser.o: __/race/src/wallChooser.cpp.o
 .PHONY : __/race/src/wallChooser.o
 
@@ -2844,6 +2868,9 @@ help:
 	@echo "... __/race/src/speedChooser.o"
 	@echo "... __/race/src/speedChooser.i"
 	@echo "... __/race/src/speedChooser.s"
+	@echo "... __/race/src/timingTattler.o"
+	@echo "... __/race/src/timingTattler.i"
+	@echo "... __/race/src/timingTattler.s"
 	@echo "... __/race/src/wallChooser.o"
 	@echo "... __/race/src/wallChooser.i"
 	@echo "... __/race/src/wallChooser.s"

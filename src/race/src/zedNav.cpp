@@ -4,7 +4,7 @@
 #define square(x) x*x
 #define THRESHOLD 70
 
-#include "cudaTest2.h"
+#include "zedMagic.h"
 //extern "C" int testMain();
 
 struct polar_point { int roh; int theta; };
@@ -19,9 +19,6 @@ class zedNav
 
   void callback(const sensor_msgs::Image& msg, sensor_msgs::Image& edge)
   {
-    testMain();
-    printf("Did test main in callback");
-    return;
     int i,j;
     int W = msg.width, H = msg.height;
     int cropH=H*55/100;
@@ -34,9 +31,19 @@ class zedNav
     edge.encoding = "mono8"; // now single color (B/W)
     edge.is_bigendian = msg.is_bigendian;
     edge.step = msg.step/3/2; // only have 1/6 the data: bw, zoom
+
+    printf("about to process img\n");
+    edge.data = processImage(msg.data);
+
+    edge.header.stamp = ros::Time::now();
+    printf("Took %f seconds to process\n", edge.header.stamp.toSec() - msg.header.stamp.toSec());
+
+    return;
    
     std::vector <unsigned char> scaled; //to scale down image
 
+
+    
     for (i=0;i<newH;i++) {
         for (j=0;j<newW*3;j++) {
             long sum=0;
@@ -48,6 +55,10 @@ class zedNav
             scaled.push_back(sum/4);
         }
     }
+
+    //scaled = processImage(msg.data);
+
+    printf("successfully used .cu file\n");
     
     std::vector <unsigned char> bw; // to hold raw bw
     
@@ -119,7 +130,10 @@ class zedNav
     printf("min is now %d\n",roh_min);
 
     edge.data.swap(edge_img);
-    
+   
+
+    //edge.data = processImage(edge.data);
+ 
     edge_img.clear();   
      
     /*
@@ -176,7 +190,7 @@ class zedNav
     }
     sensor_msgs::Image edge;
     callback(msg,edge); // do operations on data
-    //pub_l_.publish(edge); 
+    pub_l_.publish(edge); 
     
   }
   

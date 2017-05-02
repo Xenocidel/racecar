@@ -1,2 +1,2 @@
-/usr/bin/ar cr /home/ubuntu/catkin_ws/devel/lib/libTestLib.a  CMakeFiles/TestLib.dir/src/./TestLib_generated_cudaTest2.cu.o
+/usr/bin/ar cr /home/ubuntu/catkin_ws/devel/lib/libTestLib.a  CMakeFiles/TestLib.dir/src/./TestLib_generated_zedMagic.cu.o
 /usr/bin/ranlib /home/ubuntu/catkin_ws/devel/lib/libTestLib.a

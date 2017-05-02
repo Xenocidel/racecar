@@ -1275,7 +1275,7 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 CUDA_64_BIT_DEVICE_CODE-ADVANCED:INTERNAL=1
 //List of intermediate files that are part of the cuda dependency
 // scanning.
-CUDA_ADDITIONAL_CLEAN_FILES:INTERNAL=/home/ubuntu/catkin_ws/build/race/CMakeFiles/TestLib.dir/src/TestLib_generated_cudaTest2.cu.o.depend
+CUDA_ADDITIONAL_CLEAN_FILES:INTERNAL=/home/ubuntu/catkin_ws/build/race/CMakeFiles/TestLib.dir/src/TestLib_generated_cudaTest2.cu.o.depend;/home/ubuntu/catkin_ws/build/race/CMakeFiles/TestLib.dir/src/TestLib_generated_zedMagic.cu.o.depend
 //ADVANCED property for variable: CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE
 CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_CUDART_LIBRARY

@@ -20,7 +20,7 @@ find_package(catkin REQUIRED COMPONENTS
 SET(CUDA_NVCC_FLAGS "" CACHE STRING "nvcc flags" FORCE)
 SET (CUDA_VERBOSE_BUILD ON CACHE BOOL "nvcc verbose" FORCE)
 SET(LIB_TYPE STATIC)
-CUDA_ADD_LIBRARY(TestLib ${LIB_TYPE} src/cudaTest2.cu)
+CUDA_ADD_LIBRARY(TestLib ${LIB_TYPE} src/zedMagic.cu)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -152,6 +152,7 @@ add_executable(wallChooser src/wallChooser.cpp)
 add_executable(speedChooser src/speedChooser.cpp)
 add_executable(zedNav src/zedNav.cpp)
 add_executable(zedBW src/zedBW.cpp)
+add_executable(timer src/timingTattler.cpp)
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(race_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
@@ -186,6 +187,9 @@ target_link_libraries(zedNav
   TestLib
  )
 target_link_libraries(zedBW
+  ${catkin_LIBRARIES}
+ )
+target_link_libraries(timer
   ${catkin_LIBRARIES}
  )
 

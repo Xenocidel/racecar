@@ -1603,30 +1603,6 @@ __/race/src/cudaTest.cpp.s:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.s
 .PHONY : __/race/src/cudaTest.cpp.s
 
-__/race/src/cudaTest2.o: __/race/src/cudaTest2.cpp.o
-.PHONY : __/race/src/cudaTest2.o
-
-# target to build an object file
-__/race/src/cudaTest2.cpp.o:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o
-.PHONY : __/race/src/cudaTest2.cpp.o
-
-__/race/src/cudaTest2.i: __/race/src/cudaTest2.cpp.i
-.PHONY : __/race/src/cudaTest2.i
-
-# target to preprocess a source file
-__/race/src/cudaTest2.cpp.i:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.i
-.PHONY : __/race/src/cudaTest2.cpp.i
-
-__/race/src/cudaTest2.s: __/race/src/cudaTest2.cpp.s
-.PHONY : __/race/src/cudaTest2.s
-
-# target to generate assembly for a file
-__/race/src/cudaTest2.cpp.s:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.s
-.PHONY : __/race/src/cudaTest2.cpp.s
-
 __/race/src/getOdomFromMatcher.o: __/race/src/getOdomFromMatcher.cpp.o
 .PHONY : __/race/src/getOdomFromMatcher.o
 
@@ -1818,6 +1794,30 @@ __/race/src/zedBW.s: __/race/src/zedBW.cpp.s
 __/race/src/zedBW.cpp.s:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedBW.cpp.s
 .PHONY : __/race/src/zedBW.cpp.s
+
+__/race/src/zedMagic.o: __/race/src/zedMagic.cpp.o
+.PHONY : __/race/src/zedMagic.o
+
+# target to build an object file
+__/race/src/zedMagic.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.o
+.PHONY : __/race/src/zedMagic.cpp.o
+
+__/race/src/zedMagic.i: __/race/src/zedMagic.cpp.i
+.PHONY : __/race/src/zedMagic.i
+
+# target to preprocess a source file
+__/race/src/zedMagic.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.i
+.PHONY : __/race/src/zedMagic.cpp.i
+
+__/race/src/zedMagic.s: __/race/src/zedMagic.cpp.s
+.PHONY : __/race/src/zedMagic.s
+
+# target to generate assembly for a file
+__/race/src/zedMagic.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.s
+.PHONY : __/race/src/zedMagic.cpp.s
 
 __/race/src/zedNav.o: __/race/src/zedNav.cpp.o
 .PHONY : __/race/src/zedNav.o
@@ -2850,9 +2850,6 @@ help:
 	@echo "... __/race/src/cudaTest.o"
 	@echo "... __/race/src/cudaTest.i"
 	@echo "... __/race/src/cudaTest.s"
-	@echo "... __/race/src/cudaTest2.o"
-	@echo "... __/race/src/cudaTest2.i"
-	@echo "... __/race/src/cudaTest2.s"
 	@echo "... __/race/src/getOdomFromMatcher.o"
 	@echo "... __/race/src/getOdomFromMatcher.i"
 	@echo "... __/race/src/getOdomFromMatcher.s"
@@ -2877,6 +2874,9 @@ help:
 	@echo "... __/race/src/zedBW.o"
 	@echo "... __/race/src/zedBW.i"
 	@echo "... __/race/src/zedBW.s"
+	@echo "... __/race/src/zedMagic.o"
+	@echo "... __/race/src/zedMagic.i"
+	@echo "... __/race/src/zedMagic.s"
 	@echo "... __/race/src/zedNav.o"
 	@echo "... __/race/src/zedNav.i"
 	@echo "... __/race/src/zedNav.s"

@@ -150,18 +150,32 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-race/CMakeFiles/TestLib.dir/rule:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 race/CMakeFiles/TestLib.dir/rule
-.PHONY : race/CMakeFiles/TestLib.dir/rule
+race/CMakeFiles/ZedCudaFuncs.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 race/CMakeFiles/ZedCudaFuncs.dir/rule
+.PHONY : race/CMakeFiles/ZedCudaFuncs.dir/rule
 
 # Convenience name for target.
-TestLib: race/CMakeFiles/TestLib.dir/rule
-.PHONY : TestLib
+ZedCudaFuncs: race/CMakeFiles/ZedCudaFuncs.dir/rule
+.PHONY : ZedCudaFuncs
 
 # fast build rule for target.
-TestLib/fast:
-	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/TestLib.dir/build.make race/CMakeFiles/TestLib.dir/build
-.PHONY : TestLib/fast
+ZedCudaFuncs/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/ZedCudaFuncs.dir/build.make race/CMakeFiles/ZedCudaFuncs.dir/build
+.PHONY : ZedCudaFuncs/fast
+
+# Convenience name for target.
+race/CMakeFiles/ZedFuncs.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 race/CMakeFiles/ZedFuncs.dir/rule
+.PHONY : race/CMakeFiles/ZedFuncs.dir/rule
+
+# Convenience name for target.
+ZedFuncs: race/CMakeFiles/ZedFuncs.dir/rule
+.PHONY : ZedFuncs
+
+# fast build rule for target.
+ZedFuncs/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/ZedFuncs.dir/build.make race/CMakeFiles/ZedFuncs.dir/build
+.PHONY : ZedFuncs/fast
 
 # Convenience name for target.
 race/CMakeFiles/_race_generate_messages_check_deps_drive_param.dir/rule:
@@ -953,6 +967,30 @@ src/zedBW.cpp.s:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/zedBW.dir/build.make race/CMakeFiles/zedBW.dir/src/zedBW.cpp.s
 .PHONY : src/zedBW.cpp.s
 
+src/zedMagic.o: src/zedMagic.cpp.o
+.PHONY : src/zedMagic.o
+
+# target to build an object file
+src/zedMagic.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/ZedFuncs.dir/build.make race/CMakeFiles/ZedFuncs.dir/src/zedMagic.cpp.o
+.PHONY : src/zedMagic.cpp.o
+
+src/zedMagic.i: src/zedMagic.cpp.i
+.PHONY : src/zedMagic.i
+
+# target to preprocess a source file
+src/zedMagic.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/ZedFuncs.dir/build.make race/CMakeFiles/ZedFuncs.dir/src/zedMagic.cpp.i
+.PHONY : src/zedMagic.cpp.i
+
+src/zedMagic.s: src/zedMagic.cpp.s
+.PHONY : src/zedMagic.s
+
+# target to generate assembly for a file
+src/zedMagic.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/ZedFuncs.dir/build.make race/CMakeFiles/ZedFuncs.dir/src/zedMagic.cpp.s
+.PHONY : src/zedMagic.cpp.s
+
 src/zedNav.o: src/zedNav.cpp.o
 .PHONY : src/zedNav.o
 
@@ -983,7 +1021,8 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... TestLib"
+	@echo "... ZedCudaFuncs"
+	@echo "... ZedFuncs"
 	@echo "... _race_generate_messages_check_deps_drive_param"
 	@echo "... _race_generate_messages_check_deps_drive_values"
 	@echo "... _race_generate_messages_check_deps_pid_input"
@@ -1059,6 +1098,9 @@ help:
 	@echo "... src/zedBW.o"
 	@echo "... src/zedBW.i"
 	@echo "... src/zedBW.s"
+	@echo "... src/zedMagic.o"
+	@echo "... src/zedMagic.i"
+	@echo "... src/zedMagic.s"
 	@echo "... src/zedNav.o"
 	@echo "... src/zedNav.i"
 	@echo "... src/zedNav.s"

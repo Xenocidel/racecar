@@ -652,6 +652,12 @@ ZEDWrapper_LIB_DEPENDS:STATIC=general;/opt/ros/indigo/lib/libimage_transport.so;
 //The directory containing a CMake configuration file for ZED.
 ZED_DIR:PATH=/usr/local/zed
 
+//Dependencies for the target
+ZedCudaFuncs_LIB_DEPENDS:STATIC=general;/usr/local/cuda-6.5/lib/libcudart.so;
+
+//Dependencies for target
+ZedFuncs_LIB_DEPENDS:STATIC=
+
 //Path to a file.
 _CATKIN_GTEST_INCLUDE:FILEPATH=/usr/include/gtest/gtest.h
 
@@ -1046,6 +1052,9 @@ visualization_msgs_DIR:PATH=/opt/ros/indigo/share/visualization_msgs/cmake
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/indigo/share/xmlrpcpp/cmake
 
+//Dependencies for target
+zedFuncs_LIB_DEPENDS:STATIC=
+
 //Value Computed by CMake
 zed_wrapper_BINARY_DIR:STATIC=/home/ubuntu/catkin_ws/build/zed_wrapper
 
@@ -1275,7 +1284,7 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 CUDA_64_BIT_DEVICE_CODE-ADVANCED:INTERNAL=1
 //List of intermediate files that are part of the cuda dependency
 // scanning.
-CUDA_ADDITIONAL_CLEAN_FILES:INTERNAL=/home/ubuntu/catkin_ws/build/race/CMakeFiles/TestLib.dir/src/TestLib_generated_cudaTest2.cu.o.depend;/home/ubuntu/catkin_ws/build/race/CMakeFiles/TestLib.dir/src/TestLib_generated_zedMagic.cu.o.depend
+CUDA_ADDITIONAL_CLEAN_FILES:INTERNAL=/home/ubuntu/catkin_ws/build/race/CMakeFiles/TestLib.dir/src/TestLib_generated_cudaTest2.cu.o.depend;/home/ubuntu/catkin_ws/build/race/CMakeFiles/TestLib.dir/src/TestLib_generated_zedMagic.cu.o.depend;/home/ubuntu/catkin_ws/build/race/CMakeFiles/ZedCudaFuncs.dir/src/ZedCudaFuncs_generated_zedMagic.cu.o.depend
 //ADVANCED property for variable: CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE
 CUDA_ATTACH_VS_BUILD_RULE_TO_CUDA_FILE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUDA_CUDART_LIBRARY

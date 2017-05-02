@@ -878,17 +878,30 @@ topic_tools_generate_messages_py/fast:
 .PHONY : topic_tools_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named TestLib
+# Target rules for targets named ZedCudaFuncs
 
 # Build rule for target.
-TestLib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TestLib
-.PHONY : TestLib
+ZedCudaFuncs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ZedCudaFuncs
+.PHONY : ZedCudaFuncs
 
 # fast build rule for target.
-TestLib/fast:
-	$(MAKE) -f race/CMakeFiles/TestLib.dir/build.make race/CMakeFiles/TestLib.dir/build
-.PHONY : TestLib/fast
+ZedCudaFuncs/fast:
+	$(MAKE) -f race/CMakeFiles/ZedCudaFuncs.dir/build.make race/CMakeFiles/ZedCudaFuncs.dir/build
+.PHONY : ZedCudaFuncs/fast
+
+#=============================================================================
+# Target rules for targets named ZedFuncs
+
+# Build rule for target.
+ZedFuncs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ZedFuncs
+.PHONY : ZedFuncs
+
+# fast build rule for target.
+ZedFuncs/fast:
+	$(MAKE) -f race/CMakeFiles/ZedFuncs.dir/build.make race/CMakeFiles/ZedFuncs.dir/build
+.PHONY : ZedFuncs/fast
 
 #=============================================================================
 # Target rules for targets named _race_generate_messages_check_deps_drive_param
@@ -2285,7 +2298,8 @@ help:
 	@echo "... topic_tools_generate_messages_cpp"
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_py"
-	@echo "... TestLib"
+	@echo "... ZedCudaFuncs"
+	@echo "... ZedFuncs"
 	@echo "... _race_generate_messages_check_deps_drive_param"
 	@echo "... _race_generate_messages_check_deps_drive_values"
 	@echo "... _race_generate_messages_check_deps_pid_input"

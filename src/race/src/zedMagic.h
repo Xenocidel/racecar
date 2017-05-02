@@ -19,7 +19,11 @@ extern "C" int testMain(void);
 
 extern "C" std::vector<unsigned char> processImage(std::vector<unsigned char> imgData);
 
+std::vector <unsigned char> scaleAndCrop(std::vector <unsigned char> imgData);
 
+std::vector <unsigned char> toGrayscale(std::vector <unsigned char> scaled);
+
+std::vector <unsigned char> getEdges(std::vector <unsigned char> bw);
 
 #endif
 

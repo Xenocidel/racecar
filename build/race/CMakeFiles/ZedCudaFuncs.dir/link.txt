@@ -1,0 +1,2 @@
+/usr/bin/ar cr /home/ubuntu/catkin_ws/devel/lib/libZedCudaFuncs.a  CMakeFiles/ZedCudaFuncs.dir/src/./ZedCudaFuncs_generated_zedMagic.cu.o
+/usr/bin/ranlib /home/ubuntu/catkin_ws/devel/lib/libZedCudaFuncs.a

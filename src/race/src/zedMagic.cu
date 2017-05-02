@@ -103,70 +103,24 @@ extern "C" std::vector<unsigned char> processImage(std::vector<unsigned char> im
     free(scCrop);
     cudaFree(d_scCrop);
 
-    //return output;
+    std::vector <unsigned char> scaled; //to scale down image
 
-   std::vector <unsigned char> scaled; //to scale down image
-
-/*
-    for (i=0;i<newH;i++) {
-        for (j=0;j<newW*3;j++) {
-            long sum=0;
-            //sum += scaled[3*newW*i + 3*j +k];
-            sum=sum+imgData[(2*j)   + 3*W*(2*i)  ];
-            sum=sum+imgData[(2*j+3) + 3*W*(2*i)  ];
-            sum=sum+imgData[(2*j)   + 3*W*(2*i+1)];
-            sum=sum+imgData[(2*j+3) + 3*W*(2*i+1)];
-            scaled.push_back(sum/4);
-        }
-    }
-*/
+    /*
+    scaled = scaleAndCrop(imgData);
+    * OR
+    */
 
     scaled = output;
     
     std::vector <unsigned char> bw; // to hold raw bw
     
-    /* Consolidate color into black and white photo */
-    for (i=0;i<newH;i++) {
-        for (j=0;j<newW;j++) {
-            long sum = 0;
-            int k;
-            for (k=-1;k<2;k++) sum += scaled[3*newW*i + 3*j +k];
-            bw.push_back(sum/3);
-        }
-    }
+    bw = toGrayscale(scaled);
+
     
-    std::vector <double> edges; // to hold sgm 
-    /* Calculate dx, dy, sgm */
-    int dx,dy;
-    double max = 0;
-    for (i=0;i<newH;i++) {
-        if (i==0 || i==(newH-1)) { // top/bottom row
-            for (j=0;j<newW;j++) edges.push_back(0);
-        }
-        else {
-            edges.push_back(0); // left column
-            for (j=1;j<newW-1;j++) {
-                int index = newW*i + j; 
-                dx = bw[index+newW+1] + 2*bw[index+1] + bw[index-newW+1] \
-                - (bw[index+newW-1] + 2*bw[index-1] + bw[index-newW-1]);
-                dy = bw[index-newW-1] + 2*bw[index-newW] + bw[index-newW+1]\
-                - (bw[index+newW-1] + 2*bw[index+newW] + bw[index+newW+1]);
-                double sgm = sqrt(square(dx) + square(dy));
-                max = (max<sgm)? sgm: max;
-                edges.push_back(sgm);
-            }
-            edges.push_back(0); // right column
-        }
-    }
-    bw.clear();
+    std::vector <unsigned char> edges; // to hold scaled, thresholded sgm 
+    edges = getEdges(bw);
 
-    std::vector <unsigned char> edge_img;
-    /* Scale edge (sgm) data to 0 to 255 range */
-    for (i=0;i<edges.size();i++) edge_img.push_back((edges[i]/max*255 > THRESHOLD)?255 :0);
-    edges.clear();
-
-    return edge_img;
-
+    return edges;
 
 }
 

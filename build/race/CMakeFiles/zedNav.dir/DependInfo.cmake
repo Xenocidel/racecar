@@ -17,7 +17,8 @@ SET(CMAKE_TARGET_DEFINITIONS
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/ubuntu/catkin_ws/build/race/CMakeFiles/TestLib.dir/DependInfo.cmake"
+  "/home/ubuntu/catkin_ws/build/race/CMakeFiles/ZedCudaFuncs.dir/DependInfo.cmake"
+  "/home/ubuntu/catkin_ws/build/race/CMakeFiles/ZedFuncs.dir/DependInfo.cmake"
   )
 
 # The include file search paths:

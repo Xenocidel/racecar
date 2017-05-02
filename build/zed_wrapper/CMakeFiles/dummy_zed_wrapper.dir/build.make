@@ -231,9 +231,32 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedNav.cpp.o.provides: 
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedNav.cpp.o.provides.build: zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedNav.cpp.o
 
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.o: 
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.o: /home/ubuntu/catkin_ws/src/race/src/zedMagic.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.o"
+	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.o -c /home/ubuntu/catkin_ws/src/race/src/zedMagic.cpp
+
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.i"
+	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/catkin_ws/src/race/src/zedMagic.cpp > CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.i
+
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.s"
+	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/catkin_ws/src/race/src/zedMagic.cpp -o CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.s
+
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.o.requires:
+.PHONY : zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.o.requires
+
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.o.provides: zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.o.requires
+	$(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.o.provides.build
+.PHONY : zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.o.provides
+
+zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.o.provides.build: zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedMagic.cpp.o
+
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/amclOdom.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/amclOdom.cpp.o: /home/ubuntu/catkin_ws/src/race/src/amclOdom.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/amclOdom.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/race/src/amclOdom.cpp.o -c /home/ubuntu/catkin_ws/src/race/src/amclOdom.cpp
 
@@ -256,7 +279,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/amclOdom.cpp.o.provides
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedBW.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedBW.cpp.o: /home/ubuntu/catkin_ws/src/race/src/zedBW.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedBW.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedBW.cpp.o -c /home/ubuntu/catkin_ws/src/race/src/zedBW.cpp
 
@@ -279,7 +302,7 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/zedBW.cpp.o.provides.bu
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/process_scan.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/process_scan.cpp.o: /home/ubuntu/catkin_ws/src/race/src/process_scan.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/process_scan.cpp.o"
 	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/race/src/process_scan.cpp.o -c /home/ubuntu/catkin_ws/src/race/src/process_scan.cpp
 
@@ -299,29 +322,6 @@ zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/process_scan.cpp.o.prov
 .PHONY : zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/process_scan.cpp.o.provides
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/process_scan.cpp.o.provides.build: zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/process_scan.cpp.o
-
-zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o: 
-zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o: /home/ubuntu/catkin_ws/src/race/src/cudaTest2.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/catkin_ws/build/CMakeFiles $(CMAKE_PROGRESS_12)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o"
-	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o -c /home/ubuntu/catkin_ws/src/race/src/cudaTest2.cpp
-
-zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.i"
-	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/catkin_ws/src/race/src/cudaTest2.cpp > CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.i
-
-zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.s"
-	cd /home/ubuntu/catkin_ws/build/zed_wrapper && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/catkin_ws/src/race/src/cudaTest2.cpp -o CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.s
-
-zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o.requires:
-.PHONY : zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o.requires
-
-zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o.provides: zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o.requires
-	$(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o.provides.build
-.PHONY : zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o.provides
-
-zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o.provides.build: zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest2.cpp.o
 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/src/collada_urdf.cpp.o: 
 zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/robot_model/collada_urdf/src/collada_urdf.cpp.o: /home/ubuntu/catkin_ws/src/robot_model/collada_urdf/src/collada_urdf.cpp

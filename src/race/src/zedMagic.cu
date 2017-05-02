@@ -14,6 +14,29 @@ void saxpy(int n, float a, float *x, float *y) {
     if (i<n) y[i]=a*x[i]+y[i];
 }
 
+__global__
+void edgeMath(unsigned char* bw, float* edges) {
+    int index = blockIdx.x*blockDim.x + threadIdx.x;
+    int i = index/W_O;
+    int j = index%W_O;
+    if (i==0 || i==H_O-1) edges[index] = 0;
+    else {
+        if (j==0 || j==W_O-1) edges[index] = 0;
+        else {
+            int dx,dy;
+            int newW = W_O;
+                dx = bw[index+newW+1] + 2*bw[index+1] + bw[index-newW+1] \
+                - (bw[index+newW-1] + 2*bw[index-1] + bw[index-newW-1]);
+                dy = bw[index-newW-1] + 2*bw[index-newW] + bw[index-newW+1]\
+                - (bw[index+newW-1] + 2*bw[index+newW] + bw[index+newW+1]);
+                double sgm = (square(dx) + square(dy));
+            edges[index] = sgm;
+        }
+    }
+}
+
+
+
 extern "C" int testMain(void) {
     int N=30000;//1<<20;
     float *x, *y, *d_x, *d_y;
@@ -60,25 +83,26 @@ extern "C" std::vector<unsigned char> processImage(std::vector<unsigned char> im
 
     //Reading into an array AND cropping AND scaling at once
     unsigned char *scCrop,*d_scCrop;
+    float  *edge,*d_edge;
     std::vector<unsigned char> output; 
 
-    scCrop = (unsigned char*) malloc(3*H_O*W_O*sizeof(unsigned char));
-    cudaMalloc(&d_scCrop,3*H_O*W_O*sizeof(unsigned char));
+    scCrop = (unsigned char*) malloc(H_O*W_O*sizeof(unsigned char));
+    edge = (float*) malloc(H_O*W_O*sizeof(float));
+    cudaMalloc(&d_scCrop,H_O*W_O*sizeof(unsigned char));
+    cudaMalloc(&d_edge,H_O*W_O*sizeof(float));
     
+
     printf("allocated mem\n");
     if (scCrop==NULL) printf("Error allocating memory: allocated to NULL\n");
 
     int i,j;
     int W = W_I, H = H_I;
-    int cropH=H*55/100;
-    int newH=cropH/2;
-    int newW=W/2;
 
     if (imgData.size() != W*H*3) {
         printf("ERROR dimensions wahwahwah\n");
     } 
 
-    for (i=0;i<H_O;i++) {
+    /*for (i=0;i<H_O;i++) {
         for (j=0;j<W_O*3;j++) {
             long sum=0;
             sum=sum+imgData[(2*j)   + 3*W*(2*i)  ];
@@ -87,40 +111,46 @@ extern "C" std::vector<unsigned char> processImage(std::vector<unsigned char> im
             sum=sum+imgData[(2*j+3) + 3*W*(2*i+1)];
             scCrop[i*W_O*3 + j] = (sum/4);
         }
+    }*/
+
+    for (i=0;i<H_O;i++) {
+        for (j=0;j<W_O;j++) {
+            long sum = 0;
+            for (int k = 0; k<6; k++) {
+                sum += imgData[6*j + k + 6*W*i];
+                sum += imgData[6*j + k + 6*W*i + 3*W];
+            }
+            scCrop[i*W_O + j] = sum/12;
+        }
     }
 
     printf("scaled and cropped into array\n");
 
-
+    /*
     for (i=0;i<H_O;i++) {
         for (j=0;j<W_O*3;j++) {
             output.push_back(scCrop[i*W_O*3 + j]);
         }
-    }
+    }*/
+    cudaMemcpy(d_scCrop,scCrop,H_O*W_O*sizeof(unsigned char),cudaMemcpyHostToDevice);
+    edgeMath<<<W_O,H_O>>>(d_scCrop,d_edge);
+    cudaMemcpy(edge,d_edge,H_O*W_O*sizeof(float),cudaMemcpyDeviceToHost);
+
+    double max;
+    for (i=0;i<H_O;i++) for (j=0;j<W_O;j++) max = (sqrt(edge[i*W_O + j])>max)? sqrt(edge[i*W_O + j]) : max;
+ 
+    for (i=0;i<H_O;i++) for (j=0;j<W_O;j++) output.push_back( (sqrt(edge[i*W_O + j])/max*255 > THRESHOLD)? 255: 0);
 
     printf("read from array into vector\n");
 
     free(scCrop);
     cudaFree(d_scCrop);
+    free(edge);
+    cudaFree(d_edge);
 
-    std::vector <unsigned char> scaled; //to scale down image
-
-    /*
-    scaled = scaleAndCrop(imgData);
-    * OR
-    */
-
-    scaled = output;
-    
-    std::vector <unsigned char> bw; // to hold raw bw
-    
-    bw = toGrayscale(scaled);
-
-    
-    std::vector <unsigned char> edges; // to hold scaled, thresholded sgm 
-    edges = getEdges(bw);
-
-    return edges;
+    //output = toGrayscale(output); 
+    //output = getEdges(output);
+    return output;
 
 }
 

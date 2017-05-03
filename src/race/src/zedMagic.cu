@@ -5,7 +5,7 @@
 #define square(x) x*x
 #define THRESHOLD 70
 
-
+#define AREA H_O*W_O
 
 
 __global__
@@ -71,8 +71,16 @@ extern "C" int testMain(void) {
     return 0;
 }
 
+extern "C" std::vector<unsigned char> processImage(std::vector<unsigned char> imgData, int func_id) {
+    switch(func_id) {
+        case CUDA_BASIC: return processImageCuda(imgData);
+        case DUMB: return processImageDumb(imgData);
+        case DUMB_MIN: return processImageDumb(imgData);
+    } return processImageCuda(imgData);
+} 
 
-extern "C" std::vector<unsigned char> processImage(std::vector<unsigned char> imgData) {
+
+extern "C" std::vector<unsigned char> processImageCuda(std::vector<unsigned char> imgData) {
     // Steps:
     // Read from std::vector format
     // Crop and scale
@@ -86,32 +94,17 @@ extern "C" std::vector<unsigned char> processImage(std::vector<unsigned char> im
     float  *edge,*d_edge;
     std::vector<unsigned char> output; 
 
-    scCrop = (unsigned char*) malloc(H_O*W_O*sizeof(unsigned char));
-    edge = (float*) malloc(H_O*W_O*sizeof(float));
-    cudaMalloc(&d_scCrop,H_O*W_O*sizeof(unsigned char));
-    cudaMalloc(&d_edge,H_O*W_O*sizeof(float));
+    scCrop = (unsigned char*) malloc(AREA*sizeof(unsigned char));
+    edge = (float*) malloc(AREA*sizeof(float));
+    cudaMalloc(&d_scCrop,AREA*sizeof(unsigned char));
+    cudaMalloc(&d_edge,AREA*sizeof(float));
     
-
-    printf("allocated mem\n");
-    if (scCrop==NULL) printf("Error allocating memory: allocated to NULL\n");
-
     int i,j;
     int W = W_I, H = H_I;
 
     if (imgData.size() != W*H*3) {
         printf("ERROR dimensions wahwahwah\n");
     } 
-
-    /*for (i=0;i<H_O;i++) {
-        for (j=0;j<W_O*3;j++) {
-            long sum=0;
-            sum=sum+imgData[(2*j)   + 3*W*(2*i)  ];
-            sum=sum+imgData[(2*j+3) + 3*W*(2*i)  ];
-            sum=sum+imgData[(2*j)   + 3*W*(2*i+1)];
-            sum=sum+imgData[(2*j+3) + 3*W*(2*i+1)];
-            scCrop[i*W_O*3 + j] = (sum/4);
-        }
-    }*/
 
     for (i=0;i<H_O;i++) {
         for (j=0;j<W_O;j++) {
@@ -122,37 +115,103 @@ extern "C" std::vector<unsigned char> processImage(std::vector<unsigned char> im
             }
             scCrop[i*W_O + j] = sum/12;
         }
-    }
+    } //scaled and cropped into array
 
-    printf("scaled and cropped into array\n");
-
-    /*
-    for (i=0;i<H_O;i++) {
-        for (j=0;j<W_O*3;j++) {
-            output.push_back(scCrop[i*W_O*3 + j]);
-        }
-    }*/
-    cudaMemcpy(d_scCrop,scCrop,H_O*W_O*sizeof(unsigned char),cudaMemcpyHostToDevice);
+    cudaMemcpy(d_scCrop,scCrop,AREA*sizeof(unsigned char),cudaMemcpyHostToDevice);
     edgeMath<<<W_O,H_O>>>(d_scCrop,d_edge);
-    cudaMemcpy(edge,d_edge,H_O*W_O*sizeof(float),cudaMemcpyDeviceToHost);
+    cudaMemcpy(edge,d_edge,AREA*sizeof(float),cudaMemcpyDeviceToHost);
 
     double max;
     for (i=0;i<H_O;i++) for (j=0;j<W_O;j++) max = (sqrt(edge[i*W_O + j])>max)? sqrt(edge[i*W_O + j]) : max;
  
     for (i=0;i<H_O;i++) for (j=0;j<W_O;j++) output.push_back( (sqrt(edge[i*W_O + j])/max*255 > THRESHOLD)? 255: 0);
 
-    printf("read from array into vector\n");
 
     free(scCrop);
     cudaFree(d_scCrop);
     free(edge);
     cudaFree(d_edge);
 
-    //output = toGrayscale(output); 
-    //output = getEdges(output);
     return output;
 
 }
 
+extern "C" std::vector<unsigned char> processImageDumb(std::vector<unsigned char> imgData) {
+    std::vector <unsigned char> output;
+    output = scaleAndCrop(imgData);
+    output = toGrayscale(output);
+    output = getEdges(output);
+    return output;
+}
+
+extern "C" std::vector<unsigned char> processImageMin(std::vector<unsigned char> imgData) {
+    std::vector <unsigned char> output;
+    output = scaleCropGrayscale(imgData);
+    output = getEdges(output);
+    return output;
+}
 
 
+
+
+#ifdef INPROGRESS
+__global__
+void findHough(unsigned char* edge, unsigned char* temp) {
+    int index = blockIdx.x*blockDim.x + threadIdx.x;
+    int i = index/W_O;
+    int j = index%W_O;
+    int x = j;
+    int y = newH -1 -i;
+    if (edge[index]) {
+                
+    }
+
+}
+
+
+void blah() {
+    
+  for (i=0;i<newH;i++) {
+        for (j=0;j<newW;j++) {
+            int x,y;
+            x = j;
+            y = newH - 1 - i;
+            int index = newW*i + j;
+            if (edge_img[index]) {
+                for (theta=0;theta<180;theta++) {
+                    roh = -x*sin(theta*M_PI/180) + y*cos(theta*M_PI/180);
+                    roh_min = (roh_min>roh)? roh: roh_min;
+                    roh_max = (roh_max<roh)? roh: roh_max;
+                    voting[theta].push_back(roh);    
+                }
+            } 
+        }
+    }
+
+    int hough_max = 0;
+    int final_r, final_t;
+    for (theta=0;theta<180;theta++) {
+        for (roh=roh_min;roh<roh_max+1;roh++) {
+            if (count(voting,theta,roh)>hough_max) {
+                hough_max = count(voting,theta,roh);
+                final_r = roh;
+                final_t = theta;
+            }
+        }
+    }
+
+    printf("r %d, t %d\n", roh, theta);
+
+    for (i=0;i<newH;i++) {
+        for (j=0;j<newW;j++) {
+            int x = j;
+            int y = newH-1-i;
+            if (abs(x*sin(final_t*M_PI/180) - y*cos(final_t*M_PI/180) + final_r) < 1) edge.data.push_back(255);
+            else edge.data.push_back(0);
+        }
+    }
+
+
+}
+
+#endif

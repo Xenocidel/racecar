@@ -38,6 +38,24 @@ std::vector <unsigned char> toGrayscale(std::vector <unsigned char> scaled) {
     return bw;
 }
 
+std::vector <unsigned char> scaleCropGrayscale(std::vector <unsigned char> imgData) {
+    std::vector <unsigned char> scCrop;
+    int i,j, W=W_I;
+    for (i=0;i<H_O;i++) {
+        for (j=0;j<W_O;j++) {
+            long sum = 0;
+            for (int k = 0; k<6; k++) {
+                sum += imgData[6*j + k + 6*W*i];
+                sum += imgData[6*j + k + 6*W*i + 3*W];
+            }
+            scCrop.push_back(sum/12);
+        }
+    } //scaled and cropped grayscale into array
+
+    return scCrop;
+
+}
+
 std::vector <unsigned char> getEdges(std::vector <unsigned char> bw) {
     std::vector <double> edges; // to hold sgm 
     /* Calculate dx, dy, sgm */

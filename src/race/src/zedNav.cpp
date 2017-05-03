@@ -17,6 +17,8 @@ class zedNav
   ros::Publisher pub_r_,pub_l_;
   ros::Subscriber sub_r_,sub_l_;
 
+  int process_type;
+
   void callback(const sensor_msgs::Image& msg, sensor_msgs::Image& edge)
   {
     int i,j;
@@ -32,109 +34,12 @@ class zedNav
     edge.is_bigendian = msg.is_bigendian;
     edge.step = msg.step/3/2; // only have 1/6 the data: bw, zoom
 
-    printf("about to process img\n");
-    edge.data = processImage(msg.data);
+    edge.data = processImage(msg.data, process_type);
 
     edge.header.stamp = ros::Time::now();
     printf("Took %f seconds to process\n", edge.header.stamp.toSec() - msg.header.stamp.toSec());
 
     return;
-   
-    std::vector <unsigned char> scaled; //to scale down image
-
-
-    
-    for (i=0;i<newH;i++) {
-        for (j=0;j<newW*3;j++) {
-            long sum=0;
-            //sum += scaled[3*newW*i + 3*j +k];
-            sum=sum+msg.data[(2*j)   + 3*W*(2*i)  ];
-            sum=sum+msg.data[(2*j+3) + 3*W*(2*i)  ];
-            sum=sum+msg.data[(2*j)   + 3*W*(2*i+1)];
-            sum=sum+msg.data[(2*j+3) + 3*W*(2*i+1)];
-            scaled.push_back(sum/4);
-        }
-    }
-
-    //scaled = processImage(msg.data);
-
-    printf("successfully used .cu file\n");
-    
-    std::vector <unsigned char> bw; // to hold raw bw
-    
-    /* Consolidate color into black and white photo */
-    for (i=0;i<newH;i++) {
-        for (j=0;j<newW;j++) {
-            long sum = 0;
-            int k;
-            for (k=-1;k<2;k++) sum += scaled[3*newW*i + 3*j +k];
-            bw.push_back(sum/3);
-        }
-    }
-    
-    std::vector <double> edges; // to hold sgm 
-    /* Calculate dx, dy, sgm */
-    int dx,dy;
-    double max = 0;
-    for (i=0;i<newH;i++) {
-        if (i==0 || i==(newH-1)) { // top/bottom row
-            for (j=0;j<newW;j++) edges.push_back(0);
-        }
-        else {
-            edges.push_back(0); // left column
-            for (j=1;j<newW-1;j++) {
-                int index = newW*i + j; 
-                dx = bw[index+newW+1] + 2*bw[index+1] + bw[index-newW+1] \
-                - (bw[index+newW-1] + 2*bw[index-1] + bw[index-newW-1]);
-                dy = bw[index-newW-1] + 2*bw[index-newW] + bw[index-newW+1]\
-                - (bw[index+newW-1] + 2*bw[index+newW] + bw[index+newW+1]);
-                double sgm = sqrt(square(dx) + square(dy));
-                max = (max<sgm)? sgm: max;
-                edges.push_back(sgm);
-            }
-            edges.push_back(0); // right column
-        }
-    }
-    bw.clear();
-
-    std::vector <unsigned char> edge_img;
-    /* Scale edge (sgm) data to 0 to 255 range */
-    for (i=0;i<edges.size();i++) edge_img.push_back((edges[i]/max*255 > THRESHOLD)?255 :0);
-    edges.clear();
-
-    //std::vector <polar_point> voting;
-    std::vector <int> voting[180];
-
-    /* Hough Transform */
-    int theta, roh, roh_min, roh_max;
-    for (i=0;i<newH;i++) {
-        for (j=0;j<newW;j++) {
-            int x,y;
-            x = j;
-            y = newH - 1 - i;
-            int index = newW*i + j;
-            if (edge_img[index]) {
-                for (theta=0;theta<180;theta++) {
-                    roh = -x*sin(theta*M_PI/180) + y*cos(theta*M_PI/180);
-                    roh_min = (roh_min>roh)? roh: roh_min;
-                    roh_max = (roh_max<roh)? roh: roh_max;
-                    voting[theta].push_back(roh);    
-                }
-            } 
-        }
-    }
-    printf("max %d, min %d\n",roh_max, roh_min);
-    if (roh_min<-1500) {
-        roh_min=-1500;
-    }
-    printf("min is now %d\n",roh_min);
-
-    edge.data.swap(edge_img);
-   
-
-    //edge.data = processImage(edge.data);
- 
-    edge_img.clear();   
      
     /*
     int hough_max = 0;
@@ -201,6 +106,7 @@ class zedNav
     pub_l_ = nh_.advertise<sensor_msgs::Image>("left_edges",10);
     sub_r_ = nh_.subscribe("/zed/right/image_raw_color",10,&zedNav::callback_r,this);
     sub_l_ = nh_.subscribe("/zed/left/image_raw_color",10,&zedNav::callback_l,this);
+    process_type = 0;
   }
   
 };

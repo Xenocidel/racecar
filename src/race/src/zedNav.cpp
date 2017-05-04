@@ -106,7 +106,7 @@ class zedNav
     pub_l_ = nh_.advertise<sensor_msgs::Image>("left_edges",10);
     sub_r_ = nh_.subscribe("/zed/right/image_raw_color",10,&zedNav::callback_r,this);
     sub_l_ = nh_.subscribe("/zed/left/image_raw_color",10,&zedNav::callback_l,this);
-    process_type = 0;
+    process_type = CUDA_SMART;
   }
   
 };

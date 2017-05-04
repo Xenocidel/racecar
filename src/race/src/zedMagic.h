@@ -13,24 +13,32 @@
 #define W_O 640
 
 #define CUDA_BASIC 31
+#define CUDA_SMART 32
 #define DUMB 1
 #define DUMB_MIN 2
 
-
+/* Included in zedMagic.cu */
 
 __global__
 void saxpy(int n, float a, float *x, float *y);
 
-extern "C" int testMain(void);
+__global__
+void edgeMath(unsigned char* bw, float* edges);
 
-extern "C" std::vector<unsigned char> processImage(std::vector<unsigned char> imgData, int func_id);
 
-extern "C" std::vector<unsigned char> processImageCuda(std::vector<unsigned char> imgData); 
+int testMain(void);
+
+std::vector<unsigned char> processImage(std::vector<unsigned char> imgData, int func_id);
+
+std::vector<unsigned char> processImageCuda(std::vector<unsigned char> imgData); 
+
+std::vector<unsigned char> processImageCudaExpand(std::vector<unsigned char> imgData);
  
-extern "C" std::vector<unsigned char> processImageDumb(std::vector<unsigned char> imgData);
+std::vector<unsigned char> processImageDumb(std::vector<unsigned char> imgData);
 
-extern "C" std::vector<unsigned char> processImageMin(std::vector<unsigned char> imgData); 
+std::vector<unsigned char> processImageMin(std::vector<unsigned char> imgData); 
  
+/* Included in zedMagic.cpp */
 
 std::vector <unsigned char> scaleAndCrop(std::vector <unsigned char> imgData);
 

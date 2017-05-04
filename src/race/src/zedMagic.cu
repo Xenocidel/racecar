@@ -158,25 +158,52 @@ std::vector<unsigned char> processImageCuda(std::vector<unsigned char> imgData) 
 
 }
 
+__global__
+void scaleCuda(unsigned char* imgData, unsigned char* bw) {
+    int index = blockIdx.x*blockDim.x + threadIdx.x;
+    int i = index/W_O;
+    int j = index%(W_O);
+    int W = W_I, H = H_I;
+    long sum = 0;
+    for (int k = 0;k<6; k++) {
+        sum += imgData[6*j + k + 6*W*i];
+        sum += imgData[6*j + k + 6*W*i + 3*W];
+    }
+    bw[i*W_O + j] = sum/12;
+}
+
+
+
+#define CROPPED_AREA W_I*H_O*3*2
 
 std::vector<unsigned char> processImageCudaExpand(std::vector<unsigned char> imgData) {
+    unsigned char *raw, *d_raw;
     unsigned char *scCrop,*d_scCrop;
     unsigned int *edge,*d_edge;
     std::vector<unsigned char> output; 
 
+    raw = (unsigned char*) malloc(CROPPED_AREA*sizeof(unsigned char));
     scCrop = (unsigned char*) malloc(AREA*sizeof(unsigned char));
     edge = (unsigned int*) malloc(AREA*sizeof(unsigned int));
+    cudaMalloc(&d_raw,CROPPED_AREA*sizeof(unsigned char));
     cudaMalloc(&d_scCrop,AREA*sizeof(unsigned char));
     cudaMalloc(&d_edge,AREA*sizeof(unsigned int));
     
-    int i,j;
+    int i,j,index;
     int W = W_I, H = H_I;
 
     if (imgData.size() != W*H*3) {
         printf("ERROR dimensions wahwahwah\n");
     } 
+    
+    for (index=0;index<CROPPED_AREA;index++) raw[index] = imgData[index];
+    // read into array
 
-    for (i=0;i<H_O;i++) {
+    cudaMemcpy(d_raw,raw,CROPPED_AREA*sizeof(unsigned char),cudaMemcpyHostToDevice);
+    scaleCuda<<<W_O,H_O>>>(d_raw,d_scCrop);
+    // do scale and grayscale
+
+    /*for (i=0;i<H_O;i++) {
         for (j=0;j<W_O;j++) {
             long sum = 0;
             for (int k = 0; k<6; k++) {
@@ -186,17 +213,16 @@ std::vector<unsigned char> processImageCudaExpand(std::vector<unsigned char> img
             scCrop[i*W_O + j] = sum/12;
         }
     } //scaled and cropped into array
+    */
 
-    cudaMemcpy(d_scCrop,scCrop,AREA*sizeof(unsigned char),cudaMemcpyHostToDevice);
+    //cudaMemcpy(d_scCrop,scCrop,AREA*sizeof(unsigned char),cudaMemcpyHostToDevice);
     edgeMath<<<W_O,H_O>>>(d_scCrop,d_edge);
     cudaMemcpy(edge,d_edge,AREA*sizeof(unsigned int),cudaMemcpyDeviceToHost);
 
-    double max;
-    int index;
-    //for (index=0;index<AREA;index++) max = (edge[index] > max)? edge[index] : max;
-    //int threshold = (double) THRESHOLD2;//*max/255/255;
     for (index=0;index<AREA;index++) output.push_back((edge[index] > THRESHOLD2) ? 255 : 0);
 
+    free(raw);
+    cudaFree(d_raw);
     free(scCrop);
     cudaFree(d_scCrop);
     free(edge);
@@ -205,64 +231,6 @@ std::vector<unsigned char> processImageCudaExpand(std::vector<unsigned char> img
     return output;
 
 }
-
-
-
-
-#ifdef IGNORE
-std::vector<unsigned char> processImageCudaExpand(std::vector<unsigned char> imgData) {
-    unsigned char *scCrop,*d_scCrop;
-    unsigned char  *edge,*d_edge;
-    std::vector<unsigned char> output; 
-
-    scCrop = (unsigned char*) malloc(AREA*sizeof(unsigned char));
-    edge = (unsigned char*) malloc(AREA*sizeof(unsigned char));
-    cudaMalloc(&d_scCrop,AREA*sizeof(unsigned char));
-    cudaMalloc(&d_edge,AREA*sizeof(unsigned char));
-    
-    int i,j;
-    int W = W_I, H = H_I;
-
-    if (imgData.size() != W*H*3) {
-        printf("ERROR dimensions wahwahwah\n");
-    } 
-
-    for (i=0;i<H_O;i++) {
-        for (j=0;j<W_O;j++) {
-            long sum = 0;
-            for (int k = 0; k<6; k++) {
-                sum += imgData[6*j + k + 6*W*i];
-                sum += imgData[6*j + k + 6*W*i + 3*W];
-            }
-            scCrop[i*W_O + j] = sum/12;
-        }
-    } //scaled and cropped into array
-
-    cudaMemcpy(d_scCrop,scCrop,AREA*sizeof(unsigned char),cudaMemcpyHostToDevice);
-    edgeMath<<<W_O,H_O>>>(d_scCrop,d_edge);
-    cudaMemcpy(edge,d_edge,AREA*sizeof(unsigned char),cudaMemcpyDeviceToHost);
-
-    double max;
-    int index;
-    //for (i=0;i<H_O;i++) for (j=0;j<W_O;j++) max = ((edge[i*W_O + j])>max)? (edge[i*W_O + j]) : max;
-    for (index=0;index<AREA;index++) max = (edge[index]>max)? edge[index]: max;
-
-    int threshold = (float)THRESHOLD*THRESHOLD/255*max;
-    for (index=0;index<AREA;index++) output.push_back((edge[index] > threshold)? 255 : 0);
-
-    //for (i=0;i<H_O;i++) for (j=0;j<W_O;j++) output.push_back( (edge[i*W_O + j] > threshold)? 255: 0);
-
-
-    free(scCrop);
-    cudaFree(d_scCrop);
-    free(edge);
-    cudaFree(d_edge);
-
-    return output;
-
-}
-
-#endif
 
 std::vector<unsigned char> processImageDumb(std::vector<unsigned char> imgData) {
     std::vector <unsigned char> output;

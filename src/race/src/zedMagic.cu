@@ -7,7 +7,7 @@
 #define THRESHOLD2 12000
 
 #define AREA H_O*W_O
-
+#define CROPPED_AREA W_I*H_O*3*2
 
 __global__
 void saxpy(int n, float a, float *x, float *y) {
@@ -163,18 +163,13 @@ void scaleCuda(unsigned char* imgData, unsigned char* bw) {
     int index = blockIdx.x*blockDim.x + threadIdx.x;
     int i = index/W_O;
     int j = index%(W_O);
-    int W = W_I, H = H_I;
     long sum = 0;
     for (int k = 0;k<6; k++) {
-        sum += imgData[6*j + k + 6*W*i];
-        sum += imgData[6*j + k + 6*W*i + 3*W];
+        sum += imgData[6*j + k + 6*W_I*i];
+        sum += imgData[6*j + k + 6*W_I*i + 3*W_I];
     }
-    bw[i*W_O + j] = sum/12;
+    bw[index] = sum/12;
 }
-
-
-
-#define CROPPED_AREA W_I*H_O*3*2
 
 std::vector<unsigned char> processImageCudaExpand(std::vector<unsigned char> imgData) {
     unsigned char *raw, *d_raw;
@@ -184,47 +179,42 @@ std::vector<unsigned char> processImageCudaExpand(std::vector<unsigned char> img
 
     raw = (unsigned char*) malloc(CROPPED_AREA*sizeof(unsigned char));
     scCrop = (unsigned char*) malloc(AREA*sizeof(unsigned char));
-    edge = (unsigned int*) malloc(AREA*sizeof(unsigned int));
     cudaMalloc(&d_raw,CROPPED_AREA*sizeof(unsigned char));
     cudaMalloc(&d_scCrop,AREA*sizeof(unsigned char));
-    cudaMalloc(&d_edge,AREA*sizeof(unsigned int));
     
-    int i,j,index;
+    int index;
     int W = W_I, H = H_I;
 
     if (imgData.size() != W*H*3) {
         printf("ERROR dimensions wahwahwah\n");
     } 
     
+    /* Read into normal array (while cropping)  */
     for (index=0;index<CROPPED_AREA;index++) raw[index] = imgData[index];
-    // read into array
 
+    /* Use CUDA for scaling and grayscale */
     cudaMemcpy(d_raw,raw,CROPPED_AREA*sizeof(unsigned char),cudaMemcpyHostToDevice);
     scaleCuda<<<W_O,H_O>>>(d_raw,d_scCrop);
-    // do scale and grayscale
 
-    /*for (i=0;i<H_O;i++) {
-        for (j=0;j<W_O;j++) {
-            long sum = 0;
-            for (int k = 0; k<6; k++) {
-                sum += imgData[6*j + k + 6*W*i];
-                sum += imgData[6*j + k + 6*W*i + 3*W];
-            }
-            scCrop[i*W_O + j] = sum/12;
-        }
-    } //scaled and cropped into array
-    */
+    /* Done with raw */
+    free(raw);
+    cudaFree(d_raw);
 
-    //cudaMemcpy(d_scCrop,scCrop,AREA*sizeof(unsigned char),cudaMemcpyHostToDevice);
+    edge = (unsigned int*) malloc(AREA*sizeof(unsigned int));
+    cudaMalloc(&d_edge,AREA*sizeof(unsigned int));
+
+    /* Use CUDA for edge detection */
     edgeMath<<<W_O,H_O>>>(d_scCrop,d_edge);
     cudaMemcpy(edge,d_edge,AREA*sizeof(unsigned int),cudaMemcpyDeviceToHost);
 
-    for (index=0;index<AREA;index++) output.push_back((edge[index] > THRESHOLD2) ? 255 : 0);
-
-    free(raw);
-    cudaFree(d_raw);
+    /* Done with scCrop */
     free(scCrop);
     cudaFree(d_scCrop);
+
+    /* Saving to std::vector */
+    for (index=0;index<AREA;index++) output.push_back((edge[index] > THRESHOLD2) ? 255 : 0);
+
+    /* Done with edge */
     free(edge);
     cudaFree(d_edge);
 

@@ -501,6 +501,7 @@ SET(CMAKE_DEPEND_INFO_FILES
   "race/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/DependInfo.cmake"
   "race/CMakeFiles/geometry_msgs_generate_messages_py.dir/DependInfo.cmake"
   "race/CMakeFiles/hectorOdom.dir/DependInfo.cmake"
+  "race/CMakeFiles/lineDetect.dir/DependInfo.cmake"
   "race/CMakeFiles/nav_msgs_generate_messages_cpp.dir/DependInfo.cmake"
   "race/CMakeFiles/nav_msgs_generate_messages_lisp.dir/DependInfo.cmake"
   "race/CMakeFiles/nav_msgs_generate_messages_py.dir/DependInfo.cmake"

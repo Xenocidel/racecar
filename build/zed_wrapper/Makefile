@@ -1651,6 +1651,30 @@ __/race/src/hectorOdom.cpp.s:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/hectorOdom.cpp.s
 .PHONY : __/race/src/hectorOdom.cpp.s
 
+__/race/src/lineDetector.o: __/race/src/lineDetector.cpp.o
+.PHONY : __/race/src/lineDetector.o
+
+# target to build an object file
+__/race/src/lineDetector.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/lineDetector.cpp.o
+.PHONY : __/race/src/lineDetector.cpp.o
+
+__/race/src/lineDetector.i: __/race/src/lineDetector.cpp.i
+.PHONY : __/race/src/lineDetector.i
+
+# target to preprocess a source file
+__/race/src/lineDetector.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/lineDetector.cpp.i
+.PHONY : __/race/src/lineDetector.cpp.i
+
+__/race/src/lineDetector.s: __/race/src/lineDetector.cpp.s
+.PHONY : __/race/src/lineDetector.s
+
+# target to generate assembly for a file
+__/race/src/lineDetector.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/build.make zed_wrapper/CMakeFiles/dummy_zed_wrapper.dir/__/race/src/lineDetector.cpp.s
+.PHONY : __/race/src/lineDetector.cpp.s
+
 __/race/src/odom.o: __/race/src/odom.cpp.o
 .PHONY : __/race/src/odom.o
 
@@ -2856,6 +2880,9 @@ help:
 	@echo "... __/race/src/hectorOdom.o"
 	@echo "... __/race/src/hectorOdom.i"
 	@echo "... __/race/src/hectorOdom.s"
+	@echo "... __/race/src/lineDetector.o"
+	@echo "... __/race/src/lineDetector.i"
+	@echo "... __/race/src/lineDetector.s"
 	@echo "... __/race/src/odom.o"
 	@echo "... __/race/src/odom.i"
 	@echo "... __/race/src/odom.s"

@@ -77,7 +77,7 @@ set(CUDA_NVCC_FLAGS_MINSIZEREL  ; )
 set(CUDA_NVCC_FLAGS_RELEASE  ; )
 set(CUDA_NVCC_FLAGS_RELWITHDEBINFO  ; )
 set(nvcc_flags -m32;-DROS_BUILD_SHARED_LIBS=1;-DROS_PACKAGE_NAME="race";-DROSCONSOLE_BACKEND_LOG4CXX) # list
-set(CUDA_NVCC_INCLUDE_ARGS "-I/usr/local/cuda-6.5/include;-I/usr/local/cuda-6.5/include") # list (needs to be in quotes to handle spaces properly).
+set(CUDA_NVCC_INCLUDE_ARGS "-I/usr/local/cuda-6.5/include;-I/usr/include/opencv;-I/usr/include;-I/usr/local/cuda-6.5/include") # list (needs to be in quotes to handle spaces properly).
 set(format_flag "-c") # string
 
 if(build_cubin AND NOT generated_cubin_file)

@@ -25,6 +25,11 @@ void saxpy(int n, float a, float *x, float *y);
 __global__
 void edgeMath(unsigned char* bw, float* edges);
 
+__global__
+void draw_math(float theta, int roh, unsigned char *edge_data);
+
+void drawMath(float theta, int roh, unsigned char* edge_data); 
+ 
 
 int testMain(void);
 

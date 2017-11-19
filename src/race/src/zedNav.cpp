@@ -19,6 +19,12 @@ class zedNav
 
   int process_type;
 
+  //START NEW STUFF
+  int counter;
+  int frameSkip;
+  std::vector<unsigned char>  publishedImage;
+  //END NEW STUFF*/
+
   void callback(const sensor_msgs::Image& msg, sensor_msgs::Image& edge)
   {
     int i,j;
@@ -34,10 +40,16 @@ class zedNav
     edge.is_bigendian = msg.is_bigendian;
     edge.step = msg.step/3/2; // only have 1/6 the data: bw, zoom
 
-    edge.data = processImage(msg.data, process_type);
+    //edge.data = processImage(msg.data, process_type);
+
+    if (counter%frameSkip==0) {
+        publishedImage=processImage(msg.data,process_type);
+    }
+    counter++;
+    edge.data=publishedImage;
 
     edge.header.stamp = ros::Time::now();
-    printf("Took %f seconds to process\n", edge.header.stamp.toSec() - msg.header.stamp.toSec());
+    //printf("Took %f seconds to process\n", edge.header.stamp.toSec() - msg.header.stamp.toSec());
 
     return;
      
@@ -103,10 +115,13 @@ class zedNav
   zedNav():nh_(), private_nh_("~")
   {
     pub_r_ = nh_.advertise<sensor_msgs::Image>("right_edges",10);
-    pub_l_ = nh_.advertise<sensor_msgs::Image>("left_edges",10);
+   // pub_l_ = nh_.advertise<sensor_msgs::Image>("left_edges",10);
     sub_r_ = nh_.subscribe("/zed/right/image_raw_color",10,&zedNav::callback_r,this);
-    sub_l_ = nh_.subscribe("/zed/left/image_raw_color",10,&zedNav::callback_l,this);
+    //sub_l_ = nh_.subscribe("/zed/left/image_raw_color",10,&zedNav::callback_l,this);
     process_type = CUDA_SMART;
+    //counter=5; //
+    frameSkip=2;//
+    counter = frameSkip;
   }
   
 };

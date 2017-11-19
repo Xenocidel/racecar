@@ -374,6 +374,20 @@ hectorOdom/fast:
 .PHONY : hectorOdom/fast
 
 # Convenience name for target.
+race/CMakeFiles/lineDetect.dir/rule:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 race/CMakeFiles/lineDetect.dir/rule
+.PHONY : race/CMakeFiles/lineDetect.dir/rule
+
+# Convenience name for target.
+lineDetect: race/CMakeFiles/lineDetect.dir/rule
+.PHONY : lineDetect
+
+# fast build rule for target.
+lineDetect/fast:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/lineDetect.dir/build.make race/CMakeFiles/lineDetect.dir/build
+.PHONY : lineDetect/fast
+
+# Convenience name for target.
 race/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 race/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
 .PHONY : race/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
@@ -823,6 +837,30 @@ src/hectorOdom.cpp.s:
 	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/hectorOdom.dir/build.make race/CMakeFiles/hectorOdom.dir/src/hectorOdom.cpp.s
 .PHONY : src/hectorOdom.cpp.s
 
+src/lineDetector.o: src/lineDetector.cpp.o
+.PHONY : src/lineDetector.o
+
+# target to build an object file
+src/lineDetector.cpp.o:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/lineDetect.dir/build.make race/CMakeFiles/lineDetect.dir/src/lineDetector.cpp.o
+.PHONY : src/lineDetector.cpp.o
+
+src/lineDetector.i: src/lineDetector.cpp.i
+.PHONY : src/lineDetector.i
+
+# target to preprocess a source file
+src/lineDetector.cpp.i:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/lineDetect.dir/build.make race/CMakeFiles/lineDetect.dir/src/lineDetector.cpp.i
+.PHONY : src/lineDetector.cpp.i
+
+src/lineDetector.s: src/lineDetector.cpp.s
+.PHONY : src/lineDetector.s
+
+# target to generate assembly for a file
+src/lineDetector.cpp.s:
+	cd /home/ubuntu/catkin_ws/build && $(MAKE) -f race/CMakeFiles/lineDetect.dir/build.make race/CMakeFiles/lineDetect.dir/src/lineDetector.cpp.s
+.PHONY : src/lineDetector.cpp.s
+
 src/odom.o: src/odom.cpp.o
 .PHONY : src/odom.o
 
@@ -1041,6 +1079,7 @@ help:
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... lineDetect"
 	@echo "... list_install_components"
 	@echo "... nav_msgs_generate_messages_cpp"
 	@echo "... nav_msgs_generate_messages_lisp"
@@ -1080,6 +1119,9 @@ help:
 	@echo "... src/hectorOdom.o"
 	@echo "... src/hectorOdom.i"
 	@echo "... src/hectorOdom.s"
+	@echo "... src/lineDetector.o"
+	@echo "... src/lineDetector.i"
+	@echo "... src/lineDetector.s"
 	@echo "... src/odom.o"
 	@echo "... src/odom.i"
 	@echo "... src/odom.s"

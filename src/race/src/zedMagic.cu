@@ -57,6 +57,24 @@ void edgeMath(unsigned char* bw, unsigned int* edges) {
     }
 }
 
+__global__
+void draw_math(float theta, int roh, unsigned char *edge_data) {
+    int index = blockIdx.x*blockDim.x + threadIdx.x;
+    int i = index/W_O;
+    int j = index%W_O;
+    int x = j;
+    //int y = H_O-1-i;
+    int y=i;
+                
+    if (abs(x*cos(theta) + y*sin(theta) - roh) < 2) {
+        edge_data[index] = 255;
+    }
+}    
+
+/* Assume theta in radians */
+void drawMath(float theta, int roh, unsigned char* edge_data) {
+    draw_math<<<W_O,H_O>>>(theta,roh,edge_data);
+}
 
 int testMain(void) {
     int N=30000;//1<<20;

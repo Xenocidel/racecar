@@ -60,6 +60,16 @@ def brakePump():
     #em_pub.publish(True)
     print("BREAKS PUMPED")
 '''
+use_camera = rospy.get_param("/use_camera", "false")
+camera_sees_wall = False
+
+'''If camera sees side wall, ignores opinion that about to crash'''
+def camera_callback(cam_decision):
+    global camera_sees_wall
+    camera_sees_wall = cam_decision.data
+    #camera_sees_wall = False
+
+is_not_wall = lambda : not camera_sees_wall
 
 '''
 Check for immediate obstacles that we are not avoiding
@@ -69,7 +79,7 @@ pull emergency stop, which can be reset in kill switch
 def safety_checker(laser_data):
     global em_pub, activated
     v_msg = Int32(-70)
-    if not activated and detect_collision(laser_data):
+    if not activated and detect_collision(laser_data) and is_not_wall():
         v_pub.publish(v_msg) 
         activated = True
 
@@ -197,5 +207,10 @@ if __name__=='__main__':
     laser_sub = rospy.Subscriber('scan', LaserScan, safety_checker)
     rospy.Subscriber('side',Int32,side_callback)
     #turn_sub = rospy.Subscriber('is_turning', Bool, set_threshold)
+
+    if use_camera==True: #.lower()=="true":
+        cam_sub = rospy.Subscriber('sees_side_wall',Bool,camera_callback)
+
+
     rospy.spin()
 

@@ -17,6 +17,9 @@ find_package(catkin REQUIRED COMPONENTS
   nav_msgs
 )
 
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+
 SET(CUDA_NVCC_FLAGS "" CACHE STRING "nvcc flags" FORCE)
 SET (CUDA_VERBOSE_BUILD ON CACHE BOOL "nvcc verbose" FORCE)
 SET(LIB_TYPE STATIC)
@@ -131,6 +134,8 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
+#include_directories(${OpenCV_INCLUDE_DIRS})
+
 ## Declare a C++ library
 # add_library(race
 #   src/${PROJECT_NAME}/race.cpp
@@ -157,6 +162,7 @@ add_executable(speedChooser src/speedChooser.cpp)
 add_executable(zedNav src/zedNav.cpp)
 add_executable(zedBW src/zedBW.cpp)
 add_executable(timer src/timingTattler.cpp)
+add_executable(lineDetect src/lineDetector.cpp)
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(race_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
@@ -197,6 +203,15 @@ target_link_libraries(zedBW
 target_link_libraries(timer
   ${catkin_LIBRARIES}
  )
+target_link_libraries(lineDetect
+  ${catkin_LIBRARIES}
+  ${OpenCV_LIBS}
+  ZedCudaFuncs
+  ZedFuncs
+ )
+#target_link_libraries(my_opencv_library
+#  $(OpenCV_LIBRARIES)
+# )
 
 #############
 ## Install ##

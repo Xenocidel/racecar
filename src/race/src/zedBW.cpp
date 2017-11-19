@@ -85,62 +85,10 @@ class zedBW
     for (i=0;i<edges.size();i++) edge_img.push_back((edges[i]/max*255 > THRESHOLD)?255 :0);
     edges.clear();
 
-    //std::vector <polar_point> voting;
-    std::vector <int> voting[180];
-
-    /* Hough Transform */
-    int theta, roh, roh_min, roh_max;
-    for (i=0;i<newH;i++) {
-        for (j=0;j<newW;j++) {
-            int x,y;
-            x = j;
-            y = newH - 1 - i;
-            int index = newW*i + j;
-            if (edge_img[index]) {
-                for (theta=0;theta<180;theta++) {
-                    roh = -x*sin(theta*M_PI/180) + y*cos(theta*M_PI/180);
-                    roh_min = (roh_min>roh)? roh: roh_min;
-                    roh_max = (roh_max<roh)? roh: roh_max;
-                    voting[theta].push_back(roh);    
-                }
-            } 
-        }
-    }
-    printf("max %d, min %d\n",roh_max, roh_min);
-    if (roh_min<-1500) {
-        roh_min=-1500;
-    }
-    printf("min is now %d\n",roh_min);
-
     edge.data.swap(edge_img);
     
     edge_img.clear();   
      
-    /*
-    int hough_max = 0;
-    int final_r, final_t;
-    for (theta=0;theta<180;theta++) {
-        for (roh=roh_min;roh<roh_max+1;roh++) {
-            if (count(voting,theta,roh)>hough_max) {
-                hough_max = count(voting,theta,roh);
-                final_r = roh;
-                final_t = theta;
-            }
-        }
-    }
-
-    printf("r %d, t %d\n", roh, theta);
-
-    for (i=0;i<newH;i++) {
-        for (j=0;j<newW;j++) {
-            int x = j;
-            int y = newH-1-i;
-            if (abs(x*sin(final_t*M_PI/180) - y*cos(final_t*M_PI/180) + final_r) < 1) edge.data.push_back(255);
-            else edge.data.push_back(0);
-        }
-    }
-    */
-
   }
 
   int count(std::vector <int> * voting, int theta, int roh) {
@@ -178,9 +126,9 @@ class zedBW
   zedBW():nh_(), private_nh_("~")
   {
     pub_r_ = nh_.advertise<sensor_msgs::Image>("right_edges",10);
-    pub_l_ = nh_.advertise<sensor_msgs::Image>("left_edges",10);
+    //pub_l_ = nh_.advertise<sensor_msgs::Image>("left_edges",10);
     sub_r_ = nh_.subscribe("/zed/right/image_raw_color",10,&zedBW::callback_r,this);
-    sub_l_ = nh_.subscribe("/zed/left/image_raw_color",10,&zedBW::callback_l,this);
+    //sub_l_ = nh_.subscribe("/zed/left/image_raw_color",10,&zedBW::callback_l,this);
   }
   
 };

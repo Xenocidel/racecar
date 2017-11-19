@@ -1,6 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/dummy_zed_wrapper"
   "CMakeFiles/dummy_zed_wrapper.dir/__/race/src/hectorOdom.cpp.o"
+  "CMakeFiles/dummy_zed_wrapper.dir/__/race/src/lineDetector.cpp.o"
   "CMakeFiles/dummy_zed_wrapper.dir/__/race/src/wallChooser.cpp.o"
   "CMakeFiles/dummy_zed_wrapper.dir/__/race/src/cudaTest.cpp.o"
   "CMakeFiles/dummy_zed_wrapper.dir/__/race/src/timingTattler.cpp.o"

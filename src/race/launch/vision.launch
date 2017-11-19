@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<launch>
+  <include file="$(find zed_wrapper)/launch/zed.launch"/> 
+
+  <node name="zed_edges" pkg="race" type="zedNav" output="screen"/>
+  
+</launch>

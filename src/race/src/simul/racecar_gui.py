@@ -13,7 +13,7 @@ class RaceCarView:
         self.refresh_rate = 30
         self.sim_running = True
         
-        self.car = python_racecar.Racecar(75,400, -math.pi/2)
+        self.car = python_racecar.Racecar(75,300, -math.pi/2)
         self.track = racecar_map.Track()
         
         
@@ -31,7 +31,7 @@ class RaceCarView:
         else:
             dumb = False
 
-        self.ai = racecar_ai.RacecarAI(self.car, self.screen, codriver, dumb)
+        self.ai = racecar_ai.RacecarAI(self.car, self.screen, True, True)
         
         self.screen.grid(row = 0, column = 0, sticky = tkinter.NSEW)
 

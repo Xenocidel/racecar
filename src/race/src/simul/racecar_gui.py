@@ -11,7 +11,7 @@ class RaceCarView:
 
     def __init__(self):
         self.refresh_rate = 30
-        self.sim_running = True
+        self.sim_running = False
         
         self.car = python_racecar.Racecar(75,300, -math.pi/2)
         self.track = racecar_map.Track()
@@ -31,7 +31,7 @@ class RaceCarView:
         else:
             dumb = False
 
-        self.ai = racecar_ai.RacecarAI(self.car, self.screen, True, True)
+        self.ai = racecar_ai.RacecarAI(self.car, self.screen, False, True)
         
         self.screen.grid(row = 0, column = 0, sticky = tkinter.NSEW)
 
@@ -39,6 +39,8 @@ class RaceCarView:
         self.window.bind('<Right>', self.right_button_down)
         self.window.bind('<Up>', self.up_button_down)
         self.window.bind('<Down>', self.down_button_down)
+        self.window.bind('<space>', self.pause)
+        self.window.bind('n', self.next_frame)
 
     def _update(self):
         self.screen.delete(tkinter.ALL)
@@ -57,6 +59,27 @@ class RaceCarView:
     def start(self):
         self._update()
         self.window.mainloop()
+
+    def pause(self, event:tkinter.Event):
+        if self.sim_running:
+            self.sim_running = False
+        else:
+            self.sim_running = True
+            self._update()
+
+    def next_frame(self, event:tkinter.Event):
+        if self.sim_running:
+            return
+        self.screen.delete(tkinter.ALL)
+        self.car._update_pos() # update position of car based on physics
+        self.car.lidar_readings(self.track)
+        self.car.draw_lidar(self.screen)
+        self.draw_track()
+        self.draw_car()
+        self.draw_nodes()
+        self.check_crash()
+        #AI program
+        self.ai.main_funct()
 
     def left_button_down(self, event:tkinter.Event):
         self.car.turnAngle -= 0.1
@@ -86,7 +109,7 @@ class RaceCarView:
     def draw_car(self):
         centerX = self.car._position[0]
         centerY = self.car._position[1]
-        length = 20
+        length = self.car.carLength
         axil_length = 10
         angle = math.pi/6
         # Box for car frame

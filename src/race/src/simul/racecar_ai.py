@@ -100,6 +100,7 @@ class RacecarAI:
         #if car is too close to a wall, modify angle to pull away
         right = self.car.lidar[0]
         left = self.car.lidar[len(self.car.lidar)-1]
+        # dist will be scaled by number of carLengths (currently 1x)
         if(right < dist):
             #print("too close to right")
             return angle + math.pi/12
@@ -108,7 +109,8 @@ class RacecarAI:
             return angle - math.pi/12
         return angle
 
-    def _getFrontDist(self):
+    def _getFrontDist(self, angle=0):
+        # todo, add relative angle functionality and account for outliers
         middle = len(self.car.lidar)//2
         front_dist = self.car.lidar[middle]
         for i in range(-2,3):
@@ -116,6 +118,20 @@ class RacecarAI:
                 front_dist = self.car.lidar[middle+i]
         return front_dist
 
+    def detectObstacle(self, front_dist):
+        #CHECK FOR OBSTACLE within 4x current motor speed or 5x car lengths, whichever is greater
+        if self.car.motorSpeed*4 < self.car.carLength*5:
+            lookaheadDistance = self.car.carLength*5
+            print("lookahead by car length "+str(lookaheadDistance))
+        else:
+            lookaheadDistance = self.car.motorSpeed*4
+            print("lookahead by motor speed "+str(lookaheadDistance))
+        if front_dist < lookaheadDistance:
+            self.collisionAvoid = True
+            self.obsDist = front_dist
+        else:
+            self.collisionAvoid = False
+            
     def autoProgram(self):
         #CHECK FOR UNAVOIDABLE CRASH
         ''' If the distance reading directly in front of the car is less that the minimum turning radius
@@ -127,12 +143,9 @@ class RacecarAI:
             self.safetyMode = True
             print("safety mode on")
 
-        #CHECK FOR OBSTACLE
-        if(front_dist < 100):
-            self.collisionAvoid = True
-            self.obsDist = front_dist
+        self.detectObstacle(front_dist)
         
-        #SET CAR VELOCITY PREPORTIONAL TO FRONT DISTANCE
+        #SET CAR VELOCITY PROPORTIONAL TO FRONT DISTANCE
         motor_speed = int(15 + 40*(front_dist/500))
         self.car.changeMotorSpeed(motor_speed)
 
@@ -167,12 +180,13 @@ class RacecarAI:
                 new_angle = self.moveTowardsLongestDist(0, 0, len(self.car.lidar))
 
         #if car is too close to a wall, modify angle to pull away
-        new_angle = self._moveAwayFromWall(20, new_angle)
+        new_angle = self._moveAwayFromWall(self.car.carLength, new_angle)
                 
         # turn the wheels of the car according to the new_angle    
         ''' The intensity of angle change is preportional to the difference in current angle and desired angle'''
         diff = abs(new_angle - self.car.turnAngle)
         if(new_angle > self.car.turnAngle): # right
+            # todo, clarify 0.2 constant
             self.car.changeTurnAngle(self.car.turnAngle + 0.2*diff)
         elif(new_angle < self.car.turnAngle): # left
             self.car.changeTurnAngle(self.car.turnAngle - 0.2*diff)
@@ -213,25 +227,27 @@ class RacecarAI:
             return left_angle
 
     def avoidCollision(self):
-        
+        # set to lowest motor speed
         motor_speed = 30
         self.car.changeMotorSpeed(motor_speed)
-
         buffer = math.pi/20
         new_angle = self._chooseAvoidAngle(self.obsDist, 15, buffer)
+        print("avoid angle: "+str(new_angle))
         #new_angle = self._moveAwayFromWall(10, new_angle)
 
         if(new_angle > self.car.turnAngle): # right
+            # todo, clarify 0.2, should be max steering lock for collision avoidance
             self.car.changeTurnAngle(self.car.turnAngle + 0.2)#weight*diff)
             #self.turningProgram()
         elif(new_angle < self.car.turnAngle): # left
             self.car.changeTurnAngle(self.car.turnAngle - 0.2)#weight*diff)
-
-        dist = dist_between(self.start_pos, self.car._position)
-        #print(dist)
-        #print(self.start_pos)
-        if(dist > self.obsDist):
-            self.collisionAvoid = False
+        # todo, clarify positions
+        # dist = dist_between(self.start_pos, self.car._position)
+        # print(dist)
+        # print(self.start_pos)
+        # if(dist > self.obsDist):
+            # self.collisionAvoid = False
+        self.detectObstacle(self._getFrontDist())
 
     #-------------------------------------------------------------------------------------
 
@@ -241,11 +257,7 @@ class RacecarAI:
         motor_speed = 30
         self.car.changeMotorSpeed(motor_speed)
 
-        # COLLSISION AVOIDANCE
-        front_dist = self._getFrontDist()
-        if(front_dist < 100):
-            self.collisionAvoid = True
-            self.obsDist = front_dist
+        self.detectObstacle(self._getFrontDist())
         
         #decide turning angle
         ''' This makes sure Driver does not turn too much at a node. Planned to make the turning cap 90 degress, but found
@@ -268,6 +280,7 @@ class RacecarAI:
             
         diff = abs(new_angle - self.car.turnAngle)
         if(new_angle > self.car.turnAngle): # right
+            # todo, clarify 0.1 constant
             self.car.changeTurnAngle(self.car.turnAngle + 0.1)#*abs(max_index - self.car.reading_number//2))
         elif(new_angle < self.car.turnAngle): # left
             self.car.changeTurnAngle(self.car.turnAngle - 0.1)#*abs(max_index - self.car.reading_number//2))

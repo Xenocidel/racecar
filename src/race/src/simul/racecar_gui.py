@@ -31,7 +31,7 @@ class RaceCarView:
         else:
             dumb = False
 
-        self.ai = racecar_ai.RacecarAI(self.car, self.screen, False, True)
+        self.ai = racecar_ai.RacecarAI(self.car, self.screen, False, False)
         
         self.screen.grid(row = 0, column = 0, sticky = tkinter.NSEW)
 

@@ -17,7 +17,7 @@ class Racecar():
         self.turnAngle = 0 # angle wheels are facing, 0 is forwards
         self.fricCoeff = 10 # coefficient of friction between ground and tires
         self.carLength = 20 # length of car determines smallest turn radius
-        self.reading_number = 40
+        self.reading_number = 180
         self.lidar = [0]*self.reading_number
 
     def _magnitude(self, vector):
@@ -113,7 +113,7 @@ class Racecar():
 
     def changeTurnAngle(self, ang):
         self.turnAngle = ang
-        if(self.turnAngle > math.pi/3):
-            self.turnAngle = math.pi/3
-        if(self.turnAngle < -math.pi/3):
-            self.turnAngle = -math.pi/3
+        if(self.turnAngle > math.pi/4):
+            self.turnAngle = math.pi/4
+        if(self.turnAngle < -math.pi/4):
+            self.turnAngle = -math.pi/4

@@ -113,15 +113,17 @@ class RacecarAI:
         middle = len(self.car.lidar)//2
         # relative angle ranges from -pi/2 to pi/2
         lidar_beam_angle = (math.pi / len(self.car.lidar))
+        #determine the range of values to scan
+        scope = int(math.atan(1/5) / lidar_beam_angle) + 1
         # this converts relative angle to corresponding LIDAR index
         index = int(angle / lidar_beam_angle + middle)
-        if index + 2 > len(self.car.lidar):
-            index -= 2
-        elif index - 2 < 0:
-            index += 2
+        if index + scope > len(self.car.lidar):
+            index -= scope
+        elif index - scope < 0:
+            index += scope
         
         front_dist = self.car.lidar[index]
-        for i in range(-2,3):
+        for i in range(-scope,scope+1):
             if(self.car.lidar[index+i] < front_dist):
                 front_dist = self.car.lidar[index+i]
         return front_dist
@@ -130,10 +132,10 @@ class RacecarAI:
         #CHECK FOR OBSTACLE within 4x current motor speed or 5x car lengths, whichever is greater
         if self.car.motorSpeed*4 < self.car.carLength*5:
             lookaheadDistance = self.car.carLength*5
-            print("lookahead by car length "+str(lookaheadDistance))
+            #print("lookahead by car length "+str(lookaheadDistance))
         else:
             lookaheadDistance = self.car.motorSpeed*4
-            print("lookahead by motor speed "+str(lookaheadDistance))
+            #print("lookahead by motor speed "+str(lookaheadDistance))
         if front_dist < lookaheadDistance:
             self.obsDist = front_dist
             return True
@@ -155,7 +157,7 @@ class RacecarAI:
             self.collisionAvoid = True
         
         #SET CAR VELOCITY PROPORTIONAL TO FRONT DISTANCE
-        motor_speed = int(15 + 40*(front_dist/500))
+        motor_speed = int(15 + 50*(front_dist/500))
         self.car.changeMotorSpeed(motor_speed)
 
         #DETERMINE ANGLE TO TURN WHEELS TO
@@ -181,7 +183,8 @@ class RacecarAI:
             new_angle = (average(left_slopes) + average(right_slopes) - math.pi)/2
         else: # if not in a straight hallway type path...
             # intelligent auto driver behavior (the thing to improve)
-            new_angle = self.moveTowardsLongestDist(0, 0, len(self.car.lidar))
+            #new_angle = self.moveTowardsLongestDist(0, 0, len(self.car.lidar))
+            new_angle = 0
 
         #if car is too close to a wall, modify angle to pull away
         new_angle = self._moveAwayFromWall(self.car.carLength, new_angle)
@@ -214,53 +217,59 @@ class RacecarAI:
         return ans
     
     def _chooseAvoidAngle(self, dist, thresh, buffer):
+        # make a list of tuples representing start and end indices of lidar segments
+        segments = []
+        start = 10
+        end = 10
+        _sum = 0
+        for i in range(10,len(self.car.lidar)-10):
+            if(self.car.lidar[i] > dist+thresh):
+                end = i+1
+                _sum += self.car.lidar[i]
+            elif(start != end):
+                segments.append( (start,end, _sum) )
+                start = end = i+1
+                _sum = 0
+            else:
+                start = end = i+1
+        segments.append( (start, end, _sum) )
+        # select segment of greatest area
+        _max = 0
+        index = 0
+        for i in range(len(segments)):
+            if(segments[i][2] > _max):
+                _max = segments[i][2]
+                index = i
+        # get angle from the middle of the best segment
+        size = segments[index][1]-segments[index][0]
+        best_index = segments[index][0] + size//2
         angle = math.pi / len(self.car.lidar)
-        middle = len(self.car.lidar)//2
-        left_count = 0
-        right_count = 0
-        left_angle = 0
-        right_angle = 0
-        # readings directly in front of the car will have more weight
-        # this will result in an avoid angle that requires less turning
-        # current weight at -pi/2 and pi/2 is 0.5
-        
-        for i in range(len(self.car.lidar)//2-1):
-            weight = 1 - 0.5*(angle * i)/(math.pi/2)
-            # print ("wt:"+str(weight))
-            if(self.car.lidar[middle+i] > dist+thresh):
-                right_count += self.car.lidar[middle+i] * weight
-                if(right_angle == 0):
-                    right_angle = self.clipAngle(angle*i + buffer, math.pi/2)
-            if(self.car.lidar[middle-i] > dist+thresh):
-                left_count += self.car.lidar[middle-i] * weight
-                if(left_angle == 0):
-                    left_angle = self.clipAngle(angle*i - buffer, math.pi/2)
-        ans = 0
-        if(left_count == 0 and right_count == 0):
-            ans = self.moveTowardsLongestDist(0, 0, len(self.car.lidar))
-        elif(right_count > left_count):
-            ans = right_angle
-        else:
-            ans = left_angle
-
+        ans = best_index * angle - math.pi/2
         #draw line just for gui visual
-        self.screen.create_line(self.car._position[0], self.car._position[1],
-                               self.car._position[0] + math.cos(ans + self.car._angle)*50,
-                               self.car._position[1] + math.sin(ans + self.car._angle)*50, fill="#00FFFF")
         
-        # if not self.detectObstacle(self._getFrontDist(ans)):
-            # print(self._getFrontDist(ans))
-            # no obstacles detected in the direction that we want to go
-            # return ans
+        colors = ["#007777","#770077","#777700","#007700","#000077"]
+        for seg in range(len(segments)):
+            for i in range(segments[seg][0], segments[seg][1]):
+                slope = self.car._angle - math.pi/2 + angle*i
+                color = "#555500"
+                self.screen.create_line(self.car._position[0], self.car._position[1],
+                                   self.car._position[0] + math.cos(slope)*self.car.lidar[i],
+                                   self.car._position[1] + math.sin(slope)*self.car.lidar[i], fill=colors[seg])
+
+        self.screen.create_line(self.car._position[0], self.car._position[1],
+                               self.car._position[0] + math.cos(ans + self.car._angle)*100,
+                               self.car._position[1] + math.sin(ans + self.car._angle)*100, fill="#FFFFFF")
+        
         return ans
 
+                
     def avoidCollision(self):
         # todo, set to lowest motor speed
         motor_speed = 30
         self.car.changeMotorSpeed(motor_speed)
         buffer = math.pi/15
         new_angle = self._chooseAvoidAngle(self.obsDist, 15, buffer)
-        print("avoid angle: "+str(new_angle))
+        #print("avoid angle: "+str(new_angle))
         #new_angle = self._moveAwayFromWall(10, new_angle)
 
         if(new_angle > self.car.turnAngle): # right
@@ -329,13 +338,13 @@ class RacecarAI:
         
         if(not self.safetyMode):
             if(self.collisionAvoid):
-                print("COLLISION AVOID")
+                #print("COLLISION AVOID")
                 self.avoidCollision()
             elif(self.state == "auto"):
-                print("auto")
+                #print("auto")
                 self.autoProgram()
             elif(self.state == "left" or self.state == "right"):
-                print(self.state)
+                #print(self.state)
                 self.turningProgram()
             elif(self.state =="slow"):
                 self.slowProgram()

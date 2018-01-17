@@ -10,10 +10,10 @@ import sys
 class RaceCarView:
 
     def __init__(self):
-        self.refresh_rate = 30
+        self.refresh_rate = 10
         self.sim_running = False
         
-        self.car = python_racecar.Racecar(75,300, -math.pi/2)
+        self.car = python_racecar.Racecar(75,300, math.pi/2)
         self.track = racecar_map.Track()
         
         
@@ -137,9 +137,11 @@ class RaceCarView:
         self.screen.create_line(upperLeftX, upperLeftY, leftX, leftY, fill = "#0066FF")
         self.screen.create_line(upperRightX, upperRightY, rightX, rightY, fill = "#0066FF")
         # dotted line
+        
         '''update angle based on motorSpeed and turnAngle'''
         turnRad = math.tan(self.car.turnAngle + math.pi/2) * self.car.carLength
         '''speed up or slow down car based on motorSpeed'''
+        '''
         #radDist = self.car.velocity * 0.033 * 2*math.pi / turnRad
         turnCenterX = self.car._position[0] - math.cos(self.car._angle + math.pi/2) * turnRad
         turnCenterY = self.car._position[1] - math.sin(self.car._angle + math.pi/2) * turnRad
@@ -154,8 +156,8 @@ class RaceCarView:
                 newPosX = turnCenterX - turnRad * math.cos(self.car._angle - math.pi/2 + 0.05*i)
                 newPosY = turnCenterY - turnRad * math.sin(self.car._angle - math.pi/2 + 0.05*i)
             self.screen.create_line(newPosX, newPosY, newPosX+1, newPosY+1, fill = color)
+        '''
         
-
         
 if __name__ == '__main__':
     display = RaceCarView()

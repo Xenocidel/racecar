@@ -14,22 +14,23 @@ class Track():
         obstacle = Square(65,80,400,450)
         obstacle2 = Square(80,120,200,230)
         obstacle3 = Square(280,300,700,730)
+        wall1 = Square(350,400,650,690)
+        wall2 = Square(350,400,740,780)
         obstacle1 = Square(60,90,230,250)
         obstacle4 = Square(100,130,360,410)
         obstacle5 = Square(50,60,480,530)
         obstacle6 = Square(80,110,600,650)
-        block = Square(450,600,350,450)
-        self.obstacles = [middle1, middle2, left_wall, right_wall, top_wall, bottom_wall, obstacle1,
-                          obstacle4, obstacle5, obstacle3, obstacle6]
-        #self.obstacles = [middle1, middle2, left_wall, right_wall, top_wall, bottom_wall, obstacle3]
+        block1 = Square(450,470,250,340)
+        block2 = Square(505,525,250,340)
+        block3 = Square(560,580,250,340)
+        
+        #self.obstacles = [middle1, middle2, left_wall, right_wall, top_wall, bottom_wall, obstacle1,
+        #                 obstacle4, obstacle5, obstacle6, obstacle3, wall1, wall2, block1, block2, block3]
+        self.obstacles = [middle1, middle2, left_wall, right_wall, top_wall, bottom_wall]
 
     def draw(self, screen:"tkinter.Canvas"):
         color = "#FF0000"
         for item in self.obstacles:
-            # screen.create_line(item.left, item.top, item.left, item.bottom, fill = color)
-            # screen.create_line(item.left, item.bottom, item.right, item.bottom, fill = color)
-            # screen.create_line(item.right, item.bottom, item.right, item.top, fill = color)
-            # screen.create_line(item.right, item.top, item.left, item.top, fill = color)
             screen.create_rectangle(item.left, item.top, item.right, item.bottom, outline = color)
 
     def check_collision(self, point:"touple"):

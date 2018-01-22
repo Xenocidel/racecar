@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+
+<launch>
+  <node name="talker" pkg="race" type="talker.py"/>
+  
+  <node name="teensy" pkg="rosserial_python" type="serial_node.py" args="/dev/ttyACM0"/>
+  
+  <node name="lidar" pkg="urg_node" type="urg_node" args="_ip_address:='192.168.1.11'"/>  
+
+  <node name="driver" pkg="race" type="driver_ai.py" output="screen"/>
+
+</launch>

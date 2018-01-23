@@ -25,8 +25,9 @@ class Car:
         self.velocity = 0
         self.fricCoeff = 10 # coefficient of friction between ground and tires
         self.carLength = 20 # length of car determines smallest turn radius
-        self.reading_number = 90
-        self.lidar = [0]*self.reading_number
+        self.reading_number = 1 # ray casts per degree (2 = 360 readings)
+        # must be 0.25, 0.5, 1, 2, or 4
+        self.lidar = [10]*180*self.reading_number
 
 
 class RacecarAI:
@@ -325,8 +326,15 @@ class RacecarAI:
     #------------------------------------------------------------------------------------
 
     def update_lidar(self, data):
-        self.car.lidar = data # parse data
-        self.main_funct()
+        # LIDAR data: (index, distance), where index goes from 1080 to 0
+        # from the right going CCW, with 0 as center, 270deg = 0, -270deg = 1080
+        # updates car's lidar array with the new tuple, converting to 0 to 180*n
+        if data[0] < 180 or data[0] > 900:
+            # these are values behind the LIDAR, we will discard them
+            return
+        mapped_index = int(-(180*self.car.reading_number/720)*(data-900))
+        self.car.lidar[mapped_index] = data[1]
+        self.main_funct()   # lidar data updates very quickly, maybe trigger main_funct some other way
 
     def publisher(self):
         msg = drive_param()

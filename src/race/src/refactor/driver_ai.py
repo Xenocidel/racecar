@@ -24,14 +24,31 @@ class Car:
         self.lidar = []
         self._angle = 0 # used by turningProgram
         self._position = 0 # used by turningProgram
+        self.motorSpeed = 0
         self.turnAngle = 0
         self.velocity = 0
         self.fricCoeff = 10 # coefficient of friction between ground and tires
-        self.carLength = 20 # length of car determines smallest turn radius
+        self.carLength = 0.5 # length of car determines smallest turn radius
         self.reading_number = 1 # ray casts per degree (2 = 360 readings)
         # must be 0.25, 0.5, 1, 2, or 4
-        self.lidar = [10]*(180*self.reading_number+1) #want lidar range to be 0 to 180 inclusive
+        self.lidar = [10.0]*(180*self.reading_number+1) #want lidar range to be 0 to 180 inclusive
 
+    def changeMotorSpeed(self, val):
+        self.motorSpeed = val
+
+    def changeTurnAngle(self, ang):
+        # clip turn angle to +/- pi/4
+        if (ang > math.pi/4):
+            self.turnAngle = math.pi/4
+            return
+        if (ang < -math.pi/4):
+            self.turnAngle = -math.pi/4
+            return
+        self.turnAngle = ang
+
+    def __del__(self):
+        self.changeMotorSpeed(0)
+        self.changeTurnAngle(0)
 
 class RacecarAI:
     '''This is the Driver module that controls the car's basic functions
@@ -86,14 +103,14 @@ class RacecarAI:
 
     def _moveAwayFromWall(self, dist, angle):
         #if car is too close to a wall, modify angle to pull away
-        right = self.car.lidar[0]
-        left = self.car.lidar[len(self.car.lidar)-1]
+        left = self.car.lidar[0]
+        right = self.car.lidar[len(self.car.lidar)-1]
         # dist will be scaled by number of carLengths (currently 1x)
-        if(right < dist):
-            #print("too close to right")
-            return angle + math.pi/12
         if(left < dist):
-            #print("too close to left")
+            rospy.loginfo("Too close to left wall: %f", left)
+            return angle + math.pi/12
+        if(right < dist):
+            rospy.loginfo("Too close to right wall: %f", right)
             return angle - math.pi/12
         return angle
 
@@ -118,13 +135,14 @@ class RacecarAI:
 
     def detectObstacle(self, front_dist):
         #CHECK FOR OBSTACLE within 4x current motor speed or 5x car lengths, whichever is greater
-        if self.car.motorSpeed*4 < self.car.carLength*5:
-            lookaheadDistance = self.car.carLength*5
+        if self.car.motorSpeed < self.car.carLength*4:
+            lookaheadDistance = self.car.carLength*4
             #print("lookahead by car length "+str(lookaheadDistance))
         else:
-            lookaheadDistance = self.car.motorSpeed*4
+            lookaheadDistance = self.car.motorSpeed
             #print("lookahead by motor speed "+str(lookaheadDistance))
         if front_dist < lookaheadDistance:
+            print("obstacle detected " + str(front_dist)+ "m away")
             self.obsDist = front_dist
             return True
         else:
@@ -145,11 +163,11 @@ class RacecarAI:
             self.collisionAvoid = True
         
         #SET CAR VELOCITY PROPORTIONAL TO FRONT DISTANCE
-        motor_speed = int(15 + 50*(front_dist/500))
+        motor_speed = front_dist*0.5
         self.car.changeMotorSpeed(motor_speed)
 
         #DETERMINE ANGLE TO TURN WHEELS TO
-        angle = math.pi / len(self.car.lidar)
+        angle = math.pi / (len(self.car.lidar)-1)
         left_slopes = []
         right_slopes = []
         # average of slopes between left and right lidar readings
@@ -173,9 +191,10 @@ class RacecarAI:
             # intelligent auto driver behavior (the thing to improve)
             #new_angle = self.moveTowardsLongestDist(0, 0, len(self.car.lidar))
             new_angle = 0
+            print("not in straight hallway")
 
         #if car is too close to a wall, modify angle to pull away
-        new_angle = self._moveAwayFromWall(self.car.carLength, new_angle)
+        new_angle = self._moveAwayFromWall(self.car.carLength*1.5, new_angle)
                 
         # turn the wheels of the car according to the new_angle    
         ''' The intensity of angle change is preportional to the difference in current angle and desired angle'''
@@ -239,7 +258,7 @@ class RacecarAI:
                 
     def avoidCollision(self):
         # todo, set to lowest motor speed
-        motor_speed = 30
+        motor_speed = 1
         self.car.changeMotorSpeed(motor_speed)
         buffer = math.pi/15
         new_angle = self._chooseAvoidAngle(self.obsDist, 15, buffer)
@@ -265,7 +284,7 @@ class RacecarAI:
     def turningProgram(self):
         #set car velocity preportional to front dist
         #front_dist = self.car.lidar[len(self.car.lidar)//2]
-        motor_speed = 30
+        motor_speed = 1
         self.car.changeMotorSpeed(motor_speed)
 
         self.detectObstacle(self._getFrontDist())
@@ -324,6 +343,7 @@ class RacecarAI:
                 self.slowProgram()
         else:
             self.safetyProgram()
+        print('motorspeed = ' + str(self.car.motorSpeed))
         self.publisher()
 
     #------------------------------------------------------------------------------------
@@ -340,9 +360,11 @@ class RacecarAI:
         self.main_funct()   # lidar data updates very quickly, maybe trigger main_funct some other way
 
     def publisher(self):
+        #todo, map vel and angle to [-100, 100]
         msg = drive_param()
-        msg.velocity = self.car.velocity
+        msg.velocity = 0 # self.car.velocity
         msg.angle = self.car.turnAngle
+        print("angle = " + str(self.car.turnAngle))
         self.pub.publish(msg)
     
     def listener(self):

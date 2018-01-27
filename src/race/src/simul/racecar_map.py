@@ -24,9 +24,9 @@ class Track():
         block2 = Square(505,525,250,340)
         block3 = Square(560,580,250,340)
         
-        #self.obstacles = [middle1, middle2, left_wall, right_wall, top_wall, bottom_wall, obstacle1,
-        #                 obstacle4, obstacle5, obstacle6, obstacle3, wall1, wall2, block1, block2, block3]
-        self.obstacles = [middle1, middle2, left_wall, right_wall, top_wall, bottom_wall]
+        self.obstacles = [middle1, middle2, left_wall, right_wall, top_wall, bottom_wall, obstacle1,
+                         obstacle4, obstacle5, obstacle6, obstacle3, wall1, wall2, block1, block2, block3]
+        # self.obstacles = [middle1, middle2, left_wall, right_wall, top_wall, bottom_wall]
 
     def draw(self, screen:"tkinter.Canvas"):
         color = "#FF0000"

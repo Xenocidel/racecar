@@ -76,7 +76,7 @@ class RacecarAI:
         self.start_angle = self.car._angle # used to keep track of how much the car has turned at nodes, updated in autoProgram
         self.start_pos = self.car._position # used to record distance traveled by car during collision avoidance mode
 
-        self.pub = rospy.Publisher('drive_parameters', drive_param, queue_size=1) # ros publisher
+        self.pub = rospy.Publisher('drive_parameters', drive_param, queue_size=10) # ros publisher
         self.listener()
 
     #-------------------------------------------------------------------------------------
@@ -363,8 +363,8 @@ class RacecarAI:
         #todo, map vel and angle to [-100, 100]
         msg = drive_param()
         msg.velocity = 0 # self.car.velocity
-        msg.angle = self.car.turnAngle
-        print("angle = " + str(self.car.turnAngle))
+        msg.angle = 100*self.car.turnAngle/(math.pi/4)
+        print("mapped angle = " + str(msg.angle))
         self.pub.publish(msg)
     
     def listener(self):

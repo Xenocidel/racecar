@@ -5,6 +5,7 @@ import rospy
 import math
 from race.msg import drive_param
 from sensor_msgs.msg import LaserScan
+from std_msgs.msg import Bool
 
 import constants
 
@@ -72,12 +73,17 @@ class RacecarAI:
         self.collisionAvoid = False
         self.obsDist = 0
         self.obsAngle = 0
+        self.motorKill = False;
         
         self.start_angle = self.car._angle # used to keep track of how much the car has turned at nodes, updated in autoProgram
         self.start_pos = self.car._position # used to record distance traveled by car during collision avoidance mode
 
         self.pub = rospy.Publisher('drive_parameters', drive_param, queue_size=10) # ros publisher
         self.listener()
+
+    def kill_motors(self, data):
+        print("kill_motors")
+        self.motorKill = True
 
     #-------------------------------------------------------------------------------------
 
@@ -119,30 +125,27 @@ class RacecarAI:
         # relative angle ranges from -pi/2 to pi/2
         lidar_beam_angle = (math.pi / len(self.car.lidar))
         #determine the range of values to scan
-        scope = int(math.atan(1/5) / lidar_beam_angle) + 1
+        scope = int(math.atan(1) / lidar_beam_angle) + 1
         # this converts relative angle to corresponding LIDAR index
         index = int(angle / lidar_beam_angle + middle)
-        if index + scope > len(self.car.lidar):
-            index -= scope
-        elif index - scope < 0:
-            index += scope
         
         front_dist = self.car.lidar[index]
         for i in range(-scope,scope+1):
-            if(self.car.lidar[index+i] < front_dist):
-                front_dist = self.car.lidar[index+i]
+            if(self.car.lidar[index+i]*math.sin(abs(i)*lidar_beam_angle) < self.car.carLength/2):
+                if(self.car.lidar[index+i] < front_dist):
+                    front_dist = self.car.lidar[index+i]
         return front_dist
 
     def detectObstacle(self, front_dist):
         #CHECK FOR OBSTACLE within 4x current motor speed or 5x car lengths, whichever is greater
-        if self.car.motorSpeed < self.car.carLength*4:
-            lookaheadDistance = self.car.carLength*4
+        if self.car.motorSpeed < self.car.carLength*5:
+            lookaheadDistance = self.car.carLength*5
             #print("lookahead by car length "+str(lookaheadDistance))
         else:
             lookaheadDistance = self.car.motorSpeed
             #print("lookahead by motor speed "+str(lookaheadDistance))
         if front_dist < lookaheadDistance:
-            print("obstacle detected " + str(front_dist)+ "m away")
+            #print("obstacle detected " + str(front_dist)+ "m away")
             self.obsDist = front_dist
             return True
         else:
@@ -157,7 +160,7 @@ class RacecarAI:
         
         if(self.car.velocity**2/(front_dist/3) > 9.81*self.fricCoeff):
             self.safetyMode = True
-            print("safety mode on")
+            #print("safety mode on")
         self.collisionAvoid = self.detectObstacle(front_dist)
         if self.dumb:
             self.collisionAvoid = True
@@ -172,15 +175,15 @@ class RacecarAI:
         right_slopes = []
         # average of slopes between left and right lidar readings
         for i in range(5):
-            left_x1 = self.car.lidar[1] * math.cos(angle)
-            left_y1 = self.car.lidar[1] * math.sin(angle)
-            left_x2 = self.car.lidar[2] * math.cos(2*angle)
-            left_y2 = self.car.lidar[2] * math.sin(2*angle)
+            left_x1 = self.car.lidar[i+1] * math.cos(angle)
+            left_y1 = self.car.lidar[i+1] * math.sin(angle)
+            left_x2 = self.car.lidar[i+2] * math.cos(2*angle)
+            left_y2 = self.car.lidar[i+2] * math.sin(2*angle)
             left_slopes.append( math.atan2((left_y2-left_y1) , (left_x2-left_x1)) )
-            right_x1 = self.car.lidar[-2] * math.cos(math.pi - angle)
-            right_y1 = self.car.lidar[-2] * math.sin(math.pi - angle)
-            right_x2 = self.car.lidar[-3] * math.cos(math.pi - 2*angle)
-            right_y2 = self.car.lidar[-3] * math.sin(math.pi - 2*angle)
+            right_x1 = self.car.lidar[-i-2] * math.cos(math.pi - angle)
+            right_y1 = self.car.lidar[-i-2] * math.sin(math.pi - angle)
+            right_x2 = self.car.lidar[-i-3] * math.cos(math.pi - 2*angle)
+            right_y2 = self.car.lidar[-i-3] * math.sin(math.pi - 2*angle)
             right_slopes.append( math.atan2((right_y2-right_y1) , (right_x2-right_x1)) )
 
         # if in a straight hallway type path
@@ -191,10 +194,10 @@ class RacecarAI:
             # intelligent auto driver behavior (the thing to improve)
             #new_angle = self.moveTowardsLongestDist(0, 0, len(self.car.lidar))
             new_angle = 0
-            print("not in straight hallway")
+            #print("not in straight hallway")
 
         #if car is too close to a wall, modify angle to pull away
-        new_angle = self._moveAwayFromWall(self.car.carLength*1.5, new_angle)
+        new_angle = self._moveAwayFromWall(self.car.carLength, new_angle)
                 
         # turn the wheels of the car according to the new_angle    
         ''' The intensity of angle change is preportional to the difference in current angle and desired angle'''
@@ -229,12 +232,13 @@ class RacecarAI:
         start = 10
         end = 10
         _sum = 0
-        for i in range(10,len(self.car.lidar)-10):
+        cutoff = self.car.reading_number*30
+        for i in range(cutoff,len(self.car.lidar)-cutoff):
             if(self.car.lidar[i] > dist+thresh):
                 end = i+1
-                _sum += self.car.lidar[i]
+                _sum += self.car.lidar[i] #* (len(self.car.lidar)//2 - i)
             elif(start != end):
-                segments.append( (start,end, _sum) )
+                segments.append( (start, end, _sum) )
                 start = end = i+1
                 _sum = 0
             else:
@@ -252,7 +256,10 @@ class RacecarAI:
         best_index = segments[index][0] + size//2
         angle = math.pi / len(self.car.lidar)
         ans = best_index * angle - math.pi/2
-        
+        #for seg in segments:
+        #    print(seg)
+        #print("chosen angle: ", ans)
+
         return ans
 
                 
@@ -261,16 +268,17 @@ class RacecarAI:
         motor_speed = 1
         self.car.changeMotorSpeed(motor_speed)
         buffer = math.pi/15
-        new_angle = self._chooseAvoidAngle(self.obsDist, 15, buffer)
+        new_angle = self._chooseAvoidAngle(self.obsDist, 0.1, buffer)
         #print("avoid angle: "+str(new_angle))
         #new_angle = self._moveAwayFromWall(10, new_angle)
 
+        diff = abs(new_angle - self.car.turnAngle)
         if(new_angle > self.car.turnAngle): # right
             # todo
-            self.car.changeTurnAngle(self.car.turnAngle + 0.2)#weight*diff)
+            self.car.changeTurnAngle(self.car.turnAngle + diff*0.2)#weight*diff)
             #self.turningProgram()
         elif(new_angle < self.car.turnAngle): # left
-            self.car.changeTurnAngle(self.car.turnAngle - 0.2)#weight*diff)
+            self.car.changeTurnAngle(self.car.turnAngle - diff*0.2)#weight*diff)
         # todo, clarify positions
         # dist = dist_between(self.start_pos, self.car._position)
         # print(dist)
@@ -331,10 +339,10 @@ class RacecarAI:
         
         if(not self.safetyMode):
             if(self.collisionAvoid):
-                #print("COLLISION AVOID")
+                print("COLLISION AVOID")
                 self.avoidCollision()
             elif(self.state == "auto"):
-                #print("auto")
+                print("auto")
                 self.autoProgram()
             elif(self.state == "left" or self.state == "right"):
                 #print(self.state)
@@ -343,7 +351,7 @@ class RacecarAI:
                 self.slowProgram()
         else:
             self.safetyProgram()
-        print('motorspeed = ' + str(self.car.motorSpeed))
+        #print('motorspeed = ' + str(self.car.motorSpeed))
         self.publisher()
 
     #------------------------------------------------------------------------------------
@@ -362,13 +370,18 @@ class RacecarAI:
     def publisher(self):
         #todo, map vel and angle to [-100, 100]
         msg = drive_param()
-        msg.velocity = 0 # self.car.velocity
+        if(self.motorKill):
+            print("motors Killed")
+            msg.velocity = 0
+        else:
+            msg.velocity = 10 # self.car.velocity
         msg.angle = 100*self.car.turnAngle/(math.pi/4)
-        print("mapped angle = " + str(msg.angle))
+        #print("mapped angle = " + str(msg.angle))
         self.pub.publish(msg)
     
     def listener(self):
         rospy.Subscriber('scan', LaserScan, self.update_lidar) # calls driver main function when lidar is updated
+        rospy.Subscriber('eBreak', Bool, self.kill_motors) # sets self.motorKill to true to stop motors for emergency
 
 ############################################################################
 

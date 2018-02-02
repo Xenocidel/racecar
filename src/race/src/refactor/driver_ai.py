@@ -27,15 +27,19 @@ class Car:
         self._position = 0 # used by turningProgram
         self.motorSpeed = 0
         self.turnAngle = 0
-        self.velocity = 0
+        self.velocity = 0.0
         self.fricCoeff = 10 # coefficient of friction between ground and tires
         self.carLength = 0.5 # length of car determines smallest turn radius
         self.reading_number = 1 # ray casts per degree (2 = 360 readings)
-        # must be 0.25, 0.5, 1, 2, or 4
+        self.speed_factor = 0.2
+
         self.lidar = [10.0]*(180*self.reading_number+1) #want lidar range to be 0 to 180 inclusive
 
     def changeMotorSpeed(self, val):
-        self.motorSpeed = val
+        self.velocity = val
+        if(self.velocity > 0.3): # cropping motor speed here just for now
+            self.velocity = 0.3
+        self.motorSpeed = 100*self.velocity/2.0
 
     def changeTurnAngle(self, ang):
         # clip turn angle to +/- pi/4
@@ -138,11 +142,11 @@ class RacecarAI:
 
     def detectObstacle(self, front_dist):
         #CHECK FOR OBSTACLE within 4x current motor speed or 5x car lengths, whichever is greater
-        if self.car.motorSpeed < self.car.carLength*5:
+        if self.car.velocity < self.car.carLength*5:
             lookaheadDistance = self.car.carLength*5
             #print("lookahead by car length "+str(lookaheadDistance))
         else:
-            lookaheadDistance = self.car.motorSpeed
+            lookaheadDistance = self.car.velocity
             #print("lookahead by motor speed "+str(lookaheadDistance))
         if front_dist < lookaheadDistance:
             #print("obstacle detected " + str(front_dist)+ "m away")
@@ -158,16 +162,17 @@ class RacecarAI:
         '''
         front_dist = self._getFrontDist()
         
-        if(self.car.velocity**2/(front_dist/3) > 9.81*self.fricCoeff):
-            self.safetyMode = True
+       # if(self.car.velocity**2/(front_dist/3) > 9.81*self.fricCoeff):
+       #     self.safetyMode = True
             #print("safety mode on")
         self.collisionAvoid = self.detectObstacle(front_dist)
         if self.dumb:
             self.collisionAvoid = True
         
         #SET CAR VELOCITY PROPORTIONAL TO FRONT DISTANCE
-        motor_speed = front_dist*0.5
-        self.car.changeMotorSpeed(motor_speed)
+        velocity = front_dist*self.car.speed_factor
+        #print(velocity)
+        self.car.changeMotorSpeed(velocity)
 
         #DETERMINE ANGLE TO TURN WHEELS TO
         angle = math.pi / (len(self.car.lidar)-1)
@@ -265,8 +270,7 @@ class RacecarAI:
                 
     def avoidCollision(self):
         # todo, set to lowest motor speed
-        motor_speed = 1
-        self.car.changeMotorSpeed(motor_speed)
+        self.car.changeMotorSpeed(self.car.speed_factor)
         buffer = math.pi/15
         new_angle = self._chooseAvoidAngle(self.obsDist, 0.1, buffer)
         #print("avoid angle: "+str(new_angle))
@@ -374,9 +378,10 @@ class RacecarAI:
             print("motors Killed")
             msg.velocity = 0
         else:
-            msg.velocity = 10 # self.car.velocity
+            msg.velocity = self.car.motorSpeed
         msg.angle = 100*self.car.turnAngle/(math.pi/4)
         #print("mapped angle = " + str(msg.angle))
+        print(self.car.motorSpeed)
         self.pub.publish(msg)
     
     def listener(self):

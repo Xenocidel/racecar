@@ -19,7 +19,6 @@ def average(array):
 def dist_between(pos1, pos2):
     return math.sqrt( (pos1[0]-pos2[0])**2 + (pos1[1]-pos2[1])**2 )
 
-
 class Car:
     def __init__(self):
         self.lidar = []
@@ -31,14 +30,16 @@ class Car:
         self.fricCoeff = 10 # coefficient of friction between ground and tires
         self.carLength = 0.5 # length of car determines smallest turn radius
         self.reading_number = 1 # ray casts per degree (2 = 360 readings)
-        self.speed_factor = 0.2
-
+        self.speed_factor = 0.4
         self.lidar = [10.0]*(180*self.reading_number+1) #want lidar range to be 0 to 180 inclusive
+        self.init_time = rospy.get_time()
 
+    def get_dur(self):
+        return str("%.3f" % (rospy.get_time() - self.init_time))
     def changeMotorSpeed(self, val):
         self.velocity = val
-        if(self.velocity > 0.3): # cropping motor speed here just for now
-            self.velocity = 0.3
+        if(self.velocity > self.speed_factor): # cropping motor speed here just for now
+            self.velocity = self.speed_factor
         self.motorSpeed = 100*self.velocity/2.0
 
     def changeTurnAngle(self, ang):
@@ -86,7 +87,7 @@ class RacecarAI:
         self.listener()
 
     def kill_motors(self, data):
-        print("kill_motors")
+        # print("Alert: motors killed")
         self.motorKill = True
 
     #-------------------------------------------------------------------------------------
@@ -113,14 +114,14 @@ class RacecarAI:
 
     def _moveAwayFromWall(self, dist, angle):
         #if car is too close to a wall, modify angle to pull away
-        left = self.car.lidar[0]
-        right = self.car.lidar[len(self.car.lidar)-1]
+        left = average(self.car.lidar[0:5*self.car.reading_number])
+        right = average(self.car.lidar[-5*self.car.reading_number:len(self.car.lidar)])
         # dist will be scaled by number of carLengths (currently 1x)
         if(left < dist):
-            rospy.loginfo("Too close to left wall: %f", left)
+            print("[" + self.car.get_dur() + "] Alert: left " + str(left))
             return angle + math.pi/12
         if(right < dist):
-            rospy.loginfo("Too close to right wall: %f", right)
+            print("[" + self.car.get_dur() + "] Alert: right "+ str(right))
             return angle - math.pi/12
         return angle
 
@@ -269,8 +270,8 @@ class RacecarAI:
 
                 
     def avoidCollision(self):
-        # todo, set to lowest motor speed
-        self.car.changeMotorSpeed(self.car.speed_factor)
+        # velocity of 0.2 is the lowest
+        self.car.changeMotorSpeed(0.2)
         buffer = math.pi/15
         new_angle = self._chooseAvoidAngle(self.obsDist, 0.1, buffer)
         #print("avoid angle: "+str(new_angle))
@@ -343,10 +344,10 @@ class RacecarAI:
         
         if(not self.safetyMode):
             if(self.collisionAvoid):
-                print("COLLISION AVOID")
+                print("[" + self.car.get_dur() + "] State: COLLISION AVOID")
                 self.avoidCollision()
             elif(self.state == "auto"):
-                print("auto")
+                print("[" + self.car.get_dur() + "] State: auto")
                 self.autoProgram()
             elif(self.state == "left" or self.state == "right"):
                 #print(self.state)
@@ -375,13 +376,13 @@ class RacecarAI:
         #todo, map vel and angle to [-100, 100]
         msg = drive_param()
         if(self.motorKill):
-            print("motors Killed")
+            print("[" + self.car.get_dur() + "] Alert: motors killed")
             msg.velocity = 0
         else:
             msg.velocity = self.car.motorSpeed
+            print("[" + self.car.get_dur() + "] Motor: " + str(self.car.motorSpeed) + "%")
         msg.angle = 100*self.car.turnAngle/(math.pi/4)
-        #print("mapped angle = " + str(msg.angle))
-        print(self.car.motorSpeed)
+        print("[" + self.car.get_dur() + "] Angle: " + str(msg.angle))
         self.pub.publish(msg)
     
     def listener(self):

@@ -1,0 +1,30 @@
+Running the car with output to log (no screen): `roslaunch race race2log.launch`
+Log will be written to `~/.ros/log/latest/driver-5-stdout.log`
+
+Log formatting:
+ [Duration since car init, seconds in float to 3 decimal places]
+ {Alert/State/Motor/Angle}
+ {value}
+
+
+Example:
+
+[8.209] State: COLLISION AVOID
+[8.210] Motor: 10.0%
+[8.210] Angle: -29.784487537
+
+[10.791] State: auto
+[10.791] Alert: left 0.493800002337
+[10.791] Motor: 20.0%
+[10.791] Angle: 12.6037489426
+
+Currently there are 2 possible states: 'auto' or 'COLLISION AVOID'
+
+Alerts may include:
+    'left' or 'right', followed by the distance to the left or right wall in meters
+    'motors killed', which indicates that the velocity is set to 0
+
+Motor speed ranges from -100% to 100%
+
+Angle ranges from -100 to 100 (this maps to approximately -30 to 30 degrees)
+    Left is negative, right is positive, straight ahead is zero

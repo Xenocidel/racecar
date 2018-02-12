@@ -28,6 +28,7 @@ class Car:
         self.turnAngle = 0
         self.velocity = 0.0
         self.fricCoeff = 10 # coefficient of friction between ground and tires
+        self.slowdown_distance = 15
         self.carLength = 0.5 # length of car determines smallest turn radius
         self.reading_number = 1 # ray casts per degree (2 = 360 readings)
         self.speed_factor = 0.4
@@ -139,16 +140,12 @@ class RacecarAI:
             if(self.car.lidar[index+i]*math.sin(abs(i)*lidar_beam_angle) < self.car.carLength/2):
                 if(self.car.lidar[index+i] < front_dist):
                     front_dist = self.car.lidar[index+i]
+        print(front_dist)
         return front_dist
 
     def detectObstacle(self, front_dist):
-        #CHECK FOR OBSTACLE within 4x current motor speed or 5x car lengths, whichever is greater
-        if self.car.velocity < self.car.carLength*5:
-            lookaheadDistance = self.car.carLength*5
-            #print("lookahead by car length "+str(lookaheadDistance))
-        else:
-            lookaheadDistance = self.car.velocity
-            #print("lookahead by motor speed "+str(lookaheadDistance))
+        # Imminent obstacle that needs to be avoided < 5x car lengths away
+        lookaheadDistance = self.car.carLength*5
         if front_dist < lookaheadDistance:
             #print("obstacle detected " + str(front_dist)+ "m away")
             self.obsDist = front_dist
@@ -171,7 +168,10 @@ class RacecarAI:
             self.collisionAvoid = True
         
         #SET CAR VELOCITY PROPORTIONAL TO FRONT DISTANCE
-        velocity = front_dist*self.car.speed_factor
+        if front_dist < self.car.slowdown_distance * self.car.speed_factor:
+            velocity = 0.2  # if obstacle up ahead but not imminent, lower speed to minimum
+        else:
+            velocity = front_dist*self.car.speed_factor
         #print(velocity)
         self.car.changeMotorSpeed(velocity)
 
@@ -238,7 +238,7 @@ class RacecarAI:
         start = 10
         end = 10
         _sum = 0
-        cutoff = self.car.reading_number*30
+        cutoff = self.car.reading_number*30  # limit to 120 deg
         for i in range(cutoff,len(self.car.lidar)-cutoff):
             if(self.car.lidar[i] > dist+thresh):
                 end = i+1
@@ -381,7 +381,7 @@ class RacecarAI:
         else:
             msg.velocity = self.car.motorSpeed
             print("[" + self.car.get_dur() + "] Motor: " + str(self.car.motorSpeed) + "%")
-        msg.angle = 100*self.car.turnAngle/(math.pi/4)
+        msg.angle = 100*self.car.turnAngle/(math.pi/4) + 8
         print("[" + self.car.get_dur() + "] Angle: " + str(msg.angle))
         self.pub.publish(msg)
     

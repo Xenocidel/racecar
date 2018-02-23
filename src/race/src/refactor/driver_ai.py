@@ -31,13 +31,14 @@ class Car:
         self.slowdown_distance = 15
         self.carLength = 0.5 # length of car determines smallest turn radius
         self.reading_number = 1 # ray casts per degree (2 = 360 readings)
-        self.speed_factor = 0.4
+        self.speed_factor = 0.4 # ranges between 0.2 (min speed) to 1 (max)
         self.lidar = [10.0]*(180*self.reading_number+1) #want lidar range to be 0 to 180 inclusive
         self.init_time = rospy.get_time()
 
     def get_dur(self):
         return str("%.3f" % (rospy.get_time() - self.init_time))
     def changeMotorSpeed(self, val):
+        # print("requested motorSpeed: " + str(100*val/2.0))
         self.velocity = val
         if(self.velocity > self.speed_factor): # cropping motor speed here just for now
             self.velocity = self.speed_factor
@@ -140,7 +141,6 @@ class RacecarAI:
             if(self.car.lidar[index+i]*math.sin(abs(i)*lidar_beam_angle) < self.car.carLength/2):
                 if(self.car.lidar[index+i] < front_dist):
                     front_dist = self.car.lidar[index+i]
-        print(front_dist)
         return front_dist
 
     def detectObstacle(self, front_dist):
@@ -159,7 +159,6 @@ class RacecarAI:
             given velocity of the car and friction, car cannot turn to avoid the crash
         '''
         front_dist = self._getFrontDist()
-        
        # if(self.car.velocity**2/(front_dist/3) > 9.81*self.fricCoeff):
        #     self.safetyMode = True
             #print("safety mode on")
@@ -167,11 +166,19 @@ class RacecarAI:
         if self.dumb:
             self.collisionAvoid = True
         
-        #SET CAR VELOCITY PROPORTIONAL TO FRONT DISTANCE
+        # level 0 = normal operation
+        # level 1 = initial slowdown
+        # level 2 = slow approach
+        # level 3 = avoid collision (collisionAvoid = true)
         if front_dist < self.car.slowdown_distance * self.car.speed_factor:
+            # level 2
             velocity = 0.2  # if obstacle up ahead but not imminent, lower speed to minimum
+        elif front_dist < self.car.slowdown_distance * self.car.speed_factor * 1.05:
+            # level 1
+            velocity = 0.0        
         else:
-            velocity = front_dist*self.car.speed_factor
+            # level 0: SET CAR VELOCITY PROPORTIONAL TO FRONT DISTANCE
+            velocity = front_dist/5.0*self.car.speed_factor
         #print(velocity)
         self.car.changeMotorSpeed(velocity)
 

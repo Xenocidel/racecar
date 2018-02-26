@@ -9,6 +9,7 @@ from std_msgs.msg import Bool
 
 import constants
 
+import time
 # useful functions
 def average(array):
     total = 0
@@ -84,6 +85,8 @@ class RacecarAI:
         
         self.start_angle = self.car._angle # used to keep track of how much the car has turned at nodes, updated in autoProgram
         self.start_pos = self.car._position # used to record distance traveled by car during collision avoidance mode
+        
+        self.stopTime = 0; # timestamp for breaking
 
         self.pub = rospy.Publisher('drive_parameters', drive_param, queue_size=10) # ros publisher
         self.listener()
@@ -91,7 +94,7 @@ class RacecarAI:
     def kill_motors(self, data):
         # print("Alert: motors killed")
         self.motorKill = True
-
+        self.stopTime = time.time() + 0.5
     #-------------------------------------------------------------------------------------
 
     def moveTowardsLongestDist(self, scope, right_bound, left_bound):
@@ -143,9 +146,31 @@ class RacecarAI:
                     front_dist = self.car.lidar[index+i]
         return front_dist
 
+
+    def _getFrontAngle(self, angle=0):
+        middle = len(self.car.lidar)//2
+        # relative angle ranges from -pi/2 to pi/2
+        lidar_beam_angle = (math.pi / len(self.car.lidar))
+        #determine the range of values to scan
+        scope = int(math.atan(1) / lidar_beam_angle) + 1
+        # this converts relative angle to corresponding LIDAR index
+        index = int(angle / lidar_beam_angle + middle)
+        slopes = []
+
+        for i in range(-scope,scope+1):
+            if(self.car.lidar[index+i]*math.sin(abs(i)*lidar_beam_angle) < self.car.carLength/2):
+                # average of slopes between left and right lidar readings
+                x1 = self.car.lidar[index+i] * math.cos(lidar_beam_angle)
+                y1 = self.car.lidar[index+i] * math.sin(lidar_beam_angle)
+                x2 = self.car.lidar[index+i+1] * math.cos(2*lidar_beam_angle)
+                y2 = self.car.lidar[index+i+1] * math.sin(2*lidar_beam_angle)
+                slopes.append( math.atan2((y2-y1) , (x2-x1)) )
+        return average(slopes)
+
+
     def detectObstacle(self, front_dist):
         # Imminent obstacle that needs to be avoided < 5x car lengths away
-        lookaheadDistance = self.car.carLength*5
+        lookaheadDistance = self.car.carLength*6
         if front_dist < lookaheadDistance:
             #print("obstacle detected " + str(front_dist)+ "m away")
             self.obsDist = front_dist
@@ -159,9 +184,7 @@ class RacecarAI:
             given velocity of the car and friction, car cannot turn to avoid the crash
         '''
         front_dist = self._getFrontDist()
-       # if(self.car.velocity**2/(front_dist/3) > 9.81*self.fricCoeff):
-       #     self.safetyMode = True
-            #print("safety mode on")
+
         self.collisionAvoid = self.detectObstacle(front_dist)
         if self.dumb:
             self.collisionAvoid = True
@@ -173,7 +196,7 @@ class RacecarAI:
         if front_dist < self.car.slowdown_distance * self.car.speed_factor:
             # level 2
             velocity = 0.2  # if obstacle up ahead but not imminent, lower speed to minimum
-        elif front_dist < self.car.slowdown_distance * self.car.speed_factor * 1.05:
+        elif front_dist < self.car.slowdown_distance * self.car.speed_factor * 1.4:
             # level 1
             velocity = 0.0        
         else:
@@ -245,7 +268,7 @@ class RacecarAI:
         start = 10
         end = 10
         _sum = 0
-        cutoff = self.car.reading_number*30  # limit to 120 deg
+        cutoff = self.car.reading_number*25  # limit to 110 deg
         for i in range(cutoff,len(self.car.lidar)-cutoff):
             if(self.car.lidar[i] > dist+thresh):
                 end = i+1
@@ -338,16 +361,36 @@ class RacecarAI:
     #-------------------------------------------------------------------------------------
 
     def safetyProgram(self):
-        if(self.car.velocity > 0.1): #not stopped
-            self.car.changeMotorSpeed(-30)
-        self.car.changeMotorSpeed(0)
+        if(self.motorKill == False):
+            self.motorKill = True
+            self.stopTime = time.time() + 0.5
 
+
+    def checkEmergency(self):
+        #if(self.car.velocity**2/(front_dist/3) > 9.81*self.fricCoeff):
+        #    self.safetyMode = True
+        front_dist = self._getFrontDist()
+        print("front_dist: ", front_dist)
+        #print("velocity: ", self.car.velocity)
+        #print("vel**2/front_dist: ", self.car.velocity**2/front_dist)
+        if(self.car.velocity**2/front_dist > 0.04): # 0.03 is probably a good approx based readings without motors running
+            # check slopes of obstacle in front of us
+            front_angle = self._getFrontAngle()
+            if(front_angle < 2.0 and front_angle > 1.2):
+                self.safetyMode = True
+        if(front_dist < 0.5): #always go to safety mode
+            self.safetyMode = True
+            #print("safety mode on")
+        #print("front_angle: ", self._getFrontAngle())
     #-------------------------------------------------------------------------------------
 
     def main_funct(self):
         # check for a changed state from Codriver
         if self.codriver is not None:
             self.state = self.codriver.chooseState()
+        
+        # check if we are about to collide
+        self.checkEmergency();
         
         if(not self.safetyMode):
             if(self.collisionAvoid):
@@ -384,11 +427,17 @@ class RacecarAI:
         msg = drive_param()
         if(self.motorKill):
             print("[" + self.car.get_dur() + "] Alert: motors killed")
-            msg.velocity = 0
+            if(self.stopTime > time.time()):
+                msg.velocity = -50
+                print("-50 velocity")
+            else:
+                print("0 velocity")
+                msg.velocity = 0
         else:
             msg.velocity = self.car.motorSpeed
             print("[" + self.car.get_dur() + "] Motor: " + str(self.car.motorSpeed) + "%")
         msg.angle = 100*self.car.turnAngle/(math.pi/4) + 8
+        #msg.angle = 0
         print("[" + self.car.get_dur() + "] Angle: " + str(msg.angle))
         self.pub.publish(msg)
     

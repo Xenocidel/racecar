@@ -35,14 +35,28 @@ class Car:
         self.speed_factor = 0.4 # ranges between 0.2 (min speed) to 1 (max)
         self.lidar = [10.0]*(180*self.reading_number+1) #want lidar range to be 0 to 180 inclusive
         self.init_time = rospy.get_time()
+        self.motorKill = False;
+        self.stopTime = 0; # timestamp for breaking
+
 
     def get_dur(self):
         return str("%.3f" % (rospy.get_time() - self.init_time))
+    
     def changeMotorSpeed(self, val):
         # print("requested motorSpeed: " + str(100*val/2.0))
         self.velocity = val
         if(self.velocity > self.speed_factor): # cropping motor speed here just for now
             self.velocity = self.speed_factor
+
+        if(self.motorKill and self.motorSpeed != 0):
+            print("[" + self.get_dur() + "] Alert: motors killed")
+            if(self.stopTime > time.time()):
+                self.velocity = -1
+                print("-50 velocity")
+            else:
+                print("0 velocity")
+                self.velocity = 0
+
         self.motorSpeed = 100*self.velocity/2.0
 
     def changeTurnAngle(self, ang):
@@ -81,20 +95,17 @@ class RacecarAI:
         self.collisionAvoid = False
         self.obsDist = 0
         self.obsAngle = 0
-        self.motorKill = False;
         
         self.start_angle = self.car._angle # used to keep track of how much the car has turned at nodes, updated in autoProgram
         self.start_pos = self.car._position # used to record distance traveled by car during collision avoidance mode
         
-        self.stopTime = 0; # timestamp for breaking
-
         self.pub = rospy.Publisher('drive_parameters', drive_param, queue_size=10) # ros publisher
         self.listener()
 
     def kill_motors(self, data):
         # print("Alert: motors killed")
-        self.motorKill = True
-        self.stopTime = time.time() + 0.5
+        self.car.motorKill = True
+        self.car.stopTime = time.time() + 0.5
     #-------------------------------------------------------------------------------------
 
     def moveTowardsLongestDist(self, scope, right_bound, left_bound):
@@ -193,12 +204,13 @@ class RacecarAI:
         # level 1 = initial slowdown
         # level 2 = slow approach
         # level 3 = avoid collision (collisionAvoid = true)
+        front_angle = self._getFrontAngle()
         if front_dist < self.car.slowdown_distance * self.car.speed_factor:
             # level 2
             velocity = 0.2  # if obstacle up ahead but not imminent, lower speed to minimum
-        elif front_dist < self.car.slowdown_distance * self.car.speed_factor * 1.4:
+        elif front_dist < self.car.slowdown_distance * self.car.speed_factor * 1.4: #and front_angle < 2.0 and front_angle > 1.2:
             # level 1
-            velocity = 0.0        
+            velocity = 0.0
         else:
             # level 0: SET CAR VELOCITY PROPORTIONAL TO FRONT DISTANCE
             velocity = front_dist/5.0*self.car.speed_factor
@@ -361,10 +373,10 @@ class RacecarAI:
     #-------------------------------------------------------------------------------------
 
     def safetyProgram(self):
-        if(self.motorKill == False):
-            self.motorKill = True
-            self.stopTime = time.time() + 0.5
-
+        if(self.car.motorKill == False):
+            self.car.motorKill = True
+            self.car.stopTime = time.time() + 0.5
+            print("In motor kill")
 
     def checkEmergency(self):
         #if(self.car.velocity**2/(front_dist/3) > 9.81*self.fricCoeff):
@@ -373,12 +385,13 @@ class RacecarAI:
         print("front_dist: ", front_dist)
         #print("velocity: ", self.car.velocity)
         #print("vel**2/front_dist: ", self.car.velocity**2/front_dist)
-        if(self.car.velocity**2/front_dist > 0.04): # 0.03 is probably a good approx based readings without motors running
+        if(self.car.velocity**2/front_dist > 0.07): # 0.03 is probably a good approx based readings without motors running
             # check slopes of obstacle in front of us
             front_angle = self._getFrontAngle()
-            if(front_angle < 2.0 and front_angle > 1.2):
+            if(front_angle < 2.0 and front_angle > 1.2): # these values are the range of slopes perpendicular to the car
                 self.safetyMode = True
         if(front_dist < 0.5): #always go to safety mode
+            print("DISTANCE LESS THAN 0.5")
             self.safetyMode = True
             #print("safety mode on")
         #print("front_angle: ", self._getFrontAngle())
@@ -390,22 +403,21 @@ class RacecarAI:
             self.state = self.codriver.chooseState()
         
         # check if we are about to collide
-        self.checkEmergency();
-        
-        if(not self.safetyMode):
-            if(self.collisionAvoid):
-                print("[" + self.car.get_dur() + "] State: COLLISION AVOID")
-                self.avoidCollision()
-            elif(self.state == "auto"):
-                print("[" + self.car.get_dur() + "] State: auto")
-                self.autoProgram()
-            elif(self.state == "left" or self.state == "right"):
-                #print(self.state)
-                self.turningProgram()
-            elif(self.state =="slow"):
-                self.slowProgram()
-        else:
+        self.checkEmergency()
+        if(self.safetyMode):
             self.safetyProgram()
+        
+        if(self.collisionAvoid):
+            print("[" + self.car.get_dur() + "] State: COLLISION AVOID")
+            self.avoidCollision()
+        elif(self.state == "auto"):
+            print("[" + self.car.get_dur() + "] State: auto")
+            self.autoProgram()
+        elif(self.state == "left" or self.state == "right"):
+            #print(self.state)
+            self.turningProgram()
+        elif(self.state =="slow"):
+            self.slowProgram()
         #print('motorspeed = ' + str(self.car.motorSpeed))
         self.publisher()
 
@@ -425,17 +437,8 @@ class RacecarAI:
     def publisher(self):
         #todo, map vel and angle to [-100, 100]
         msg = drive_param()
-        if(self.motorKill):
-            print("[" + self.car.get_dur() + "] Alert: motors killed")
-            if(self.stopTime > time.time()):
-                msg.velocity = -50
-                print("-50 velocity")
-            else:
-                print("0 velocity")
-                msg.velocity = 0
-        else:
-            msg.velocity = self.car.motorSpeed
-            print("[" + self.car.get_dur() + "] Motor: " + str(self.car.motorSpeed) + "%")
+        msg.velocity = self.car.motorSpeed
+        print("[" + self.car.get_dur() + "] Motor: " + str(self.car.motorSpeed) + "%")
         msg.angle = 100*self.car.turnAngle/(math.pi/4) + 8
         #msg.angle = 0
         print("[" + self.car.get_dur() + "] Angle: " + str(msg.angle))

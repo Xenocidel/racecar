@@ -48,13 +48,13 @@ class Car:
         if(self.velocity > self.speed_factor): # cropping motor speed here just for now
             self.velocity = self.speed_factor
 
-        if(self.motorKill and self.motorSpeed != 0):
+        if(self.motorKill):
             print("[" + self.get_dur() + "] Alert: motors killed")
-            if(self.stopTime > time.time()):
+            if(self.stopTime > time.time() and self.motorSpeed != 0):
                 self.velocity = -1
-                print("-50 velocity")
+                print("-50 motor speed")
             else:
-                print("0 velocity")
+                print("0 motor speed")
                 self.velocity = 0
 
         self.motorSpeed = 100*self.velocity/2.0
@@ -111,7 +111,7 @@ class RacecarAI:
     def moveTowardsLongestDist(self, scope, right_bound, left_bound):
         ''' Uses the lidar to find the angle with the longest distance reading, and returns that angle. The angle is
         relative to the direction the car is facing. 0 degrees should be straight forward. Left angles are negative and
-        right angles are positive.
+        right angles are positive.`
         scope - limits the band of view which that car is using to make its decisions
         right_bound, left_bound - bottom and top boundary on the lidar indices that are taken into consideration 
         '''

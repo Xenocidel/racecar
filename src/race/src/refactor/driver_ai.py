@@ -6,6 +6,8 @@ import math
 from race.msg import drive_param
 from sensor_msgs.msg import LaserScan
 from std_msgs.msg import Bool
+from std_msgs.msg import String
+from std_msgs.msg import Float32
 
 import constants
 
@@ -37,7 +39,7 @@ class Car:
         self.init_time = rospy.get_time()
         self.motorKill = False;
         self.stopTime = 0; # timestamp for breaking
-
+        self.alert = ""
 
     def get_dur(self):
         return str("%.3f" % (rospy.get_time() - self.init_time))
@@ -50,6 +52,7 @@ class Car:
 
         if(self.motorKill):
             print("[" + self.get_dur() + "] Alert: motors killed")
+            self.alert = "Motors killed"
             if(self.stopTime > time.time() and self.motorSpeed != 0):
                 self.velocity = -1
                 # print("-50 motor speed")
@@ -90,7 +93,7 @@ class RacecarAI:
         self.codriver = None
         self.fricCoeff = 10 # this will have to be adjusted to a realistic value
         self.safetyMode = False
-        
+
         ''' Variables for collision avoidance'''
         self.collisionAvoid = False
         self.obsDist = 0
@@ -100,6 +103,12 @@ class RacecarAI:
         self.start_pos = self.car._position # used to record distance traveled by car during collision avoidance mode
         
         self.pub = rospy.Publisher('drive_parameters', drive_param, queue_size=10) # ros publisher
+        self.pub2 = rospy.Publisher('alert', String, queue_size=10)
+        self.pub3 = rospy.Publisher('state', String, queue_size=10)
+        self.pub4 = rospy.Publisher('motor', Float32, queue_size=10)
+        self.pub5 = rospy.Publisher('angle', Float32, queue_size=10)
+        
+
         self.listener()
 
     def kill_motors(self, data):
@@ -135,9 +144,11 @@ class RacecarAI:
         # dist will be scaled by number of carLengths (currently 1x)
         if(left < dist):
             print("[" + self.car.get_dur() + "] Alert: left " + str(left))
+            self.alert = "left " + str(left)
             return angle + math.pi/12
         if(right < dist):
             print("[" + self.car.get_dur() + "] Alert: right "+ str(right))
+            self.alert = "right " + str(right)
             return angle - math.pi/12
         return angle
 
@@ -442,8 +453,16 @@ class RacecarAI:
         msg.angle = 100*self.car.turnAngle/(math.pi/4) + 8
         #msg.angle = 0
         print("[" + self.car.get_dur() + "] Angle: " + str(msg.angle))
+        
+        # msg.state = self.state
+        # msg.alert = self.car.alert
+
         self.pub.publish(msg)
-    
+        self.pub2.publish(self.car.alert)
+        self.pub3.publish(self.state)
+        self.pub4.publish(self.car.motorSpeed)
+        self.pub5.publish(msg.angle)
+
     def listener(self):
         rospy.Subscriber('scan', LaserScan, self.update_lidar) # calls driver main function when lidar is updated
         rospy.Subscriber('eBreak', Bool, self.kill_motors) # sets self.motorKill to true to stop motors for emergency

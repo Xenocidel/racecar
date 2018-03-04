@@ -24,4 +24,6 @@
   <node name="obstacle_detector" pkg="race" type="obstacle_detector.py" output="screen" />
 
   <node name="speed_chooser" pkg="race" type="speedChooser.py" output="screen" />
+  <node name="kill_switch" pkg="race" type="kill.py" output="screen"/>
+
 </launch>

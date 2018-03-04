@@ -52,9 +52,9 @@ class Car:
             print("[" + self.get_dur() + "] Alert: motors killed")
             if(self.stopTime > time.time() and self.motorSpeed != 0):
                 self.velocity = -1
-                print("-50 motor speed")
+                # print("-50 motor speed")
             else:
-                print("0 motor speed")
+                # print("0 motor speed")
                 self.velocity = 0
 
         self.motorSpeed = 100*self.velocity/2.0
@@ -376,13 +376,13 @@ class RacecarAI:
         if(self.car.motorKill == False):
             self.car.motorKill = True
             self.car.stopTime = time.time() + 0.5
-            print("In motor kill")
+            # print("In motor kill")
 
     def checkEmergency(self):
         #if(self.car.velocity**2/(front_dist/3) > 9.81*self.fricCoeff):
         #    self.safetyMode = True
         front_dist = self._getFrontDist()
-        print("front_dist: ", front_dist)
+        # print("front_dist: ", front_dist)
         #print("velocity: ", self.car.velocity)
         #print("vel**2/front_dist: ", self.car.velocity**2/front_dist)
         if(self.car.velocity**2/front_dist > 0.07): # 0.03 is probably a good approx based readings without motors running
